@@ -13,6 +13,8 @@
 		EEBF5BEF22B8C92300A4F317 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEE22B8C92300A4F317 /* Assets.xcassets */; };
 		EEBF5BF222B8C92300A4F317 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BF022B8C92300A4F317 /* LaunchScreen.storyboard */; };
 		EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */; };
+		EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
+		EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +38,7 @@
 		EEBF5BF822B8C92300A4F317 /* unitravelspracTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = unitravelspracTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitravelspracTests.swift; sourceTree = "<group>"; };
 		EEBF5BFE22B8C92300A4F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,7 @@
 				EEBF5BEE22B8C92300A4F317 /* Assets.xcassets */,
 				EEBF5BF022B8C92300A4F317 /* LaunchScreen.storyboard */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
+				EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -198,6 +202,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
+				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -206,6 +211,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

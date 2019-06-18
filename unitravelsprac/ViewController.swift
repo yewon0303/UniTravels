@@ -15,6 +15,20 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
 
+    @IBOutlet weak var emailTextField: UITextField!
 
+
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    @IBAction func goTapped(_ sender: Any) {
+    }
+    
+
+    @IBAction func enterAsGuestTapped(_ sender: Any) {
+    }
+
+    @IBAction func signUpTapped(_ sender: Any) {
+         performSegue(withIdentifier: "signUp", sender: self)
+    }
 }
 
