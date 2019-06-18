@@ -24,11 +24,28 @@ class ViewController: UIViewController {
     
     //MARK: ~actions
     @IBAction func goTapped(_ sender: Any) {
+        let loginManager = FirebaseAuthManager()
+        guard let email = emailTextField.text, let password = passwordTextField.text else { return }
+        loginManager.signIn(email: email, pass: password) {[weak self] (success) in
+            guard let `self` = self else { return }
+            var message: String = ""
+            if (success) {
+                message = "User was sucessfully logged in."
+            } else {
+                message = "There was an error."
+            }
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.display(alertController: alertController)
+        }
     }
     
+    func display(alertController: UIAlertController) {
+        self.present(alertController, animated: true, completion: nil)
+    }
 
     @IBAction func enterAsGuestTapped(_ sender: Any) {
-         performSegue(withIdentifier: "goHomeThroughGuest", sender: self)
+         performSegue(withIdentifier: "goHome", sender: self)
     }
 
     @IBAction func signUpTapped(_ sender: Any) {

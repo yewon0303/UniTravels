@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,8 @@
 		EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
 		EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
+		EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
+		EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
 		EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */; };
 		EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE922B8C91F00A4F317 /* ViewController.swift */; };
 		EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */; };
@@ -41,6 +43,7 @@
 		D3D1DEC73537A388317CEF6E /* Pods-unitravelsprac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelsprac.debug.xcconfig"; path = "Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		EEBF5BE422B8C91F00A4F317 /* unitravelsprac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitravelsprac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBF5BE922B8C91F00A4F317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +86,6 @@
 				38A260732B8ABD3A3939B95A /* Pods-unitravelspracTests.debug.xcconfig */,
 				F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -128,6 +130,7 @@
 				EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */,
 				EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */,
 				EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */,
+				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
+				EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,6 +328,7 @@
 			files = (
 				EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
+				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

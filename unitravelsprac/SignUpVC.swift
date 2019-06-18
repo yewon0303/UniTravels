@@ -26,6 +26,27 @@ class SignUpVC: UIViewController {
     //MARK: ~Action
     
     @IBAction func registerTapped(_ sender: Any) {
+        let signUpManager = FirebaseAuthManager()
+        if let email = emailTextField.text, let password = passwordTextField.text, let confirmpwd = confirmpwdTextField.text {
+            signUpManager.createUser(email: email, password: password) {[weak self] (success) in
+                guard let `self` = self else { return }
+                var message: String = ""
+                if (success && (confirmpwd == password)) {
+                    message = "User was sucessfully created."
+                } else if (success && (confirmpwd != password)){
+                    message = "There was an error. Passwords do not match"
+                }else{
+                    message = "There was an error."
+                }
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.display(alertController: alertController)
+            }
+        }
+    }
+    
+    func display(alertController: UIAlertController) {
+        self.present(alertController, animated: true, completion: nil)
     }
     
     @IBAction func returnTapped(_ sender: Any) {

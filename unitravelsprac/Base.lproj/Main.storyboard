@@ -82,7 +82,7 @@
                         <outlet property="emailTextField" destination="Vb1-rm-lZ8" id="duJ-pX-p3l"/>
                         <outlet property="passwordTextField" destination="kIM-bQ-NL1" id="VVB-SJ-SWe"/>
                         <segue destination="RGR-3S-SHT" kind="show" identifier="signUp" id="mFA-cI-Ogc"/>
-                        <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeThroughGuest" id="VeK-gZ-571"/>
+                        <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHome" id="VeK-gZ-571"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
