@@ -14,17 +14,21 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    
+    //MARK: ~properties
 
     @IBOutlet weak var emailTextField: UITextField!
 
 
     @IBOutlet weak var passwordTextField: UITextField!
-
+    
+    //MARK: ~actions
     @IBAction func goTapped(_ sender: Any) {
     }
     
 
     @IBAction func enterAsGuestTapped(_ sender: Any) {
+         performSegue(withIdentifier: "goHomeThroughGuest", sender: self)
     }
 
     @IBAction func signUpTapped(_ sender: Any) {

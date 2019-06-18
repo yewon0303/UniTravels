@@ -82,6 +82,7 @@
                         <outlet property="emailTextField" destination="Vb1-rm-lZ8" id="duJ-pX-p3l"/>
                         <outlet property="passwordTextField" destination="kIM-bQ-NL1" id="VVB-SJ-SWe"/>
                         <segue destination="RGR-3S-SHT" kind="show" identifier="signUp" id="mFA-cI-Ogc"/>
+                        <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeThroughGuest" id="VeK-gZ-571"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -124,9 +125,12 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fO-D1-QVZ">
-                                        <rect key="frame" x="24" y="248" width="102" height="48"/>
+                                        <rect key="frame" x="26.5" y="248" width="97" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                        <state key="normal" title="sign up!"/>
+                                        <state key="normal" title="register"/>
+                                        <connections>
+                                            <action selector="registerTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="yNv-aL-6PG"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -138,10 +142,83 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t6l-P4-rSW"/>
                     </view>
+                    <connections>
+                        <outlet property="confirmpwdTextField" destination="emW-T4-tlT" id="haj-E0-pzp"/>
+                        <outlet property="emailTextField" destination="QAU-l1-rY0" id="TGD-pL-jlw"/>
+                        <outlet property="passwordTextField" destination="eVd-nP-Gaj" id="bYM-AP-pEX"/>
+                        <outlet property="usernameTextField" destination="Fqa-Da-p0K" id="J5Y-Mp-mxb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abI-3e-zMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="764" y="-358"/>
+            <point key="canvasLocation" x="970" y="-1009"/>
+        </scene>
+        <!--HomeVC-->
+        <scene sceneID="tVL-QC-XAB">
+            <objects>
+                <viewController id="fI8-Bw-ZTd" customClass="HomeVC" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yMC-ut-a4Q">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-Ls-xdw">
+                                <rect key="frame" x="84" y="391" width="246" height="114"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poy-zL-IVD">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="new trip"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
+                                                <rect key="frame" x="116" y="0.0" width="130" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="current trips"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-wP-6Lc">
+                                        <rect key="frame" x="0.0" y="72" width="246" height="42"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-3u-gOs">
+                                                <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="past trips"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
+                                                <rect key="frame" x="172" y="0.0" width="74" height="42"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="setting"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
+                                <rect key="frame" x="87" y="170" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Welcome" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3KL-ly-yGk">
+                                <rect key="frame" x="48" y="62" width="102" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerY" secondItem="yMC-ut-a4Q" secondAttribute="centerY" id="8WC-eY-Iso"/>
+                            <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerX" secondItem="yMC-ut-a4Q" secondAttribute="centerX" id="YOR-R1-ZWz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Kgb-BE-CCO"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3pY-pe-9kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="969.56521739130437" y="-358.25892857142856"/>
         </scene>
     </scenes>
     <resources>

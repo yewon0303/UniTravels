@@ -14,7 +14,18 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
+    //MARK: ~Properties
+    @IBOutlet weak var usernameTextField: UITextField!
     
+    @IBOutlet weak var emailTextField: UITextField!
+
+    @IBOutlet weak var passwordTextField: UITextField!
+
+    @IBOutlet weak var confirmpwdTextField: UITextField!
     
+    //MARK: ~Action
+    
+    @IBAction func registerTapped(_ sender: Any) {
+    }
 }
 

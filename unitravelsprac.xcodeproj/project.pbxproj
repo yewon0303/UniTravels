@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
+		EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */; };
 		EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE922B8C91F00A4F317 /* ViewController.swift */; };
 		EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */; };
@@ -28,6 +30,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EEBF5BE422B8C91F00A4F317 /* unitravelsprac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitravelsprac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBF5BE922B8C91F00A4F317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +90,7 @@
 				EEBF5BF022B8C92300A4F317 /* LaunchScreen.storyboard */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */,
+				EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -202,6 +206,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
+				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
 			);
@@ -211,6 +216,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,
 			);
