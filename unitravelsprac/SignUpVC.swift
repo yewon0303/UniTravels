@@ -27,5 +27,9 @@ class SignUpVC: UIViewController {
     
     @IBAction func registerTapped(_ sender: Any) {
     }
+    
+    @IBAction func returnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "returnToLogin", sender: self)
+    }
 }
 

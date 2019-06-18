@@ -93,7 +93,7 @@
         <scene sceneID="BSF-05-Kwc">
             <objects>
                 <viewController id="RGR-3S-SHT" customClass="SignUpVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="NEY-Bc-I6b" customClass="Signu">
+                    <view key="view" contentMode="scaleToFill" id="NEY-Bc-I6b">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
@@ -134,11 +134,23 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IzV-aw-VCS">
+                                <rect key="frame" x="50" y="94" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="vWs-yf-UDK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="IzV-aw-VCS" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="8Hw-Ik-v7A"/>
+                            <constraint firstItem="IzV-aw-VCS" firstAttribute="top" secondItem="t6l-P4-rSW" secondAttribute="top" constant="50" id="9gT-jC-AJF"/>
+                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="IzV-aw-VCS" secondAttribute="trailing" symbolic="YES" id="AKE-Ed-Wnh"/>
                             <constraint firstItem="pvM-Hb-kFs" firstAttribute="centerY" secondItem="NEY-Bc-I6b" secondAttribute="centerY" id="Wpw-9e-tUD"/>
                             <constraint firstItem="pvM-Hb-kFs" firstAttribute="centerX" secondItem="NEY-Bc-I6b" secondAttribute="centerX" id="uQn-XZ-nxJ"/>
+                            <constraint firstItem="t6l-P4-rSW" firstAttribute="bottom" secondItem="IzV-aw-VCS" secondAttribute="bottom" constant="732" id="y9i-uS-fMY"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t6l-P4-rSW"/>
                     </view>
@@ -147,16 +159,17 @@
                         <outlet property="emailTextField" destination="QAU-l1-rY0" id="TGD-pL-jlw"/>
                         <outlet property="passwordTextField" destination="eVd-nP-Gaj" id="bYM-AP-pEX"/>
                         <outlet property="usernameTextField" destination="Fqa-Da-p0K" id="J5Y-Mp-mxb"/>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="returnToLogin" id="aOE-T1-U7e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abI-3e-zMZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="970" y="-1009"/>
+            <point key="canvasLocation" x="758" y="-1293"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">
             <objects>
-                <viewController id="fI8-Bw-ZTd" customClass="HomeVC" sceneMemberID="viewController">
+                <viewController id="fI8-Bw-ZTd" customClass="HomeVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="yMC-ut-a4Q">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
