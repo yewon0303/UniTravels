@@ -7,8 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EF047183DD81AB4083608A3 /* Pods_unitravelsprac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA54DA6AF64064879D7FF917 /* Pods_unitravelsprac.framework */; };
 		EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
+		EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
+		EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
 		EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */; };
 		EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE922B8C91F00A4F317 /* ViewController.swift */; };
 		EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */; };
@@ -17,6 +20,7 @@
 		EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */; };
 		EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
 		EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
+		FBFAA3C5CFF67AACFA6F04B2 /* Pods_unitravelspracTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +34,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unitravelspracTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		38A260732B8ABD3A3939B95A /* Pods-unitravelspracTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.debug.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.debug.xcconfig"; sourceTree = "<group>"; };
+		AA54DA6AF64064879D7FF917 /* Pods_unitravelsprac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unitravelsprac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C697AEEA4FA15DFCC85702E5 /* Pods-unitravelsprac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelsprac.release.xcconfig"; path = "Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac.release.xcconfig"; sourceTree = "<group>"; };
+		D3D1DEC73537A388317CEF6E /* Pods-unitravelsprac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelsprac.debug.xcconfig"; path = "Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac.debug.xcconfig"; sourceTree = "<group>"; };
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
+		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EEBF5BE422B8C91F00A4F317 /* unitravelsprac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitravelsprac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBF5BE922B8C91F00A4F317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -42,6 +52,7 @@
 		EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitravelspracTests.swift; sourceTree = "<group>"; };
 		EEBF5BFE22B8C92300A4F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF047183DD81AB4083608A3 /* Pods_unitravelsprac.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,18 +68,42 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FBFAA3C5CFF67AACFA6F04B2 /* Pods_unitravelspracTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		15F7247CFDA9357405E555F0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				D3D1DEC73537A388317CEF6E /* Pods-unitravelsprac.debug.xcconfig */,
+				C697AEEA4FA15DFCC85702E5 /* Pods-unitravelsprac.release.xcconfig */,
+				38A260732B8ABD3A3939B95A /* Pods-unitravelspracTests.debug.xcconfig */,
+				F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		73B8B102B4835282B3A47D6D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AA54DA6AF64064879D7FF917 /* Pods_unitravelsprac.framework */,
+				2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		EEBF5BDB22B8C91F00A4F317 = {
 			isa = PBXGroup;
 			children = (
 				EEBF5BE622B8C91F00A4F317 /* unitravelsprac */,
 				EEBF5BFB22B8C92300A4F317 /* unitravelspracTests */,
 				EEBF5BE522B8C91F00A4F317 /* Products */,
+				15F7247CFDA9357405E555F0 /* Pods */,
+				73B8B102B4835282B3A47D6D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +127,7 @@
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */,
 				EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */,
+				EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -111,9 +148,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEBF5C0122B8C92300A4F317 /* Build configuration list for PBXNativeTarget "unitravelsprac" */;
 			buildPhases = (
+				72CD87778D6AF6F165F23DFE /* [CP] Check Pods Manifest.lock */,
 				EEBF5BE022B8C91F00A4F317 /* Sources */,
 				EEBF5BE122B8C91F00A4F317 /* Frameworks */,
 				EEBF5BE222B8C91F00A4F317 /* Resources */,
+				697A858F5B71F0590AE06BCA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -128,6 +167,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = EEBF5C0422B8C92300A4F317 /* Build configuration list for PBXNativeTarget "unitravelspracTests" */;
 			buildPhases = (
+				E9DB0C2C22E7FC52A4C40EB1 /* [CP] Check Pods Manifest.lock */,
 				EEBF5BF422B8C92300A4F317 /* Sources */,
 				EEBF5BF522B8C92300A4F317 /* Frameworks */,
 				EEBF5BF622B8C92300A4F317 /* Resources */,
@@ -186,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBF5BF222B8C92300A4F317 /* LaunchScreen.storyboard in Resources */,
+				EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */,
 				EEBF5BEF22B8C92300A4F317 /* Assets.xcassets in Resources */,
 				EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */,
 			);
@@ -195,10 +236,75 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		697A858F5B71F0590AE06BCA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72CD87778D6AF6F165F23DFE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-unitravelsprac-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E9DB0C2C22E7FC52A4C40EB1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-unitravelspracTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		EEBF5BE022B8C91F00A4F317 /* Sources */ = {
@@ -370,6 +476,7 @@
 		};
 		EEBF5C0222B8C92300A4F317 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3D1DEC73537A388317CEF6E /* Pods-unitravelsprac.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -388,6 +495,7 @@
 		};
 		EEBF5C0322B8C92300A4F317 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C697AEEA4FA15DFCC85702E5 /* Pods-unitravelsprac.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -406,6 +514,7 @@
 		};
 		EEBF5C0522B8C92300A4F317 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 38A260732B8ABD3A3939B95A /* Pods-unitravelspracTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -427,6 +536,7 @@
 		};
 		EEBF5C0622B8C92300A4F317 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";

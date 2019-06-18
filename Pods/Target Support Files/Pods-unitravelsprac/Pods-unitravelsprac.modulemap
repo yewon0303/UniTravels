@@ -1,0 +1,6 @@
+framework module Pods_unitravelsprac {
+  umbrella header "Pods-unitravelsprac-umbrella.h"
+
+  export *
+  module * { export * }
+}
