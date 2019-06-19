@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+
 import UIKit
 import FirebaseAuth
 
@@ -18,7 +19,7 @@ class FirebaseAuthManager {
         })
     }
     
-    func createUser(email: String, password: String, completionBlock: @escaping (_ success: Bool) -> Void) {
+    func createUser(email: String, password: String, confirmpwd: String, completionBlock: @escaping (_ success: Bool) -> Void) {
         Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
             if let user = authResult?.user {
                 print(user)

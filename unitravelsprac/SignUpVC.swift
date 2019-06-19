@@ -28,13 +28,11 @@ class SignUpVC: UIViewController {
     @IBAction func registerTapped(_ sender: Any) {
         let signUpManager = FirebaseAuthManager()
         if let email = emailTextField.text, let password = passwordTextField.text, let confirmpwd = confirmpwdTextField.text {
-            signUpManager.createUser(email: email, password: password) {[weak self] (success) in
+            signUpManager.createUser(email: email, password: password, confirmpwd: confirmpwd) {[weak self] (success) in
                 guard let `self` = self else { return }
                 var message: String = ""
-                if (success && (confirmpwd == password)) {
+                if (success) {
                     message = "User was sucessfully created."
-                } else if (success && (confirmpwd != password)){
-                    message = "There was an error. Passwords do not match"
                 }else{
                     message = "There was an error."
                 }
