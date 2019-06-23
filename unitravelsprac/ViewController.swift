@@ -9,19 +9,17 @@
 import UIKit
 
 class ViewController: UIViewController {
-
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     
     //MARK: ~properties
 
     @IBOutlet weak var emailTextField: UITextField!
 
-
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
     //MARK: ~actions
     @IBAction func goTapped(_ sender: Any) {

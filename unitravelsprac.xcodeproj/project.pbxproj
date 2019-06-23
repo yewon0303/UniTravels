@@ -14,6 +14,8 @@
 		EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
 		EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
 		EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
+		EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86AE5B22BF969000CAB5E8 /* UserModal.swift */; };
+		EE86AE5D22BF969000CAB5E8 /* UserModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86AE5B22BF969000CAB5E8 /* UserModal.swift */; };
 		EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */; };
 		EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE922B8C91F00A4F317 /* ViewController.swift */; };
 		EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */; };
@@ -44,6 +46,7 @@
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
+		EE86AE5B22BF969000CAB5E8 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
 		EEBF5BE422B8C91F00A4F317 /* unitravelsprac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitravelsprac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBF5BE922B8C91F00A4F317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -131,6 +134,7 @@
 				EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */,
 				EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
+				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -314,6 +318,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */,
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
@@ -327,6 +332,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */,
+				EE86AE5D22BF969000CAB5E8 /* UserModal.swift in Sources */,
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,

@@ -7,14 +7,13 @@
 //
 
 import UIKit
+import FirebaseFirestore
 
 class SignUpVC: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
     //MARK: ~Properties
+    var db:Firestore!
+    
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -25,20 +24,42 @@ class SignUpVC: UIViewController {
     
     //MARK: ~Action
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        db = Firestore.firestore()
+    }
+    
     @IBAction func registerTapped(_ sender: Any) {
         let signUpManager = FirebaseAuthManager()
-        if let email = emailTextField.text, let password = passwordTextField.text, let confirmpwd = confirmpwdTextField.text {
+        if let email = emailTextField.text, let password = passwordTextField.text, let confirmpwd = confirmpwdTextField.text, let username = usernameTextField.text{
+            
             signUpManager.createUser(email: email, password: password, confirmpwd: confirmpwd) {[weak self] (success) in
                 guard let `self` = self else { return }
                 var message: String = ""
                 if (success) {
                     message = "User was sucessfully created."
+                    
+                    //info to be stored in firestore with id as email, username and password
+                    let user = UserModal(id: email, username: username, password: password)
+                    let userRef = self.db.collection("users")
+                    
+                    userRef.document(String(user.id)).setData(user.dictionary){ err in
+                        if err != nil {
+                            print("issue here")
+                        }else{
+                            print("Document was saved")
+                        }
+                    }
                 }else{
                     message = "There was an error."
                 }
+                
+                //alert for registration
                 let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.display(alertController: alertController)
+                
             }
         }
     }
