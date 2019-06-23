@@ -15,6 +15,12 @@ class SettingsVC: UIViewController {
     
     @IBOutlet weak var profileTextView: UITextView!
     
+    //MARK: ~Actions
+    
+    @IBAction func returnTapped(_ sender: Any) {
+         performSegue(withIdentifier: "goHomeFromSettings", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

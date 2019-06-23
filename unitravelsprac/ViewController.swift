@@ -29,6 +29,7 @@ class ViewController: UIViewController {
             guard let `self` = self else { return }
             var message: String = ""
             if (success) {
+                self.afterSuccessfulLogin()
                 message = "User was sucessfully logged in."
             } else {
                 message = "There was an error."
@@ -36,7 +37,13 @@ class ViewController: UIViewController {
             let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.display(alertController: alertController)
+            
         }
+    }
+    func afterSuccessfulLogin() {
+        performSegue(withIdentifier: "goHome", sender: self)
+        guard  let email = emailTextField.text else {return}
+        print("\(email) has logged in!")
     }
     
     func display(alertController: UIAlertController) {

@@ -222,22 +222,41 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
-                                <rect key="frame" x="87" y="170" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Welcome" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3KL-ly-yGk">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Welcome" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3KL-ly-yGk">
                                 <rect key="frame" x="48" y="62" width="102" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="36" id="Etv-bc-6fs"/>
+                                    <constraint firstAttribute="width" constant="102" id="c53-6v-bJ2"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
+                                <rect key="frame" x="287" y="62" width="62" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="logoutTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="F6V-Ml-KoL"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
+                                <rect key="frame" x="87" y="137" width="240" height="233"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="vf6-uw-TbF" secondAttribute="trailing" constant="65" id="1KW-6L-PzD"/>
+                            <constraint firstItem="vf6-uw-TbF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3KL-ly-yGk" secondAttribute="trailing" constant="8" symbolic="YES" id="6rm-5e-C4f"/>
                             <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerY" secondItem="yMC-ut-a4Q" secondAttribute="centerY" id="8WC-eY-Iso"/>
+                            <constraint firstItem="CBO-Ls-xdw" firstAttribute="top" secondItem="R4j-eb-kae" secondAttribute="bottom" constant="21" id="Pph-qW-Dy7"/>
+                            <constraint firstItem="3KL-ly-yGk" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="48" id="Ro9-MI-aLJ"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="3KL-ly-yGk" secondAttribute="bottom" constant="39" id="XJN-F6-5Cr"/>
                             <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerX" secondItem="yMC-ut-a4Q" secondAttribute="centerX" id="YOR-R1-ZWz"/>
+                            <constraint firstItem="vf6-uw-TbF" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" constant="18" id="gcz-TP-asS"/>
+                            <constraint firstItem="3KL-ly-yGk" firstAttribute="top" secondItem="vf6-uw-TbF" secondAttribute="top" id="htt-dj-FIZ"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="87" id="mB1-MA-1Lj"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="centerX" secondItem="CBO-Ls-xdw" secondAttribute="centerX" id="xI0-VO-hB2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-BE-CCO"/>
                     </view>
@@ -257,27 +276,47 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Profile" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-xt-cjb">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Profile" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-xt-cjb">
                                 <rect key="frame" x="77" y="122" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OLe-Az-IcF">
+                                <rect key="frame" x="42" y="65" width="42" height="30"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="4Jq-cU-VVo" eventType="touchUpInside" id="YRh-nH-rdz"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="mvI-8Z-cPM" firstAttribute="trailing" secondItem="HzX-xt-cjb" secondAttribute="trailing" constant="97" id="43Q-eB-gmg"/>
+                            <constraint firstItem="mvI-8Z-cPM" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OLe-Az-IcF" secondAttribute="trailing" symbolic="YES" id="74Z-PV-Yn7"/>
+                            <constraint firstItem="HzX-xt-cjb" firstAttribute="leading" secondItem="mvI-8Z-cPM" secondAttribute="leading" constant="77" id="Kf6-5t-h1B"/>
+                            <constraint firstItem="HzX-xt-cjb" firstAttribute="top" secondItem="OLe-Az-IcF" secondAttribute="bottom" constant="27" id="UwA-gj-REL"/>
+                            <constraint firstItem="OLe-Az-IcF" firstAttribute="top" secondItem="mvI-8Z-cPM" secondAttribute="top" constant="21" id="aqn-bN-TXM"/>
+                            <constraint firstItem="mvI-8Z-cPM" firstAttribute="bottom" secondItem="HzX-xt-cjb" secondAttribute="bottom" constant="612" id="ifB-ts-Qg9"/>
+                            <constraint firstItem="OLe-Az-IcF" firstAttribute="leading" secondItem="mvI-8Z-cPM" secondAttribute="leading" constant="42" id="uCh-tQ-G3h"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="mvI-8Z-cPM"/>
                     </view>
                     <connections>
                         <outlet property="profileTextView" destination="HzX-xt-cjb" id="u0D-cc-pAP"/>
+                        <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromSettings" id="M15-4b-faH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v9R-UT-0hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1764" y="-395"/>
+            <point key="canvasLocation" x="1933" y="-839"/>
         </scene>
     </scenes>
     <resources>
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="oSE-0T-pHD"/>
+        <segue reference="M15-4b-faH"/>
+    </inferredMetricsTieBreakers>
 </document>

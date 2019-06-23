@@ -22,7 +22,6 @@ class HomeVC: UIViewController {
         
     }
     
-    
     @IBAction func newTripTapped(_ sender: Any) {
     }
     
@@ -32,5 +31,26 @@ class HomeVC: UIViewController {
     }
 
     @IBAction func settingTapped(_ sender: Any) {
+    }
+    
+    @IBAction func logoutTapped(_ sender: Any) {
+        let signOutManager = FirebaseAuthManager()
+        signOutManager.signOut() {[weak self] (success) in
+            guard let `self` = self else { return }
+            var message: String = ""
+            if (success) {
+                message = "User was sucessfully logged out."
+            }else{
+                message = "There was an error."
+            }
+            //alert for logout
+            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.display(alertController: alertController)
+        }
+    }
+    
+    func display(alertController: UIAlertController) {
+        self.present(alertController, animated: true, completion: nil)
     }
 }

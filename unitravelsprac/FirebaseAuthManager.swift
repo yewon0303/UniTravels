@@ -32,13 +32,6 @@ class FirebaseAuthManager {
                 print(user)
                 completionBlock(true)
             }
-            /* prev code
-             if let user = authResult?.user {
-                print(user)
-                completionBlock(true)
-            } else {
-                completionBlock(false)
-            }*/
         }
     }
     
@@ -50,6 +43,20 @@ class FirebaseAuthManager {
                 completionBlock(true)
             }
         }
+    }
+    
+    func signOut(completionBlock: @escaping (_ success: Bool) -> Void) {
+        do {
+            try Auth.auth().signOut()
+            completionBlock(true)
+            print("user has logged out")
+        }
+        catch {
+            print(error)
+            print("error: there was a problem logging out")
+            completionBlock(false)
+        }
+        
     }
     
 }
