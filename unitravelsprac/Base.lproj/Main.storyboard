@@ -184,11 +184,17 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="86" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="new trip"/>
+                                                <connections>
+                                                    <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="HEO-7d-zFU"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
                                                 <rect key="frame" x="116" y="0.0" width="130" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="current trips"/>
+                                                <connections>
+                                                    <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="U5k-TP-5Op"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -199,11 +205,18 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="past trips"/>
+                                                <connections>
+                                                    <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="YVd-LU-Iir"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
                                                 <rect key="frame" x="172" y="0.0" width="74" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="setting"/>
+                                                <connections>
+                                                    <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="kqy-gC-s79"/>
+                                                    <segue destination="4Jq-cU-VVo" kind="show" identifier="goSettings" id="oSE-0T-pHD"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
@@ -228,10 +241,40 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-BE-CCO"/>
                     </view>
+                    <connections>
+                        <outlet property="welcomeTextView" destination="3KL-ly-yGk" id="fJf-PD-FdG"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pY-pe-9kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="969.56521739130437" y="-358.25892857142856"/>
+        </scene>
+        <!--SettingsVC-->
+        <scene sceneID="SNo-da-N45">
+            <objects>
+                <viewController id="4Jq-cU-VVo" customClass="SettingsVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rYX-f4-DwT">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="Profile" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="HzX-xt-cjb">
+                                <rect key="frame" x="77" y="122" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="mvI-8Z-cPM"/>
+                    </view>
+                    <connections>
+                        <outlet property="profileTextView" destination="HzX-xt-cjb" id="u0D-cc-pAP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="v9R-UT-0hP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1764" y="-395"/>
         </scene>
     </scenes>
     <resources>

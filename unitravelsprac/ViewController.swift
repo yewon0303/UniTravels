@@ -29,7 +29,7 @@ class ViewController: UIViewController {
             guard let `self` = self else { return }
             var message: String = ""
             if (success) {
-                message = "User was sucessfully logged in."
+                performSegue(withIdentifier: "goHome", sender: self)
             } else {
                 message = "There was an error."
             }
