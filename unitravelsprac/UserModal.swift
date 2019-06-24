@@ -14,13 +14,15 @@ protocol DocumentUserSerializable {
 }
 
 struct UserModal {
-    var id: String
+    var email: String
+    var uid: String
     var username: String
     var password: String
     
     var dictionary: [String: Any] {
         return [
-            "id": id,
+            "email": email,
+            "uid": uid,
             "username": username,
             "password": password
         ]
@@ -29,10 +31,11 @@ struct UserModal {
 
 extension UserModal: DocumentUserSerializable {
     init?(dictionary: [String : Any]) {
-        guard let id = dictionary["id"] as? String,
+        guard let email = dictionary["email"] as? String,
+            let uid = dictionary["uid"] as? String,
             let username = dictionary["username"] as? String,
             let password = dictionary["password"] as? String else {return nil}
-        self.init(id: id, username: username, password: password)
+        self.init(email: email, uid: uid, username: username, password: password)
     }
 
 }

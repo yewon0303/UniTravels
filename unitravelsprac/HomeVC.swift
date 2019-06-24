@@ -43,11 +43,12 @@ class HomeVC: UIViewController {
                 message = "User was sucessfully logged out."
             }else{
                 message = "There was an error."
+                //alert for logout
+                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.display(alertController: alertController)
             }
-            //alert for logout
-            let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.display(alertController: alertController)
+            
         }
     }
     

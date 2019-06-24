@@ -8,11 +8,14 @@
 
 import UIKit
 import FirebaseFirestore
+import FirebaseAuth
 
 class SignUpVC: UIViewController {
     
     //MARK: ~Properties
     var db:Firestore!
+    
+    var ref: DocumentReference? = nil
     
     @IBOutlet weak var usernameTextField: UITextField!
     
@@ -40,11 +43,11 @@ class SignUpVC: UIViewController {
                 if (success) {
                     message = "User was sucessfully created."
                     
-                    //info to be stored in firestore with id as email, username and password
-                    let user = UserModal(id: email, username: username, password: password)
+                    //info to be stored in firestore with  email, uid, username and password
+                    let user = UserModal(email: email, uid: (Auth.auth().currentUser!.uid) ,username: username, password: password)
                     let userRef = self.db.collection("users")
                     
-                    userRef.document(String(user.id)).setData(user.dictionary){ err in
+                    userRef.document().setData(user.dictionary){ err in
                         if err != nil {
                             print("issue here")
                         }else{
