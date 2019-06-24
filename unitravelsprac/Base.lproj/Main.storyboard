@@ -175,21 +175,21 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-Ls-xdw">
-                                <rect key="frame" x="84" y="391" width="246" height="114"/>
+                                <rect key="frame" x="84" y="174" width="246" height="548"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
-                                        <rect key="frame" x="0.0" y="0.0" width="246" height="42"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
+                                        <rect key="frame" x="0.0" y="0.0" width="246" height="476"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poy-zL-IVD">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="42"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poy-zL-IVD">
+                                                <rect key="frame" x="0.0" y="0.0" width="86" height="476"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="new trip"/>
                                                 <connections>
                                                     <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="HEO-7d-zFU"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
-                                                <rect key="frame" x="116" y="0.0" width="130" height="42"/>
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
+                                                <rect key="frame" x="116" y="0.0" width="130" height="476"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="current trips"/>
                                                 <connections>
@@ -198,10 +198,10 @@
                                             </button>
                                         </subviews>
                                     </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-wP-6Lc">
-                                        <rect key="frame" x="0.0" y="72" width="246" height="42"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-wP-6Lc">
+                                        <rect key="frame" x="0.0" y="506" width="246" height="42"/>
                                         <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-3u-gOs">
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-3u-gOs">
                                                 <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="past trips"/>
@@ -209,7 +209,7 @@
                                                     <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="YVd-LU-Iir"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
+                                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
                                                 <rect key="frame" x="172" y="0.0" width="74" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                                 <state key="normal" title="setting"/>
@@ -238,11 +238,11 @@
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="F6V-Ml-KoL"/>
-                                    <segue destination="RGR-3S-SHT" kind="show" identifier="signedOut" id="1Vc-RG-uML"/>
+                                    <segue destination="BYZ-38-t0r" kind="show" identifier="signedOut" id="fFb-dY-qcA"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
-                                <rect key="frame" x="87" y="137" width="240" height="233"/>
+                                <rect key="frame" x="87" y="137" width="240" height="16"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -267,7 +267,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pY-pe-9kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="969.56521739130437" y="-358.25892857142856"/>
+            <point key="canvasLocation" x="1064" y="-331"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="SNo-da-N45">
@@ -319,6 +319,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="oSE-0T-pHD"/>
         <segue reference="M15-4b-faH"/>
-        <segue reference="1Vc-RG-uML"/>
+        <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
