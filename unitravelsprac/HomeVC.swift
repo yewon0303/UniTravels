@@ -39,6 +39,7 @@ class HomeVC: UIViewController {
             guard let `self` = self else { return }
             var message: String = ""
             if (success) {
+                self.afterLogOut()
                 message = "User was sucessfully logged out."
             }else{
                 message = "There was an error."
@@ -48,6 +49,10 @@ class HomeVC: UIViewController {
             alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.display(alertController: alertController)
         }
+    }
+    
+    func afterLogOut() {
+        performSegue(withIdentifier: "signedOut", sender: self)
     }
     
     func display(alertController: UIAlertController) {

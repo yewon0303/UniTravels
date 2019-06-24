@@ -238,6 +238,7 @@
                                 <state key="normal" title="Logout"/>
                                 <connections>
                                     <action selector="logoutTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="F6V-Ml-KoL"/>
+                                    <segue destination="RGR-3S-SHT" kind="show" identifier="signedOut" id="1Vc-RG-uML"/>
                                 </connections>
                             </button>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
@@ -318,5 +319,6 @@
     <inferredMetricsTieBreakers>
         <segue reference="oSE-0T-pHD"/>
         <segue reference="M15-4b-faH"/>
+        <segue reference="1Vc-RG-uML"/>
     </inferredMetricsTieBreakers>
 </document>
