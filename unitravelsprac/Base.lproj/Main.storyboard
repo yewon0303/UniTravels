@@ -269,6 +269,73 @@
             </objects>
             <point key="canvasLocation" x="1064" y="-331"/>
         </scene>
+        <!--Item-->
+        <scene sceneID="hv5-Qf-OaN">
+            <objects>
+                <viewController id="s42-Z8-jpK" customClass="RequestsTabVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Unl-1S-qOV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="yJI-kF-fwg"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item" id="Pk7-3R-5xI"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vY2-cN-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2164" y="1774"/>
+        </scene>
+        <!--Item 2-->
+        <scene sceneID="Jv6-Ab-uCe">
+            <objects>
+                <viewController id="sQX-Q1-aDY" customClass="FriendsTabVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yzT-BT-8Pd">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="SVs-nV-fKn"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 2" id="fPS-fG-Xgp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lWj-11-YQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2164" y="1039"/>
+        </scene>
+        <!--Item 1-->
+        <scene sceneID="J2h-b3-1D3">
+            <objects>
+                <viewController id="n4P-cv-Lu6" customClass="UsersTabVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PQt-LL-FSV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="gQN-tg-zd8"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Item 1" id="lwr-7F-Y5w"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L7D-yP-nf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2165" y="285"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="ER1-Qc-HU0">
+            <objects>
+                <tabBarController id="ka4-J3-w29" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w4t-da-JYB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="n4P-cv-Lu6" kind="relationship" relationship="viewControllers" id="jiD-mD-Dkg"/>
+                        <segue destination="sQX-Q1-aDY" kind="relationship" relationship="viewControllers" id="1Dl-IN-wr8"/>
+                        <segue destination="s42-Z8-jpK" kind="relationship" relationship="viewControllers" id="1vm-Z9-9EZ"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6os-p0-GSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="861" y="1003"/>
+        </scene>
         <!--SettingsVC-->
         <scene sceneID="SNo-da-N45">
             <objects>
@@ -317,7 +384,7 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M15-4b-faH"/>
+        <segue reference="VeK-gZ-571"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
