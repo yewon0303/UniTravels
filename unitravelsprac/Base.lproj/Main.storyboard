@@ -321,6 +321,7 @@
                     </view>
                     <connections>
                         <outlet property="DestinationTextField" destination="QyE-7f-rlG" id="zAQ-ja-zCu"/>
+                        <outlet property="TrippersLabel" destination="DKw-a2-phJ" id="ePo-nU-jR9"/>
                         <outlet property="startDateTextField" destination="1jL-bJ-9iM" id="TDb-GD-NlU"/>
                         <outlet property="titleTextField" destination="vQn-bh-1Px" id="KBE-16-lBM"/>
                         <outlet property="tripper1TextField" destination="rM7-nZ-qYm" id="xzf-Nn-xoH"/>

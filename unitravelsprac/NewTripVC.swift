@@ -21,6 +21,7 @@ class NewTripVC: UIViewController {
     
     @IBOutlet weak var startDateTextField: UITextField!
     
+    @IBOutlet weak var TrippersLabel: UILabel!
     
     @IBOutlet weak var tripper1TextField: UITextField!
     
