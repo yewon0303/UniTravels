@@ -16,8 +16,8 @@
 		EE1BFB9C22C249DD00F755F3 /* UsersTabVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BFB9A22C249DD00F755F3 /* UsersTabVC.swift */; };
 		EE1BFB9E22C251E200F755F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BFB9D22C251E200F755F3 /* TabBar.swift */; };
 		EE1BFB9F22C251E200F755F3 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BFB9D22C251E200F755F3 /* TabBar.swift */; };
-		EE1BFBA822C3465700F755F3 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BFBA722C3465700F755F3 /* NewTripVC.swift */; };
-		EE1BFBA922C3465700F755F3 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE1BFBA722C3465700F755F3 /* NewTripVC.swift */; };
+		EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
+		EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
@@ -59,7 +59,7 @@
 		EE1BFB9722C2494600F755F3 /* RequestsTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsTabVC.swift; sourceTree = "<group>"; };
 		EE1BFB9A22C249DD00F755F3 /* UsersTabVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersTabVC.swift; sourceTree = "<group>"; };
 		EE1BFB9D22C251E200F755F3 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
-		EE1BFBA722C3465700F755F3 /* NewTripVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
+		EE2144E122C38C2900402B53 /* NewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
@@ -143,7 +143,6 @@
 			isa = PBXGroup;
 			children = (
 				EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */,
-				EE1BFBA722C3465700F755F3 /* NewTripVC.swift */,
 				EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */,
 				EEBF5BEE22B8C92300A4F317 /* Assets.xcassets */,
 				EEBF5BF022B8C92300A4F317 /* LaunchScreen.storyboard */,
@@ -153,6 +152,7 @@
 				EE86AE5E22BFB03500CAB5E8 /* SettingsVC.swift */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
+				EE2144E122C38C2900402B53 /* NewTripVC.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */,
 				EE1BFB9422C248C400F755F3 /* FriendsTabVC.swift */,
@@ -343,10 +343,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE1BFB9522C248C400F755F3 /* FriendsTabVC.swift in Sources */,
+				EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */,
 				EE1BFB9822C2494600F755F3 /* RequestsTabVC.swift in Sources */,
 				EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */,
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
-				EE1BFBA822C3465700F755F3 /* NewTripVC.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
@@ -370,7 +370,7 @@
 				EE1BFB9622C248C400F755F3 /* FriendsTabVC.swift in Sources */,
 				EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
 				EE1BFB9C22C249DD00F755F3 /* UsersTabVC.swift in Sources */,
-				EE1BFBA922C3465700F755F3 /* NewTripVC.swift in Sources */,
+				EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */,
 				EE1BFB9F22C251E200F755F3 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

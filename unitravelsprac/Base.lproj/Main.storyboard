@@ -235,20 +235,18 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="return"/>
                                 <connections>
-                                    <action selector="return:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="SHC-5g-XMx"/>
+                                    <action selector="returnTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="caK-o8-sqJ"/>
+                                    <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="wcR-F4-c9J"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="9AX-jY-cps"/>
                     </view>
-                    <connections>
-                        <outlet property="return" destination="sp9-bt-lSW" id="ztx-pz-jn5"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHC-nZ-fDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="439" y="339"/>
+            <point key="canvasLocation" x="917" y="409"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">
@@ -438,7 +436,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zf8-X5-ZFc">
-                                <rect key="frame" x="42" y="202" width="303" height="21"/>
+                                <rect key="frame" x="42" y="210" width="303" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -502,8 +500,7 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oSE-0T-pHD"/>
-        <segue reference="M15-4b-faH"/>
+        <segue reference="wcR-F4-c9J"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -1,26 +1,29 @@
 //
-//  NewTripVC.swift
-//  
+//  File.swift
+//  unitravelsprac
 //
 //  Created by Tiyari Harshita on 26/6/19.
+//  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class NewTripVC: UIViewController {
-
-    @IBOutlet weak var `return`: UIButton!
+    
+    //MARK: ~Properties
+    
+    
+    //MARK: ~Actions
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        // Do any additional setup after loading the view.
         
     }
     
-    //MARK: Actions
-    
-    @IBAction func `return`(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+    @IBAction func returnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goHomeFromNewTrip", sender: self)
     }
-    
-
 }
