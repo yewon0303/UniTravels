@@ -160,7 +160,7 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="confirm password" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emW-T4-tlT">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="confirm password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emW-T4-tlT">
                                         <rect key="frame" x="0.0" y="339" width="213" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -239,14 +239,99 @@
                                     <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="wcR-F4-c9J"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-e1-kod">
+                                <rect key="frame" x="116.5" y="156" width="181" height="182"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bh-1Px">
+                                        <rect key="frame" x="0.0" y="0.0" width="181" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-7f-rlG">
+                                        <rect key="frame" x="0.0" y="74" width="181" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="YYYY-MM-DD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-bJ-9iM">
+                                        <rect key="frame" x="0.0" y="148" width="181" height="34"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trippers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-a2-phJ">
+                                <rect key="frame" x="173.5" y="438" width="67.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-NF-Wsq">
+                                <rect key="frame" x="161.5" y="518.5" width="91" height="210"/>
+                                <subviews>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-nZ-qYm">
+                                        <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-ML-Rcr">
+                                        <rect key="frame" x="0.0" y="60" width="91" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Du-MT-eOn">
+                                        <rect key="frame" x="0.0" y="120" width="91" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uf0-mc-xky">
+                                        <rect key="frame" x="0.0" y="180" width="91" height="30"/>
+                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
+                                <rect key="frame" x="164" y="788.5" width="86" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="6A0-Zr-yji"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DKw-a2-phJ" firstAttribute="top" secondItem="Gsb-e1-kod" secondAttribute="bottom" constant="100" id="7Fd-9Y-obV"/>
+                            <constraint firstItem="Gsb-e1-kod" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="CaI-8d-IBL"/>
+                            <constraint firstItem="DKw-a2-phJ" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="FqX-wh-KSz"/>
+                            <constraint firstItem="bcq-NF-Wsq" firstAttribute="top" secondItem="DKw-a2-phJ" secondAttribute="bottom" constant="60" id="KJx-Hw-Set"/>
+                            <constraint firstItem="Pyt-vt-doZ" firstAttribute="top" secondItem="bcq-NF-Wsq" secondAttribute="bottom" constant="60" id="Uiy-d3-AI8"/>
+                            <constraint firstItem="Pyt-vt-doZ" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="eIE-qC-yZk"/>
+                            <constraint firstItem="bcq-NF-Wsq" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="mEh-Lw-MfT"/>
+                            <constraint firstItem="DKw-a2-phJ" firstAttribute="centerY" secondItem="E1v-cy-TnK" secondAttribute="centerY" id="s8M-SX-QUV"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="9AX-jY-cps"/>
                     </view>
+                    <connections>
+                        <outlet property="DestinationTextField" destination="QyE-7f-rlG" id="zAQ-ja-zCu"/>
+                        <outlet property="startDateTextField" destination="1jL-bJ-9iM" id="TDb-GD-NlU"/>
+                        <outlet property="titleTextField" destination="vQn-bh-1Px" id="KBE-16-lBM"/>
+                        <outlet property="tripper1TextField" destination="rM7-nZ-qYm" id="xzf-Nn-xoH"/>
+                        <outlet property="tripper2TextField" destination="vP5-ML-Rcr" id="xHZ-k1-p0V"/>
+                        <outlet property="tripper3TextField" destination="2Du-MT-eOn" id="N2f-vF-bhd"/>
+                        <outlet property="tripper4TextField" destination="Uf0-mc-xky" id="tNG-n1-F3n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHC-nZ-fDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="917" y="409"/>
+            <point key="canvasLocation" x="276.81159420289856" y="525.66964285714289"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">
@@ -374,7 +459,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vY2-cN-vcc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="1774"/>
+            <point key="canvasLocation" x="1986" y="2401"/>
         </scene>
         <!--Friends-->
         <scene sceneID="Jv6-Ab-uCe">
@@ -390,7 +475,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lWj-11-YQv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2164" y="1039"/>
+            <point key="canvasLocation" x="2729" y="2094"/>
         </scene>
         <!--Users-->
         <scene sceneID="J2h-b3-1D3">
@@ -406,7 +491,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L7D-yP-nf4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2165" y="285"/>
+            <point key="canvasLocation" x="2038" y="1641"/>
         </scene>
         <!--Tab Bar-->
         <scene sceneID="ER1-Qc-HU0">
@@ -425,7 +510,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6os-p0-GSe" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="861" y="1003"/>
+            <point key="canvasLocation" x="1219" y="1906"/>
         </scene>
         <!--SettingsVC-->
         <scene sceneID="SNo-da-N45">
@@ -501,6 +586,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wcR-F4-c9J"/>
-        <segue reference="fFb-dY-qcA"/>
+        <segue reference="aOE-T1-U7e"/>
     </inferredMetricsTieBreakers>
 </document>
