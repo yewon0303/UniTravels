@@ -15,6 +15,8 @@ class SettingsVC: UIViewController {
     
     //MARK: ~ properties
     
+    @IBOutlet weak var uid: UILabel!
+    @IBOutlet weak var emailadd: UILabel!
     @IBOutlet weak var profileTextView: UITextView!
     
     //MARK: ~Actions
@@ -34,7 +36,10 @@ class SettingsVC: UIViewController {
                     for document in (snapshot?.documents)! {
                         if let username = document.data()["username"] as? String {
                             if let email = document.data()["email"] as? String {
-                                self.profileTextView.text += "\n username: \(username) \n email: \(email)"
+                                
+                                self.uid.text  = "Username: " + username
+                                self.emailadd.text = "Email address: " + email
+                                //self.profileTextView.text += "\n username: \(username) \n email: \(email)"
                             }
                         }
                     }

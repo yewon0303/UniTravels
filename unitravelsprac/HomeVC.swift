@@ -13,6 +13,7 @@ class HomeVC: UIViewController {
     
     @IBOutlet weak var welcomeTextView: UITextView!
     
+    @IBOutlet weak var newTrip: UIButton!
     
     //MARK: ~Actions
     
@@ -23,6 +24,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func newTripTapped(_ sender: Any) {
+       performSegue(withIdentifier: "newTrip", sender: self)
     }
     
     @IBAction func currentTripTapped(_ sender: Any) {
