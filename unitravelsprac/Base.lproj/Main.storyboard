@@ -240,21 +240,21 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-e1-kod">
-                                <rect key="frame" x="116.5" y="156" width="181" height="182"/>
+                                <rect key="frame" x="116.5" y="154" width="181" height="182"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bh-1Px">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Title" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bh-1Px">
                                         <rect key="frame" x="0.0" y="0.0" width="181" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-7f-rlG">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-7f-rlG">
                                         <rect key="frame" x="0.0" y="74" width="181" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="location"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="YYYY-MM-DD" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-bJ-9iM">
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="YYYY-MM-DD" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-bJ-9iM">
                                         <rect key="frame" x="0.0" y="148" width="181" height="34"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -263,42 +263,42 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trippers:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-a2-phJ">
-                                <rect key="frame" x="173.5" y="438" width="67.5" height="20.5"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <rect key="frame" x="169" y="436" width="76" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="bcq-NF-Wsq">
-                                <rect key="frame" x="161.5" y="518.5" width="91" height="210"/>
+                                <rect key="frame" x="161.5" y="520" width="91" height="210"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rM7-nZ-qYm">
                                         <rect key="frame" x="0.0" y="0.0" width="91" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vP5-ML-Rcr">
                                         <rect key="frame" x="0.0" y="60" width="91" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Du-MT-eOn">
                                         <rect key="frame" x="0.0" y="120" width="91" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Uf0-mc-xky">
                                         <rect key="frame" x="0.0" y="180" width="91" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
-                                <rect key="frame" x="164" y="788.5" width="86" height="48"/>
+                                <rect key="frame" x="164" y="790" width="86" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <state key="normal" title="Create"/>
                                 <connections>
@@ -343,23 +343,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-Ls-xdw">
-                                <rect key="frame" x="84" y="391" width="246" height="114"/>
+                                <rect key="frame" x="79" y="391" width="256" height="114"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
-                                        <rect key="frame" x="0.0" y="0.0" width="246" height="42"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="256" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poy-zL-IVD">
-                                                <rect key="frame" x="0.0" y="0.0" width="86" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="91" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="new trip"/>
+                                                <state key="normal" title="New trip"/>
                                                 <connections>
                                                     <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="HEO-7d-zFU"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
-                                                <rect key="frame" x="116" y="0.0" width="130" height="42"/>
+                                                <rect key="frame" x="121" y="0.0" width="135" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="current trips"/>
+                                                <state key="normal" title="Current trips"/>
                                                 <connections>
                                                     <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="U5k-TP-5Op"/>
                                                 </connections>
@@ -367,20 +367,20 @@
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="RLx-wP-6Lc">
-                                        <rect key="frame" x="0.0" y="72" width="246" height="42"/>
+                                        <rect key="frame" x="0.0" y="72" width="256" height="42"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-3u-gOs">
-                                                <rect key="frame" x="0.0" y="0.0" width="142" height="42"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="past trips"/>
+                                                <state key="normal" title="Past trips"/>
                                                 <connections>
                                                     <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="YVd-LU-Iir"/>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
-                                                <rect key="frame" x="172" y="0.0" width="74" height="42"/>
+                                                <rect key="frame" x="178" y="0.0" width="78" height="42"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                                <state key="normal" title="setting"/>
+                                                <state key="normal" title="Setting"/>
                                                 <connections>
                                                     <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="kqy-gC-s79"/>
                                                     <segue destination="4Jq-cU-VVo" kind="show" identifier="goSettings" id="oSE-0T-pHD"/>
@@ -390,8 +390,11 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
-                                <rect key="frame" x="332" y="88" width="62" height="52"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
+                                <rect key="frame" x="85" y="154" width="244" height="216"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
+                                <rect key="frame" x="332" y="88" width="62" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Logout"/>
                                 <connections>
@@ -399,46 +402,44 @@
                                     <segue destination="BYZ-38-t0r" kind="show" identifier="signedOut" id="fFb-dY-qcA"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
-                                <rect key="frame" x="87" y="137" width="240" height="233"/>
-                            </imageView>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mga-4y-Nf7">
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qhC-rI-5If">
                                 <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
-                                    <navigationItem title="Home" id="gdk-en-Imz"/>
+                                    <navigationItem title="Home" id="3j6-og-ybA"/>
                                 </items>
                             </navigationBar>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" text="Welcome" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="3KL-ly-yGk">
-                                <rect key="frame" x="20" y="96" width="102" height="36"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="36" id="Etv-bc-6fs"/>
-                                    <constraint firstAttribute="width" constant="102" id="c53-6v-bJ2"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-5K-ebN">
+                                <rect key="frame" x="20" y="88" width="79" height="23"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="vf6-uw-TbF" secondAttribute="trailing" constant="65" id="1KW-6L-PzD"/>
-                            <constraint firstItem="vf6-uw-TbF" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3KL-ly-yGk" secondAttribute="trailing" constant="8" symbolic="YES" id="6rm-5e-C4f"/>
+                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="vf6-uw-TbF" secondAttribute="trailing" constant="20" id="0qO-py-3dJ"/>
+                            <constraint firstItem="7Ph-5K-ebN" firstAttribute="top" secondItem="qhC-rI-5If" secondAttribute="bottom" id="5YJ-K8-UD7"/>
                             <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerY" secondItem="yMC-ut-a4Q" secondAttribute="centerY" id="8WC-eY-Iso"/>
+                            <constraint firstItem="vf6-uw-TbF" firstAttribute="leading" secondItem="7Ph-5K-ebN" secondAttribute="trailing" constant="233" id="GRH-n1-8RJ"/>
+                            <constraint firstItem="7Ph-5K-ebN" firstAttribute="top" secondItem="qhC-rI-5If" secondAttribute="bottom" id="Jf0-qG-Wqu"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="7Ph-5K-ebN" secondAttribute="bottom" constant="43" id="Kfg-Oj-H5y"/>
+                            <constraint firstItem="qhC-rI-5If" firstAttribute="trailing" secondItem="Kgb-BE-CCO" secondAttribute="trailing" id="LNC-Fb-j3H"/>
+                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="bottom" secondItem="vf6-uw-TbF" secondAttribute="bottom" constant="738" id="PCc-GD-GBP"/>
                             <constraint firstItem="CBO-Ls-xdw" firstAttribute="top" secondItem="R4j-eb-kae" secondAttribute="bottom" constant="21" id="Pph-qW-Dy7"/>
-                            <constraint firstItem="3KL-ly-yGk" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="48" id="Ro9-MI-aLJ"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="3KL-ly-yGk" secondAttribute="bottom" constant="39" id="XJN-F6-5Cr"/>
                             <constraint firstItem="CBO-Ls-xdw" firstAttribute="centerX" secondItem="yMC-ut-a4Q" secondAttribute="centerX" id="YOR-R1-ZWz"/>
-                            <constraint firstItem="vf6-uw-TbF" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" constant="18" id="gcz-TP-asS"/>
-                            <constraint firstItem="3KL-ly-yGk" firstAttribute="top" secondItem="vf6-uw-TbF" secondAttribute="top" id="htt-dj-FIZ"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="87" id="mB1-MA-1Lj"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="centerX" secondItem="CBO-Ls-xdw" secondAttribute="centerX" id="xI0-VO-hB2"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" constant="110" id="cLU-Ib-gol"/>
+                            <constraint firstItem="7Ph-5K-ebN" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="20" id="f88-iE-ucr"/>
+                            <constraint firstItem="R4j-eb-kae" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="85" id="iAz-KU-hWA"/>
+                            <constraint firstItem="vf6-uw-TbF" firstAttribute="top" secondItem="qhC-rI-5If" secondAttribute="bottom" id="ikO-JB-Uek"/>
+                            <constraint firstItem="vf6-uw-TbF" firstAttribute="leading" secondItem="7Ph-5K-ebN" secondAttribute="trailing" constant="233" id="mNp-7W-YhY"/>
+                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="R4j-eb-kae" secondAttribute="trailing" constant="85" id="si9-IP-8eb"/>
+                            <constraint firstItem="qhC-rI-5If" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" id="vlq-5M-Fwu"/>
+                            <constraint firstItem="qhC-rI-5If" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" id="xTh-g0-eEF"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-BE-CCO"/>
                     </view>
                     <connections>
                         <outlet property="newTrip" destination="poy-zL-IVD" id="EvP-wY-xHT"/>
-                        <outlet property="welcomeTextView" destination="3KL-ly-yGk" id="fJf-PD-FdG"/>
                         <segue destination="ySM-3M-Dqw" kind="show" identifier="newTrip" id="cSu-FB-PvV"/>
                     </connections>
                 </viewController>
@@ -586,8 +587,8 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="oSE-0T-pHD"/>
-        <segue reference="M15-4b-faH"/>
+        <segue reference="cSu-FB-PvV"/>
+        <segue reference="wcR-F4-c9J"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
