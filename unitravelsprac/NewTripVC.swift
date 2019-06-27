@@ -45,6 +45,8 @@ class NewTripVC: UIViewController {
     
     @IBAction func createTapped(_ sender: Any) {
         
+        performSegue(withIdentifier: "addItem", sender: self)
+        
         let trippers = [
             "admin" : 0.0,
             "\(tripper1TextField.text!)" : 0.0,
