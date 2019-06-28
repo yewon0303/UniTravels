@@ -48,11 +48,12 @@ class NewTripVC: UIViewController {
                "\(tripper4TextField.text!)" : 0.0
         ]
         let database = Firestore.firestore()
-        let trip = TripModal(destination: DestinationTextField.text!, uid: Auth.auth().currentUser!.uid , date: startDateTextField.text!, title: titleTextField.text!, payers: trippers, payees: trippers)
+        let uid = Auth.auth().currentUser!.uid
+        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, payers: trippers, payees: trippers)
         
         let tripRef = database.collection("trips")
         
-        tripRef.document().setData(trip.dictionary){ err in
+        tripRef.document(uid).setData(trip.dictionary){ err in
             var message: String = ""
             if err != nil {
                 print("issue here at new trip info")

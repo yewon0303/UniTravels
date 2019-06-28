@@ -31,7 +31,7 @@ struct ItemModal {
     }
 }
 
-extension ItemModal: DocumentTripSerializable {
+extension ItemModal: DocumentItemSerializable {
     init?(dictionary: [String : Any]) {
         guard let item = dictionary["item"] as? String,
             let price = dictionary["price"] as? Double,

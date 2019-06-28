@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class CurrentTripVC: UIViewController {
 
@@ -17,12 +19,26 @@ class CurrentTripVC: UIViewController {
     @IBOutlet weak var tripper3: UILabel!
     @IBOutlet weak var tripper4: UILabel!
     @IBOutlet weak var returnButton: UIButton!
-    
+    @IBOutlet weak var currentTripTitle: UINavigationItem!
     
 
     override func viewDidLoad() {
         super.viewDidLoad()
         //load the budget from database and display
+        let db = Firestore.firestore()
+        let uid = Auth.auth().currentUser?.uid
+        
+        db.collection("trips").whereField("uid", isEqualTo: uid!).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    if let title = document.data()["title"] as? String {
+                        self.currentTripTitle.title = title
+                    }
+                }
+            }
+        }
     }
     
     //MARK: Actions

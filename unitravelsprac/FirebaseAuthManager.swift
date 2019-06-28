@@ -26,9 +26,11 @@ class FirebaseAuthManager {
             if let error = error {
                 print("Failed to sign up with error: " , error.localizedDescription)
                 completionBlock(false)
+                
             }else if password != confirmpwd {
                 print("passwords do not match")
                 completionBlock(false)
+                
             }else if let user = authResult?.user {
                 print(user)
                 completionBlock(true)

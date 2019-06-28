@@ -658,6 +658,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Summary" id="061-5T-kIZ"/>
                     <connections>
+                        <outlet property="currentTripTitle" destination="iDf-EP-4HN" id="6CS-D9-CZn"/>
                         <outlet property="returnButton" destination="66P-FZ-lhx" id="4j3-yC-iaP"/>
                         <outlet property="tripper1" destination="daB-mp-Vr2" id="rxR-Va-btS"/>
                         <outlet property="tripper2" destination="zBm-Sg-CUv" id="ghO-lj-dTa"/>

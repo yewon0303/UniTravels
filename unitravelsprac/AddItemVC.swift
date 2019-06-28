@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FirebaseFirestore
+import FirebaseAuth
 
 class AddItemVC: UIViewController {
 
@@ -69,7 +71,31 @@ class AddItemVC: UIViewController {
    
     @IBAction func addTapped(_ sender: Any) {
         self.perPerson((Any).self)
+        
+        let db = Firestore.firestore()
+        let uid = Auth.auth().currentUser!.uid
+        
+        let payees = ["a", "b"]
+        
+        let items = ItemModal.init(item: itemName.text!, price: Double(price.text!) as! Double, perperson: Double(pricePerPerson.text!) as! Double, payer: "tripper1", payees: payees)
+        
+        db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
+            var message: String = ""
+            if err != nil {
+                print("issue here at new trip info")
+                message = "There was an error."
+            }else{
+                print("trip document was saved")
+                message = "item successfully added!"
+            }
+            //alert for creation of new trip
+            let alertController = UIAlertController(title: nil, message: message , preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.display(alertController: alertController)
+        }
     }
     
-
+        func display(alertController: UIAlertController) {
+            self.present(alertController, animated: true, completion: nil)
+        }
 }
