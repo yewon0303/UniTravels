@@ -19,8 +19,8 @@ struct TripModal {
     var date: String
     var title: String
     var names: Any
-    var payers: Any
-    var payees: Any
+    var payers: [String:Double]
+    var payees: [String:Double]
     
     
     var dictionary: [String: Any] {

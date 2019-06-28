@@ -111,6 +111,7 @@ class AddItemVC: UIViewController {
         let db = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
         let totalprice: Double = Double(price.text!) as! Double
+        let costPerPerson: Double = Double(pricePerPerson.text!) as! Double
         var payer:String = ""
         
         if payer1.isOn {
@@ -126,41 +127,72 @@ class AddItemVC: UIViewController {
             payer = payer4Name.text!
         }
         
-        //querying current payer summary and updating
+        //querying current payer summary and updating payer details in "trips" collection
         db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
             if error != nil {
                 print(error!)
             }else{
                 for document in (snapshot?.documents)! {
-                    if var payers = document.data()["payers"] as? [String:Double] {
+                    if let payers = document.data()["payers"] as? [String:Double] {
                         var currPayerAmt: Double = payers[payer]!
                         currPayerAmt += totalprice
+                        
                         //update in firestore
                         let document = snapshot!.documents.first
                         document!.reference.updateData([
-                            "payers": currPayerAmt
+                            "payers.\(payer)": currPayerAmt
                             ])
                     }
                 }
             }
         }
         
-        // getting names of payees
-        var payees: Array<String> = Array()
+        
+        // getting names of payees, storing in array, updating in "trips" collection
+        var payeesArr: Array<String> = Array()
         if tripper1Switch.isOn {
-            payees.append(tripper1Name.text!)
+            payeesArr.append(tripper1Name.text!)
         }
         if tripper2Switch.isOn {
-            payees.append(tripper2Name.text!)
+            payeesArr.append(tripper2Name.text!)
         }
         if tripper3Switch.isOn {
-            payees.append(tripper3Name.text!)
+            payeesArr.append(tripper3Name.text!)
         }
         if tripper4Switch.isOn {
-            payees.append(tripper4Name.text!)
+            payeesArr.append(tripper4Name.text!)
         }
+        
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    if let payeesMap = document.data()["payees"] as? [String:Double] {
+                       
+                        for index in 0...(payeesArr.count-1) {
+                            let payee = payeesArr[index]
+                            var newDebt: Double = payeesMap[payee]!
+                            newDebt -= costPerPerson
+                            //update in firestore
+                            let document = snapshot!.documents.first
+                            document!.reference.updateData([
+                                "payees.\(payee)": newDebt
+                                ])
+                        }
+                        
+                        
+                    }
+                }
+                
+            }
+        }
+        
+        
+        
+        
         // setting item document
-        let items = ItemModal.init(item: itemName.text!, price: Double(price.text!) as! Double, perperson: Double(pricePerPerson.text!) as! Double, payer: payer, payees: payees, uid: uid)
+        let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid)
         
         db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
             var message: String = ""
