@@ -16,6 +16,8 @@ class CurrentTripVC: UIViewController {
     @IBOutlet weak var tripper2: UILabel!
     @IBOutlet weak var tripper3: UILabel!
     @IBOutlet weak var tripper4: UILabel!
+    @IBOutlet weak var returnButton: UIButton!
+    
     
 
     override func viewDidLoad() {
@@ -28,6 +30,9 @@ class CurrentTripVC: UIViewController {
         performSegue(withIdentifier: "addItemView", sender: self)
     }
     
+    @IBAction func returnButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
     
 
 }

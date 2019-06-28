@@ -11,15 +11,13 @@ import UIKit
 class HomeVC: UIViewController {
     //MARK: ~Properties
     
-    @IBOutlet weak var welcomeTextView: UITextView!
-    
     @IBOutlet weak var newTrip: UIButton!
+    @IBOutlet weak var currentTrip: UIButton!
     
     //MARK: ~Actions
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
     }
     
@@ -28,6 +26,7 @@ class HomeVC: UIViewController {
     }
     
     @IBAction func currentTripTapped(_ sender: Any) {
+        performSegue(withIdentifier: "currentTrip", sender: self)
     }
     @IBAction func pastTripTapped(_ sender: Any) {
     }

@@ -45,8 +45,6 @@ class NewTripVC: UIViewController {
     
     @IBAction func createTapped(_ sender: Any) {
         
-        performSegue(withIdentifier: "addItem", sender: self)
-        
         let trippers = [
             "admin" : 0.0,
             "\(tripper1TextField.text!)" : 0.0,
@@ -74,6 +72,8 @@ class NewTripVC: UIViewController {
             self.display(alertController: alertController)
         }
         
+        //perform segue to go back to HomeVC
+        dismiss(animated: true, completion: nil)
     }
     
     func display(alertController: UIAlertController) {
