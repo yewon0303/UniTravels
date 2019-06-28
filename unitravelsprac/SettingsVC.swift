@@ -17,7 +17,7 @@ class SettingsVC: UIViewController {
     
     @IBOutlet weak var uid: UILabel!
     @IBOutlet weak var emailadd: UILabel!
-    @IBOutlet weak var profileTextView: UITextView!
+    @IBOutlet weak var returnButton: UIButton!
     
     //MARK: ~Actions
     
@@ -48,8 +48,9 @@ class SettingsVC: UIViewController {
         }
     }
     
-    @IBAction func returnTapped(_ sender: Any) {
-         performSegue(withIdentifier: "goHomeFromSettings", sender: self)
+
+    @IBAction func returnButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
     
     
