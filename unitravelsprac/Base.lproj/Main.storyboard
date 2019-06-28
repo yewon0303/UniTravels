@@ -675,9 +675,13 @@
                         <outlet property="currentTripTitle" destination="iDf-EP-4HN" id="6CS-D9-CZn"/>
                         <outlet property="returnButton" destination="66P-FZ-lhx" id="4j3-yC-iaP"/>
                         <outlet property="tripper1" destination="daB-mp-Vr2" id="rxR-Va-btS"/>
+                        <outlet property="tripper1Name" destination="Ywr-rz-kAh" id="7IE-c5-BMw"/>
                         <outlet property="tripper2" destination="zBm-Sg-CUv" id="ghO-lj-dTa"/>
+                        <outlet property="tripper2Name" destination="5Tv-nq-hsk" id="c0x-9y-dPS"/>
                         <outlet property="tripper3" destination="xMo-91-bU3" id="Oh9-20-QPO"/>
+                        <outlet property="tripper3Name" destination="oYh-lq-0bl" id="1C9-SJ-y7W"/>
                         <outlet property="tripper4" destination="qeu-sN-Nth" id="kiY-4d-EVH"/>
+                        <outlet property="tripper4Name" destination="uSL-8X-MLq" id="9UC-hh-f0Y"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLc-P4-hKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -968,7 +972,7 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="3px-0q-5L6"/>
+        <segue reference="yib-8A-SRu"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -169,7 +169,8 @@ class AddItemVC: UIViewController {
             }else{
                 for document in (snapshot?.documents)! {
                     if let payeesMap = document.data()["payees"] as? [String:Double] {
-                       
+                        
+                        //loop through all payees and update in firestore
                         for index in 0...(payeesArr.count-1) {
                             let payee = payeesArr[index]
                             var newDebt: Double = payeesMap[payee]!
