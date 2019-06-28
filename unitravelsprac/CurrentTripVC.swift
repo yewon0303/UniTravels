@@ -35,7 +35,7 @@ class CurrentTripVC: UIViewController {
                 for document in (snapshot?.documents)! {
                     if let title = document.data()["title"] as? String {
                         self.currentTripTitle.title = title
-                    }
+                    } 
                 }
             }
         }
