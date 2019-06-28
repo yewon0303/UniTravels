@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unitravelsprac/NewTripVC.swift"
-            timestampString = "583398088.2823271"
+            timestampString = "583405594.5557441"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
             landmarkName = "display(alertController:)"
             landmarkType = "7">
             <Locations>
@@ -118,7 +118,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "unitravelsprac/NewTripVC.swift"
-            timestampString = "583398088.2824219"
+            timestampString = "583405594.555961"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "37"

@@ -41,15 +41,38 @@ class NewTripVC: UIViewController {
     
     @IBAction func createTapped(_ sender: Any) {
         
+        var names: Array<String> = Array()
+        if tripper1TextField.text! != "tripper1" {
+            names.append("\(tripper1TextField.text!)")
+        }else{
+            names.append("tripper1")
+        }
+        if tripper2TextField.text! != "tripper1" {
+            names.append("\(tripper2TextField.text!)")
+        }else{
+            names.append("tripper2")
+        }
+        if tripper3TextField.text! != "tripper3" {
+            names.append("\(tripper3TextField.text!)")
+        }else{
+            names.append("tripper3")
+        }
+        if tripper4TextField.text! != "tripper4" {
+            names.append("\(tripper4TextField.text!)")
+        }else{
+            names.append("tripper4")
+        }
+        
+        
         let trippers = [
-            "\(tripper1TextField.text!)" : 0.0,
-             "\(tripper2TextField.text!)" : 0.0,
-              "\(tripper3TextField.text!)" : 0.0,
-               "\(tripper4TextField.text!)" : 0.0
+            "\(names[0])" : 0.0,
+            "\(names[1])" : 0.0,
+            "\(names[2])" : 0.0,
+            "\(names[3])" : 0.0
         ]
         let database = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
-        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, payers: trippers, payees: trippers)
+        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, names: names, payers: trippers, payees: trippers)
         
         let tripRef = database.collection("trips")
         
@@ -61,6 +84,7 @@ class NewTripVC: UIViewController {
             }else{
                 print("trip document was saved")
                 message = "\(self.titleTextField.text!) successfully created!"
+                
             }
             //alert for creation of new trip
             let alertController = UIAlertController(title: nil, message: message , preferredStyle: .alert)
@@ -71,6 +95,7 @@ class NewTripVC: UIViewController {
         //perform segue to go back to HomeVC
         //dismiss(animated: true, completion: nil)
     }
+    
     
     func display(alertController: UIAlertController) {
         self.present(alertController, animated: true, completion: nil)

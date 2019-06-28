@@ -13,6 +13,7 @@ import FirebaseAuth
 class AddItemVC: UIViewController {
 
     //MARK: Properties
+     var db: Firestore!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var price: UITextField!
     @IBOutlet weak var numberOfPeople: UITextField!
@@ -28,6 +29,16 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var payer3: UISwitch!
     @IBOutlet weak var payer4: UISwitch!
     
+    
+    @IBOutlet weak var payer1Name: UILabel!
+    @IBOutlet weak var payer2Name: UILabel!
+    @IBOutlet weak var payer3Name: UILabel!
+    @IBOutlet weak var payer4Name: UILabel!
+    
+    @IBOutlet weak var tripper1Name: UILabel!
+    @IBOutlet weak var tripper2Name: UILabel!
+    @IBOutlet weak var tripper3Name: UILabel!
+    @IBOutlet weak var tripper4Name: UILabel!
     //MARK: Actions
     
     override func viewDidLoad() {
@@ -36,6 +47,32 @@ class AddItemVC: UIViewController {
         payer2.setOn(false, animated: true)
         payer3.setOn(false, animated: true)
         payer4.setOn(false, animated: true)
+        
+        db = Firestore.firestore()
+        let uid = Auth.auth().currentUser!.uid
+        
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    if let names = document.data()["names"] as? Array<String> {
+                        self.tripper1Name.text!  = names[0]
+                        self.payer1Name.text! = names[0]
+                        
+                        self.tripper2Name.text!  = names[1]
+                        self.payer2Name.text! = names[1]
+                        
+                        self.tripper3Name.text!  = names[2]
+                        self.payer3Name.text! = names[2]
+                        
+                        self.tripper4Name.text!  = names[3]
+                        self.payer4Name.text! = names[3]
+                        
+                    }
+                }
+            }
+        }
         
     }
     
@@ -86,7 +123,7 @@ class AddItemVC: UIViewController {
                 message = "There was an error."
             }else{
                 print("trip document was saved")
-                message = "item successfully added!"
+                message = "\(self.itemName.text!) successfully added!"
             }
             //alert for creation of new trip
             let alertController = UIAlertController(title: nil, message: message , preferredStyle: .alert)

@@ -535,14 +535,22 @@
                         <outlet property="itemName" destination="Odf-W1-7L3" id="tIA-EF-lgH"/>
                         <outlet property="numberOfPeople" destination="MVQ-fI-ts4" id="LUC-1Z-ifs"/>
                         <outlet property="payer1" destination="8tM-2m-Wl4" id="STP-CS-A5F"/>
+                        <outlet property="payer1Name" destination="6Y7-Gb-Ufr" id="H0N-HW-aY0"/>
                         <outlet property="payer2" destination="VY6-zX-3aG" id="g7r-KP-to8"/>
+                        <outlet property="payer2Name" destination="Ukq-Rq-75R" id="G4z-Pl-gSq"/>
                         <outlet property="payer3" destination="9oS-wU-NwF" id="4Pd-bY-AkM"/>
+                        <outlet property="payer3Name" destination="f3f-RI-5zU" id="Eph-IT-E0f"/>
                         <outlet property="payer4" destination="Sc6-Bw-0oK" id="ro0-pV-8ow"/>
+                        <outlet property="payer4Name" destination="fAh-Iy-aPG" id="bz0-hg-vJM"/>
                         <outlet property="price" destination="KJO-Vk-DDX" id="1dN-RM-zDA"/>
                         <outlet property="pricePerPerson" destination="lsc-Tl-mKN" id="pQP-bE-oRG"/>
+                        <outlet property="tripper1Name" destination="cMC-x1-J8r" id="RlT-nd-gv1"/>
                         <outlet property="tripper1Switch" destination="Le0-sG-Ddu" id="eVs-ha-Kar"/>
+                        <outlet property="tripper2Name" destination="BJc-Po-6d6" id="J8Q-Iq-nyz"/>
                         <outlet property="tripper2Switch" destination="67c-tO-5Lz" id="Wpj-R1-AIa"/>
+                        <outlet property="tripper3Name" destination="NEE-Qh-h1S" id="hfW-Sj-8Jf"/>
                         <outlet property="tripper3Switch" destination="UKc-qN-aVv" id="S8L-5U-fbY"/>
+                        <outlet property="tripper4Name" destination="O4w-CI-0rl" id="NPN-lg-QTX"/>
                         <outlet property="tripper4Switch" destination="30r-hN-vXc" id="L1b-xM-vaW"/>
                     </connections>
                 </viewController>
@@ -703,7 +711,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="CBO-Ls-xdw">
                                 <rect key="frame" x="84" y="446" width="247" height="370"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" baselineRelativeArrangement="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BPw-ln-IPp">
                                         <rect key="frame" x="0.0" y="0.0" width="247" height="70"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="create_new" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Yr-E6d">
