@@ -21,6 +21,7 @@ struct TripModal {
     var payers: Any
     var payees: Any
     
+    
     var dictionary: [String: Any] {
         return [
             "destination": destination,

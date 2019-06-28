@@ -351,7 +351,7 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Qnm-Kv-sy1">
-                                <rect key="frame" x="20" y="111" width="217.5" height="645"/>
+                                <rect key="frame" x="20" y="111" width="217.5" height="684"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY2-p8-Efq">
@@ -474,6 +474,14 @@
                                             <action selector="perPerson:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="8UI-CL-58R"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqh-q7-vve">
+                                        <rect key="frame" x="0.0" y="645" width="40" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Add"/>
+                                        <connections>
+                                            <action selector="addTapped:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="HfS-Hi-Wit"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="23" translatesAutoresizingMaskIntoConstraints="NO" id="DLF-0d-FRj">
@@ -527,7 +535,7 @@
                         <outlet property="price" destination="KJO-Vk-DDX" id="1dN-RM-zDA"/>
                         <outlet property="pricePerPerson" destination="lsc-Tl-mKN" id="pQP-bE-oRG"/>
                         <outlet property="tripper1Switch" destination="Le0-sG-Ddu" id="eVs-ha-Kar"/>
-                        <outlet property="tripper2Switch" destination="UKc-qN-aVv" id="cSa-Bm-GWS"/>
+                        <outlet property="tripper2Switch" destination="67c-tO-5Lz" id="Wpj-R1-AIa"/>
                         <outlet property="tripper3Switch" destination="UKc-qN-aVv" id="S8L-5U-fbY"/>
                         <outlet property="tripper4Switch" destination="30r-hN-vXc" id="L1b-xM-vaW"/>
                     </connections>

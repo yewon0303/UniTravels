@@ -26,6 +26,7 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var payer3: UISwitch!
     @IBOutlet weak var payer4: UISwitch!
     
+    //MARK: Actions
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,10 +34,8 @@ class AddItemVC: UIViewController {
         payer2.setOn(false, animated: true)
         payer3.setOn(false, animated: true)
         payer4.setOn(false, animated: true)
-
+        
     }
-    
-    //MARK: Actions
     
     @IBAction func perPerson(_ sender: Any) {
         //Double totPaid is the total amount of item to be added to Payer database
@@ -66,8 +65,10 @@ class AddItemVC: UIViewController {
         } else {
             print("Please enter all details.")
         }
-        
-        
+    }
+   
+    @IBAction func addTapped(_ sender: Any) {
+        self.perPerson((Any).self)
     }
     
 
