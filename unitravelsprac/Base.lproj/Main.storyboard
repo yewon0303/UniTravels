@@ -296,6 +296,16 @@
                                     <action selector="createTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="6A0-Zr-yji"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-Vh-CvK">
+                                <rect key="frame" x="39" y="102" width="52" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="qcq-Qw-V8R"/>
+                                    <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="4DS-VN-RM6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -323,9 +333,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FHC-nZ-fDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="276.81159420289856" y="525.66964285714289"/>
+            <point key="canvasLocation" x="920" y="526"/>
         </scene>
-        <!--Add ItemVC-->
+        <!--Add-->
         <scene sceneID="wp7-Ll-tJd">
             <objects>
                 <viewController id="EUi-1F-RNZ" customClass="AddItemVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
@@ -362,8 +372,8 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Price" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-Vk-DDX">
-                                        <rect key="frame" x="0.0" y="78" width="54" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-Vk-DDX">
+                                        <rect key="frame" x="0.0" y="78" width="42" height="30"/>
                                         <nil key="textColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
@@ -506,6 +516,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="ER3-Zo-KKB"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Add" id="UNQ-OB-bLC"/>
                     <connections>
                         <outlet property="itemName" destination="Odf-W1-7L3" id="tIA-EF-lgH"/>
                         <outlet property="numberOfPeople" destination="MVQ-fI-ts4" id="LUC-1Z-ifs"/>
@@ -523,9 +534,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTS-58-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1123" y="526"/>
+            <point key="canvasLocation" x="3609" y="2050"/>
         </scene>
-        <!--Current TripVC-->
+        <!--Summary-->
         <scene sceneID="vvi-Lu-Zdn">
             <objects>
                 <viewController id="jDM-s5-shi" customClass="CurrentTripVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
@@ -603,17 +614,6 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MGs-ai-oG3">
-                                <rect key="frame" x="315" y="591" width="79" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="Add Item"/>
-                                <connections>
-                                    <action selector="addItem:" destination="GZq-Ck-G9h" eventType="touchUpInside" id="SlY-8a-WKt"/>
-                                    <action selector="addItemView:" destination="jDM-s5-shi" eventType="touchUpInside" id="Gfd-w7-FGX"/>
-                                    <segue destination="EUi-1F-RNZ" kind="show" identifier="addItemView" id="BNL-df-czL"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Inh-rp-xSV">
                                 <rect key="frame" x="228" y="293" width="13" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -640,16 +640,16 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Return"/>
                                 <connections>
-                                    <action selector="returnButton:" destination="jDM-s5-shi" eventType="touchUpInside" id="kcL-qo-Xzc"/>
+                                    <action selector="returnButton:" destination="jDM-s5-shi" eventType="touchUpInside" id="iPB-TX-acy"/>
+                                    <segue destination="fI8-Bw-ZTd" kind="show" identifier="returnHomeFromCurrentTrip" id="yib-8A-SRu"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="152-nF-Zgw"/>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Summary" id="061-5T-kIZ"/>
                     <connections>
-                        <outlet property="addItem" destination="MGs-ai-oG3" id="caS-ZY-Qpw"/>
-                        <outlet property="return" destination="66P-FZ-lhx" id="OL6-5m-BWO"/>
                         <outlet property="returnButton" destination="66P-FZ-lhx" id="4j3-yC-iaP"/>
                         <outlet property="tripper1" destination="daB-mp-Vr2" id="rxR-Va-btS"/>
                         <outlet property="tripper2" destination="zBm-Sg-CUv" id="ghO-lj-dTa"/>
@@ -658,9 +658,24 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLc-P4-hKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <exit id="GZq-Ck-G9h" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1963.7681159420292" y="525.66964285714289"/>
+            <point key="canvasLocation" x="3608.6956521739135" y="1343.9732142857142"/>
+        </scene>
+        <!--Items-->
+        <scene sceneID="khB-qV-xWi">
+            <objects>
+                <viewController id="acC-zL-GPW" customClass="ItemListVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sbv-i4-imY">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="EjQ-xK-yAz"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Items" id="LeC-Re-yf0"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0fF-IP-use" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2739" y="2083"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">
@@ -690,7 +705,7 @@
                                                 <state key="normal" title="Current trips"/>
                                                 <connections>
                                                     <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="U5k-TP-5Op"/>
-                                                    <segue destination="jDM-s5-shi" kind="show" identifier="currentTrip" id="xTq-Zv-pLe"/>
+                                                    <segue destination="A1G-ce-438" kind="show" identifier="currentTrip" id="qGq-ru-hqD"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -821,11 +836,31 @@
             </objects>
             <point key="canvasLocation" x="2319" y="-358"/>
         </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="kxr-gk-s7Z">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="A1G-ce-438" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="u7m-jZ-5zk">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="jDM-s5-shi" kind="relationship" relationship="viewControllers" id="aH1-am-TMP"/>
+                        <segue destination="EUi-1F-RNZ" kind="relationship" relationship="viewControllers" id="I9C-QW-9tx"/>
+                        <segue destination="acC-zL-GPW" kind="relationship" relationship="viewControllers" id="yRv-6c-4Xi"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Va6-AQ-Hm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2698.5507246376815" y="1343.9732142857142"/>
+        </scene>
     </scenes>
     <resources>
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="aOE-T1-U7e"/>
+        <segue reference="yib-8A-SRu"/>
+        <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>

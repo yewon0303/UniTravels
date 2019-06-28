@@ -40,7 +40,7 @@ class AddItemVC: UIViewController {
     
     @IBAction func perPerson(_ sender: Any) {
         //Double totPaid is the total amount of item to be added to Payer database
-        var totPaid: Double = Double(price.text!) as! Double
+        var totalprice: Double = Double(price.text!) as! Double
         
         var num: Int = 0
         

@@ -26,13 +26,11 @@ class CurrentTripVC: UIViewController {
     }
     
     //MARK: Actions
-    @IBAction func addItemView(_ sender: Any) {
-        performSegue(withIdentifier: "addItemView", sender: self)
-    }
     
     @IBAction func returnButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        performSegue(withIdentifier: "returnHomeFromCurrentTrip", sender: self)
     }
+    
     
 
 }

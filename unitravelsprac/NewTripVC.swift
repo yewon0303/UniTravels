@@ -38,22 +38,17 @@ class NewTripVC: UIViewController {
         
     }
     
-    @IBAction func returnTapped(_ sender: Any) {
-        performSegue(withIdentifier: "goHomeFromNewTrip", sender: self)
-    }
-    
     
     @IBAction func createTapped(_ sender: Any) {
         
         let trippers = [
-            "admin" : 0.0,
             "\(tripper1TextField.text!)" : 0.0,
              "\(tripper2TextField.text!)" : 0.0,
               "\(tripper3TextField.text!)" : 0.0,
                "\(tripper4TextField.text!)" : 0.0
         ]
         let database = Firestore.firestore()
-        let trip = TripModal(destination: DestinationTextField.text!, uid: Auth.auth().currentUser!.uid , date: startDateTextField.text!, trippers: trippers)
+        let trip = TripModal(destination: DestinationTextField.text!, uid: Auth.auth().currentUser!.uid , date: startDateTextField.text!, title: titleTextField.text!, payers: trippers, payees: trippers)
         
         let tripRef = database.collection("trips")
         
@@ -73,10 +68,15 @@ class NewTripVC: UIViewController {
         }
         
         //perform segue to go back to HomeVC
-        dismiss(animated: true, completion: nil)
+        //dismiss(animated: true, completion: nil)
     }
     
     func display(alertController: UIAlertController) {
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    @IBAction func returnTapped(_ sender: Any) {
+        performSegue(withIdentifier: "goHomeFromNewTrip", sender: self)
+    }
+    
 }

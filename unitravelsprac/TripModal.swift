@@ -17,14 +17,18 @@ struct TripModal {
     var destination: String
     var uid: String
     var date: String
-    var trippers: Any
+    var title: String
+    var payers: Any
+    var payees: Any
     
     var dictionary: [String: Any] {
         return [
             "destination": destination,
             "uid": uid,
             "date": date,
-            "trippers": trippers
+            "title": title,
+            "payers": payers,
+            "payees": payees,
         ]
     }
 }
@@ -34,9 +38,13 @@ extension TripModal: DocumentTripSerializable {
         guard let destination = dictionary["destination"] as? String,
             let uid = dictionary["uid"] as? String,
             let date = dictionary["date"] as? String,
-            let trippers = dictionary["trippers"] as? [String:Double] else {return nil}
-        self.init(destination: destination, uid: uid, date: date, trippers: trippers)
+            let title = dictionary["title"] as? String,
+            let payers = dictionary["payers"] as? [String:Double],
+            let payees = dictionary["payees"] as? [String:Double] else {return nil}
+        self.init(destination: destination, uid: uid, date: date, title: title, payers: payers, payees: payees)
     }
     
 }
+
+
 
