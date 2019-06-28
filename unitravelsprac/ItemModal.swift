@@ -19,6 +19,7 @@ struct ItemModal {
     var perperson: Double
     var payer: String
     var payees: Any
+    var uid: String
     
     var dictionary: [String: Any] {
         return [
@@ -26,7 +27,8 @@ struct ItemModal {
             "price": price,
             "perperson": perperson,
             "payer": payer,
-            "payees": payees
+            "payees": payees,
+            "uid":uid
         ]
     }
 }
@@ -37,8 +39,9 @@ extension ItemModal: DocumentItemSerializable {
             let price = dictionary["price"] as? Double,
             let perperson = dictionary["perperson"] as? Double,
             let payer = dictionary["payer"] as? String,
+            let uid = dictionary["uid"] as? String,
             let payees = dictionary["payees"] as? Any else {return nil}
-        self.init(item: item, price: price, perperson: perperson, payer: payer, payees: payees)
+        self.init(item: item, price: price, perperson: perperson, payer: payer, payees: payees, uid: uid)
     }
     
 }

@@ -50,7 +50,6 @@ class AddItemVC: UIViewController {
         
         db = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
-        
         db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
             if error != nil {
                 print(error!)
@@ -78,7 +77,7 @@ class AddItemVC: UIViewController {
     
     @IBAction func perPerson(_ sender: Any) {
         //Double totPaid is the total amount of item to be added to Payer database
-        var totalprice: Double = Double(price.text!) as! Double
+        let totalprice: Double = Double(price.text!) as! Double
         
         var num: Int = 0
         
@@ -111,18 +110,65 @@ class AddItemVC: UIViewController {
         
         let db = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
+        let totalprice: Double = Double(price.text!) as! Double
+        var payer:String = ""
         
-        let payees = ["a", "b"]
+        if payer1.isOn {
+            payer = payer1Name.text!
+        }
+        else if payer2.isOn {
+            payer = payer2Name.text!
+        }
+        else if payer3.isOn {
+            payer = payer3Name.text!
+        }
+        else if payer4.isOn {
+            payer = payer4Name.text!
+        }
         
-        let items = ItemModal.init(item: itemName.text!, price: Double(price.text!) as! Double, perperson: Double(pricePerPerson.text!) as! Double, payer: "tripper1", payees: payees)
+        //querying current payer summary and updating
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    if var payers = document.data()["payers"] as? [String:Double] {
+                        var currPayerAmt: Double = payers[payer]!
+                        currPayerAmt += totalprice
+                        //update in firestore
+                        let document = snapshot!.documents.first
+                        document!.reference.updateData([
+                            "payers": currPayerAmt
+                            ])
+                    }
+                }
+            }
+        }
+        
+        // getting names of payees
+        var payees: Array<String> = Array()
+        if tripper1Switch.isOn {
+            payees.append(tripper1Name.text!)
+        }
+        if tripper2Switch.isOn {
+            payees.append(tripper2Name.text!)
+        }
+        if tripper3Switch.isOn {
+            payees.append(tripper3Name.text!)
+        }
+        if tripper4Switch.isOn {
+            payees.append(tripper4Name.text!)
+        }
+        // setting item document
+        let items = ItemModal.init(item: itemName.text!, price: Double(price.text!) as! Double, perperson: Double(pricePerPerson.text!) as! Double, payer: payer, payees: payees, uid: uid)
         
         db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
             var message: String = ""
             if err != nil {
-                print("issue here at new trip info")
+                print("issue here at new items info")
                 message = "There was an error."
             }else{
-                print("trip document was saved")
+                print("item document was saved")
                 message = "\(self.itemName.text!) successfully added!"
             }
             //alert for creation of new trip
