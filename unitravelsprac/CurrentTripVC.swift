@@ -27,6 +27,7 @@ class CurrentTripVC: UIViewController {
     
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var currentTripTitle: UINavigationItem!
+    @IBOutlet weak var refresh: UIButton!
     
     
     
@@ -77,10 +78,12 @@ class CurrentTripVC: UIViewController {
     }
     
     
+    @IBAction func refresh(_ sender: Any) {
+        self.viewDidLoad()
+    }
+    
     @IBAction func returnButton(_ sender: Any) {
         performSegue(withIdentifier: "returnHomeFromCurrentTrip", sender: self)
     }
-    
-    
 
 }

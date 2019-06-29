@@ -695,6 +695,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nXX-H5-DsN">
+                                <rect key="frame" x="326" y="108" width="53" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Refresh"/>
+                                <connections>
+                                    <action selector="refresh:" destination="jDM-s5-shi" eventType="touchUpInside" id="ZPe-fy-ceV"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C7k-Xe-qAq">
                                 <rect key="frame" x="242" y="681" width="59" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -709,6 +717,7 @@
                     <tabBarItem key="tabBarItem" title="Summary" id="061-5T-kIZ"/>
                     <connections>
                         <outlet property="currentTripTitle" destination="iDf-EP-4HN" id="6CS-D9-CZn"/>
+                        <outlet property="refresh" destination="nXX-H5-DsN" id="nYL-HQ-XwK"/>
                         <outlet property="returnButton" destination="66P-FZ-lhx" id="4j3-yC-iaP"/>
                         <outlet property="total" destination="C7k-Xe-qAq" id="Xsx-bl-BGF"/>
                         <outlet property="tripper1" destination="daB-mp-Vr2" id="rxR-Va-btS"/>
