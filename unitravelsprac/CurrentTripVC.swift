@@ -68,6 +68,7 @@ class CurrentTripVC: UIViewController {
                                     self.tripper4.text = "\(payers[name4]! + payees[name4]!)"
                                     
                                     //total needs to be updated
+                                    self.total.text = "\(payers[name1]! + payers[name2]! + payers[name3]! + payers[name4]!)"
                                 }
                             }
                         }
