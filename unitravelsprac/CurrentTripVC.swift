@@ -23,6 +23,7 @@ class CurrentTripVC: UIViewController {
     @IBOutlet weak var tripper2: UILabel!
     @IBOutlet weak var tripper3: UILabel!
     @IBOutlet weak var tripper4: UILabel!
+    @IBOutlet weak var total: UILabel!
     
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var currentTripTitle: UINavigationItem!
@@ -51,6 +52,7 @@ class CurrentTripVC: UIViewController {
                                     let name1 = names[0]
                                     self.tripper1Name.text = name1
                                     self.tripper1.text = "\(payers[name1]! + payees[name1]!)"
+                                    
                                     //repeat for rest
                                     let name2 = names[1]
                                     self.tripper2Name.text = name2
@@ -63,7 +65,8 @@ class CurrentTripVC: UIViewController {
                                     let name4 = names[3]
                                     self.tripper4Name.text = name4
                                     self.tripper4.text = "\(payers[name4]! + payees[name4]!)"
-                                   
+                                    
+                                    //total needs to be updated
                                 }
                             }
                         }
