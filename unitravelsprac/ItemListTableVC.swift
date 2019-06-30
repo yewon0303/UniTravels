@@ -26,7 +26,6 @@ class ItemListTableVC: UITableViewController {
         
         //initalize Database
         db = Firestore.firestore()
-        loadData()
     }
    
     func loadData() {
@@ -57,6 +56,8 @@ class ItemListTableVC: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         NSLog("viewDidAppear is running in current view")
+        itemArray = [Item]()
+        loadData()
         
     }
     

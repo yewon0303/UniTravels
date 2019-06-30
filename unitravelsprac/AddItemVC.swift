@@ -135,7 +135,7 @@ class AddItemVC: UIViewController {
                 for document in (snapshot?.documents)! {
                     if let payers = document.data()["payers"] as? [String:Double] {
                         if let total = document.data()["total"] as? Double {
-                        var currPayerAmt: Double = payers[payer]!
+                            var currPayerAmt: Double = payers[payer] ?? 0.0
                         currPayerAmt += totalprice
                         var newtotal = total + totalprice
                         //update in firestore
