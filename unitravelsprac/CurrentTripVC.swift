@@ -84,7 +84,7 @@ class CurrentTripVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        NSLog("viewDidAppear is running")
+        NSLog("viewDidAppear is running in current view")
         self.viewDidLoad()
     }
     

@@ -77,7 +77,7 @@ class AddItemVC: UIViewController {
     
     @IBAction func perPerson(_ sender: Any) {
         //Double totPaid is the total amount of item to be added to Payer database
-        let totalprice: Double = Double(price.text!) as! Double
+        let totalprice: Double = Double(price.text!) as? Double ?? 0.0
         
         var num: Int = 0
         
@@ -110,8 +110,8 @@ class AddItemVC: UIViewController {
         
         let db = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
-        let totalprice: Double = Double(price.text!) as! Double
-        let costPerPerson: Double = Double(pricePerPerson.text!) as! Double
+        let totalprice: Double = Double(price.text!) as? Double ?? 0.0
+        let costPerPerson: Double = Double(pricePerPerson.text!) as? Double ?? 0.0
         var payer:String = ""
         
         if payer1.isOn {

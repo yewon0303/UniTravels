@@ -571,7 +571,36 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTS-58-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.6956521739135" y="2049.7767857142858"/>
+            <point key="canvasLocation" x="3372" y="2083"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="x8b-FO-0kM">
+            <objects>
+                <tableViewController id="wCK-d2-jRy" customClass="ItemListTableVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="yev-WD-wRc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ItemTableViewCell" id="iyz-jr-gce">
+                                <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iyz-jr-gce" id="Xnk-Wu-8GC">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="wCK-d2-jRy" id="srQ-Zt-8lk"/>
+                            <outlet property="delegate" destination="wCK-d2-jRy" id="bN9-xl-AhD"/>
+                        </connections>
+                    </tableView>
+                    <tabBarItem key="tabBarItem" title="Item" id="uTE-Qa-jt2"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cbq-XY-Ee2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4178" y="2055"/>
         </scene>
         <!--Summary-->
         <scene sceneID="vvi-Lu-Zdn">
@@ -1022,6 +1051,7 @@
                         <segue destination="jDM-s5-shi" kind="relationship" relationship="viewControllers" id="aH1-am-TMP"/>
                         <segue destination="EUi-1F-RNZ" kind="relationship" relationship="viewControllers" id="I9C-QW-9tx"/>
                         <segue destination="acC-zL-GPW" kind="relationship" relationship="viewControllers" id="yRv-6c-4Xi"/>
+                        <segue destination="wCK-d2-jRy" kind="relationship" relationship="viewControllers" id="SwU-yY-Yyq"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Va6-AQ-Hm7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1038,7 +1068,8 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4DS-VN-RM6"/>
+        <segue reference="aH1-am-TMP"/>
+        <segue reference="yib-8A-SRu"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
