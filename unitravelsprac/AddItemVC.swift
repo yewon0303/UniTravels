@@ -134,14 +134,17 @@ class AddItemVC: UIViewController {
             }else{
                 for document in (snapshot?.documents)! {
                     if let payers = document.data()["payers"] as? [String:Double] {
+                        if let total = document.data()["total"] as? Double {
                         var currPayerAmt: Double = payers[payer]!
                         currPayerAmt += totalprice
-                        
+                        var newtotal = total + totalprice
                         //update in firestore
                         let document = snapshot!.documents.first
                         document!.reference.updateData([
-                            "payers.\(payer)": currPayerAmt
+                            "payers.\(payer)": currPayerAmt,
+                            "total": newtotal
                             ])
+                        }
                     }
                 }
             }

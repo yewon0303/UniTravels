@@ -83,6 +83,11 @@ class CurrentTripVC: UIViewController {
         self.viewDidLoad()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        NSLog("viewDidAppear is running")
+        self.viewDidLoad()
+    }
+    
     @IBAction func returnButton(_ sender: Any) {
         performSegue(withIdentifier: "returnHomeFromCurrentTrip", sender: self)
     }

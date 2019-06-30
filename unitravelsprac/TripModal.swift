@@ -21,6 +21,7 @@ struct TripModal {
     var names: Any
     var payers: [String:Double]
     var payees: [String:Double]
+    var total: Double
     
     
     var dictionary: [String: Any] {
@@ -32,6 +33,7 @@ struct TripModal {
             "names": names,
             "payers": payers,
             "payees": payees,
+            "total": total
         ]
     }
 }
@@ -44,8 +46,9 @@ extension TripModal: DocumentTripSerializable {
             let title = dictionary["title"] as? String,
             let names = dictionary["names"] as? Any,
             let payers = dictionary["payers"] as? [String:Double],
-            let payees = dictionary["payees"] as? [String:Double] else {return nil}
-        self.init(destination: destination, uid: uid, date: date, title: title, names: names, payers: payers, payees: payees)
+            let payees = dictionary["payees"] as? [String:Double],
+        let total = dictionary["total"] as? Double else {return nil}
+        self.init(destination: destination, uid: uid, date: date, title: title, names: names, payers: payers, payees: payees, total: total)
     }
     
 }

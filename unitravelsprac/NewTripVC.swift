@@ -72,7 +72,7 @@ class NewTripVC: UIViewController {
         ]
         let database = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
-        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, names: names, payers: trippers, payees: trippers)
+        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, names: names, payers: trippers, payees: trippers, total: 0.0)
         
         let tripRef = database.collection("trips")
         
