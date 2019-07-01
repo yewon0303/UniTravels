@@ -18,6 +18,8 @@
 		EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */; };
 		EE18E90122C8BAFB0010ED3F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90022C8BAFB0010ED3F /* Item.swift */; };
 		EE18E90222C8BAFB0010ED3F /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90022C8BAFB0010ED3F /* Item.swift */; };
+		EE18E90422C9EF660010ED3F /* MemoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */; };
+		EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */; };
 		EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
@@ -64,6 +66,7 @@
 		EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModal.swift; sourceTree = "<group>"; };
 		EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableVC.swift; sourceTree = "<group>"; };
 		EE18E90022C8BAFB0010ED3F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
+		EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableVC.swift; sourceTree = "<group>"; };
 		EE2144E122C38C2900402B53 /* NewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
 		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 				179B64D922C524AE006E1748 /* CurrentTripVC.swift */,
 				179B64D622C4863F006E1748 /* AddItemVC.swift */,
 				EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */,
+				EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
 				EE9681DA22C39A9E00BEE281 /* TripModal.swift */,
@@ -364,6 +368,7 @@
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
 				EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EE86AE5F22BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
+				EE18E90422C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -377,6 +382,7 @@
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE18E90222C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
+				EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,
 				EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
