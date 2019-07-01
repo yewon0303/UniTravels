@@ -12,8 +12,6 @@
 		179B64DA22C524AE006E1748 /* CurrentTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D922C524AE006E1748 /* CurrentTripVC.swift */; };
 		179B64DB22C524AF006E1748 /* CurrentTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D922C524AE006E1748 /* CurrentTripVC.swift */; };
 		3EF047183DD81AB4083608A3 /* Pods_unitravelsprac.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AA54DA6AF64064879D7FF917 /* Pods_unitravelsprac.framework */; };
-		EE18E8C922C5D71D0010ED3F /* ItemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8C822C5D71D0010ED3F /* ItemListVC.swift */; };
-		EE18E8CA22C5D71D0010ED3F /* ItemListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8C822C5D71D0010ED3F /* ItemListVC.swift */; };
 		EE18E8CC22C5DA0A0010ED3F /* ItemModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */; };
 		EE18E8CD22C5DA0A0010ED3F /* ItemModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */; };
 		EE18E8FE22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */; };
@@ -63,7 +61,6 @@
 		AA54DA6AF64064879D7FF917 /* Pods_unitravelsprac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unitravelsprac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C697AEEA4FA15DFCC85702E5 /* Pods-unitravelsprac.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelsprac.release.xcconfig"; path = "Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac.release.xcconfig"; sourceTree = "<group>"; };
 		D3D1DEC73537A388317CEF6E /* Pods-unitravelsprac.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelsprac.debug.xcconfig"; path = "Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac.debug.xcconfig"; sourceTree = "<group>"; };
-		EE18E8C822C5D71D0010ED3F /* ItemListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListVC.swift; sourceTree = "<group>"; };
 		EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemModal.swift; sourceTree = "<group>"; };
 		EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemListTableVC.swift; sourceTree = "<group>"; };
 		EE18E90022C8BAFB0010ED3F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
@@ -162,7 +159,6 @@
 				EE2144E122C38C2900402B53 /* NewTripVC.swift */,
 				179B64D922C524AE006E1748 /* CurrentTripVC.swift */,
 				179B64D622C4863F006E1748 /* AddItemVC.swift */,
-				EE18E8C822C5D71D0010ED3F /* ItemListVC.swift */,
 				EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
@@ -362,7 +358,6 @@
 				EE18E8CC22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
 				179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */,
 				179B64DA22C524AE006E1748 /* CurrentTripVC.swift in Sources */,
-				EE18E8C922C5D71D0010ED3F /* ItemListVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE18E90122C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FE22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
@@ -387,7 +382,6 @@
 				EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
 				EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */,
 				179B64D822C4863F006E1748 /* AddItemVC.swift in Sources */,
-				EE18E8CA22C5D71D0010ED3F /* ItemListVC.swift in Sources */,
 				EE9681DC22C39A9E00BEE281 /* TripModal.swift in Sources */,
 				179B64DB22C524AF006E1748 /* CurrentTripVC.swift in Sources */,
 			);

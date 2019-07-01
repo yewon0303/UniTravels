@@ -23,6 +23,8 @@ class ItemListTableVC: UITableViewController {
         super.viewDidLoad()
         self.tableView.delegate = self
         self.tableView.dataSource = self
+        tableView.tableFooterView = UIView()
+        
         
         //initalize Database
         db = Firestore.firestore()
@@ -129,5 +131,6 @@ class ItemListTableVC: UITableViewController {
         // Pass the selected object to the new view controller.
     }
     */
+    
 
 }
