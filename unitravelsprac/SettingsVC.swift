@@ -14,17 +14,18 @@ import FirebaseAuth
 class SettingsVC: UIViewController {
     
     //MARK: ~ properties
-    
+    var db: Firestore!
     @IBOutlet weak var uid: UILabel!
     @IBOutlet weak var emailadd: UILabel!
     @IBOutlet weak var returnButton: UIButton!
+    @IBOutlet weak var destinations: UILabel!
     
     //MARK: ~Actions
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        let db = Firestore.firestore()
+        db = Firestore.firestore()
         let user = Auth.auth().currentUser
         if let user = user {
             let uid = user.uid
@@ -45,8 +46,21 @@ class SettingsVC: UIViewController {
                     }
                 }
             }
+            db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+                if error != nil {
+                    print(error?.localizedDescription as Any)
+                }else{
+                    for document in (snapshot?.documents)! {
+                        if let destination = document.data()["destination"] as? String {
+                            self.destinations.text = "Destination(s): " + destination
+                        }
+                    }
+                }
+            }
         }
     }
+    
+    
     
 
     @IBAction func returnButton(_ sender: Any) {
