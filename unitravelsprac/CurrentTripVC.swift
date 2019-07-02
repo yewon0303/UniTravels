@@ -18,17 +18,19 @@ class CurrentTripVC: UIViewController {
     @IBOutlet weak var tripper2Name: UILabel!
     @IBOutlet weak var tripper3Name: UILabel!
     @IBOutlet weak var tripper4Name: UILabel!
+    @IBOutlet weak var tripper5Name: UILabel!
+    @IBOutlet weak var tripper6Name: UILabel!
     
     @IBOutlet weak var tripper1: UILabel!
     @IBOutlet weak var tripper2: UILabel!
     @IBOutlet weak var tripper3: UILabel!
     @IBOutlet weak var tripper4: UILabel!
+    @IBOutlet weak var tripper5: UILabel!
+    @IBOutlet weak var tripper6: UILabel!
     @IBOutlet weak var total: UILabel!
     
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var currentTripTitle: UINavigationItem!
-    @IBOutlet weak var refresh: UIButton!
-    
     
     
     //MARK: Actions
@@ -52,25 +54,64 @@ class CurrentTripVC: UIViewController {
                                         self.currentTripTitle.title = title
                                         //update name and balance(paid for - debt)
                                         let name1 = names[0]
-                                        self.tripper1Name.text = name1
-                                        self.tripper1.text = "\(payers[name1]! + payees[name1]!)"
+                                        if (self.checkExistence(currentName: name1, num: 1)) {
+                                            self.tripper1Name.text = name1
+                                            self.tripper1.text = "\(payers[name1]! + payees[name1]!)"
+                                        } else {
+                                            self.tripper1Name.isHidden = true
+                                            self.tripper1.isHidden = true
+                                        }
                                         
                                         //repeat for rest
                                         let name2 = names[1]
-                                        self.tripper2Name.text = name2
-                                        self.tripper2.text = "\(payers[name2]! + payees[name2]!)"
+                                        if (self.checkExistence(currentName: name2, num: 2)) {
+                                            self.tripper2Name.text = name2
+                                            self.tripper2.text = "\(payers[name2]! + payees[name2]!)"
+                                        } else {
+                                            self.tripper2Name.isHidden = true
+                                            self.tripper2.isHidden = true
+                                        }
                                         
                                         let name3 = names[2]
-                                        self.tripper3Name.text = name3
-                                        self.tripper3.text = "\(payers[name3]! + payees[name3]!)"
+                                        if (self.checkExistence(currentName: name3, num: 3)) {
+                                            self.tripper3Name.text = name3
+                                            self.tripper3.text = "\(payers[name3]! + payees[name3]!)"
+                                        } else {
+                                            self.tripper3Name.isHidden = true
+                                            self.tripper3.isHidden = true
+                                        }
                                         
                                         let name4 = names[3]
-                                        self.tripper4Name.text = name4
-                                        self.tripper4.text = "\(payers[name4]! + payees[name4]!)"
+                                        if (self.checkExistence(currentName: name4, num: 4)) {
+                                            self.tripper4Name.text = name4
+                                            self.tripper4.text = "\(payers[name4]! + payees[name4]!)"
+                                        } else {
+                                            self.tripper4Name.isHidden = true
+                                            self.tripper4.isHidden = true
+                                        }
                                         
-                                        //total needs to be updated
-                                        self.total.text = "\(total)"
-                                        /*self.total.text = "\(payers[name1]! + payers[name2]! + payers[name3]! + payers[name4]!)"*/
+                                        
+                                        let name5 = names[4]
+                                        if (self.checkExistence(currentName: name5, num: 5)) {
+                                            self.tripper5Name.text = name5
+                                            self.tripper5.text = "\(payers[name5]! + payees[name5]!)"
+                                        } else {
+                                            self.tripper5Name.isHidden = true
+                                            self.tripper5.isHidden = true
+                                        }
+                                        
+                                        
+                                        let name6 = names[5]
+                                        if (self.checkExistence(currentName: name6, num: 6)) {
+                                            self.tripper6Name.text = name6
+                                            self.tripper6.text = "\(payers[name6]! + payees[name6]!)"
+                                        } else {
+                                            self.tripper6Name.isHidden = true
+                                            self.tripper6.isHidden = true
+                                        }
+                                        
+                                    self.total.text = "\(total)"
+                                        
                                     }
                                     
                                 }
@@ -82,6 +123,13 @@ class CurrentTripVC: UIViewController {
         }
     }
     
+    func checkExistence(currentName: String, num: Int) -> Bool {
+        if (currentName) != "tripper" + "\(num)" {
+            return true
+        } else {
+            return false
+        }
+    }
     
     
     override func viewDidAppear(_ animated: Bool) {
