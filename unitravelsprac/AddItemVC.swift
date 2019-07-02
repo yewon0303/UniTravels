@@ -16,58 +16,123 @@ class AddItemVC: UIViewController {
      var db: Firestore!
     @IBOutlet weak var itemName: UITextField!
     @IBOutlet weak var price: UITextField!
-    @IBOutlet weak var numberOfPeople: UITextField!
+    @IBOutlet weak var numberOfPeople: UILabel!
     @IBOutlet weak var pricePerPerson: UILabel!
     
-    @IBOutlet weak var tripper1Switch: UISwitch!
-    @IBOutlet weak var tripper2Switch: UISwitch!
-    @IBOutlet weak var tripper3Switch: UISwitch!
-    @IBOutlet weak var tripper4Switch: UISwitch!
-    
+    //Payer (select 1)
     @IBOutlet weak var payer1: UISwitch!
     @IBOutlet weak var payer2: UISwitch!
     @IBOutlet weak var payer3: UISwitch!
     @IBOutlet weak var payer4: UISwitch!
-    
+    @IBOutlet weak var payer5: UISwitch!
+    @IBOutlet weak var payer6: UISwitch!
     
     @IBOutlet weak var payer1Name: UILabel!
     @IBOutlet weak var payer2Name: UILabel!
     @IBOutlet weak var payer3Name: UILabel!
     @IBOutlet weak var payer4Name: UILabel!
+    @IBOutlet weak var payer5Name: UILabel!
+    @IBOutlet weak var payer6Name: UILabel!
     
+    //Trippers sharing this item
     @IBOutlet weak var tripper1Name: UILabel!
     @IBOutlet weak var tripper2Name: UILabel!
     @IBOutlet weak var tripper3Name: UILabel!
     @IBOutlet weak var tripper4Name: UILabel!
-    //MARK: Actions
+    @IBOutlet weak var tripper5Name: UILabel!
+    @IBOutlet weak var tripper6Name: UILabel!
     
+    @IBOutlet weak var tripper1Switch: UISwitch!
+    @IBOutlet weak var tripper2Switch: UISwitch!
+    @IBOutlet weak var tripper3Switch: UISwitch!
+    @IBOutlet weak var tripper4Switch: UISwitch!
+    @IBOutlet weak var tripper5Switch: UISwitch!
+    @IBOutlet weak var tripper6Switch: UISwitch!
+    
+    //MARK: Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         payer1.setOn(false, animated: true)
         payer2.setOn(false, animated: true)
         payer3.setOn(false, animated: true)
         payer4.setOn(false, animated: true)
+        payer5.setOn(false, animated: true)
+        payer6.setOn(false, animated: true)
         
         db = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
-        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments {
+            (snapshot, error) in
             if error != nil {
                 print(error!)
-            }else{
+            } else {
                 for document in (snapshot?.documents)! {
                     if let names = document.data()["names"] as? Array<String> {
-                        self.tripper1Name.text!  = names[0]
-                        self.payer1Name.text! = names[0]
+                        if (document.data()["tripper1On"] as! Bool) {
+                            self.tripper1Name.text!  = names[0]
+                            self.payer1Name.text! = names[0]
+                        } else {
+                            self.tripper1Name.isHidden = true
+                            self.payer1.isHidden = true
+                            self.payer1Name.isHidden = true
+                            self.tripper1Switch.setOn(false, animated: true)
+                            self.tripper1Switch.isHidden = true
+                        }
                         
-                        self.tripper2Name.text!  = names[1]
-                        self.payer2Name.text! = names[1]
+                        if (document.data()["tripper2On"] as! Bool) {
+                            self.tripper2Name.text!  = names[1]
+                            self.payer2Name.text! = names[1]
+                        } else {
+                            self.tripper2Name.isHidden = true
+                            self.payer2.isHidden = true
+                            self.payer2Name.isHidden = true
+                            self.tripper2Switch.setOn(false, animated: true)
+                            self.tripper2Switch.isHidden = true
+                        }
                         
-                        self.tripper3Name.text!  = names[2]
-                        self.payer3Name.text! = names[2]
+                        if (document.data()["tripper3On"] as! Bool) {
+                            self.tripper3Name.text!  = names[2]
+                            self.payer3Name.text! = names[2]
+                        } else {
+                            self.tripper3Name.isHidden = true
+                            self.payer3.isHidden = true
+                            self.payer3Name.isHidden = true
+                            self.tripper3Switch.setOn(false, animated: true)
+                            self.tripper3Switch.isHidden = true
+                        }
                         
-                        self.tripper4Name.text!  = names[3]
-                        self.payer4Name.text! = names[3]
+                        if (document.data()["tripper4On"] as! Bool) {
+                            self.tripper4Name.text!  = names[3]
+                            self.payer4Name.text! = names[3]
+                        } else {
+                            self.tripper4Name.isHidden = true
+                            self.payer4.isHidden = true
+                            self.payer4Name.isHidden = true
+                            self.tripper4Switch.setOn(false, animated: true)
+                            self.tripper4Switch.isHidden = true
+                        }
                         
+                        if (document.data()["tripper5On"] as! Bool) {
+                            self.tripper5Name.text!  = names[4]
+                            self.payer5Name.text! = names[4]
+                        } else {
+                            self.tripper5Name.isHidden = true
+                            self.payer5.isHidden = true
+                            self.payer5Name.isHidden = true
+                            self.tripper5Switch.setOn(false, animated: true)
+                            self.tripper5Switch.isHidden = true
+                        }
+                        
+                        if (document.data()["tripper6On"] as! Bool) {
+                            self.tripper6Name.text!  = names[5]
+                            self.payer6Name.text! = names[5]
+                        } else {
+                            self.tripper6Name.isHidden = true
+                            self.payer6.isHidden = true
+                            self.payer6Name.isHidden = true
+                            self.tripper6Switch.setOn(false, animated: true)
+                            self.tripper6Switch.isHidden = true
+                        }
                     }
                 }
             }
@@ -93,8 +158,14 @@ class AddItemVC: UIViewController {
         if tripper4Switch.isOn {
             num += 1
         }
+        if tripper5Switch.isOn {
+            num += 1
+        }
+        if tripper6Switch.isOn {
+            num += 1
+        }
         
-        numberOfPeople.text = "\(num)"
+        numberOfPeople.text = "\(num) Trippers"
         
         if let itemPrice =  Double(price.text!) {
             //Double perPax is the amount of money to be paid by each person sharing
@@ -116,15 +187,16 @@ class AddItemVC: UIViewController {
         
         if payer1.isOn {
             payer = payer1Name.text!
-        }
-        else if payer2.isOn {
+        } else if payer2.isOn {
             payer = payer2Name.text!
-        }
-        else if payer3.isOn {
+        } else if payer3.isOn {
             payer = payer3Name.text!
-        }
-        else if payer4.isOn {
+        } else if payer4.isOn {
             payer = payer4Name.text!
+        } else if payer5.isOn {
+            payer = payer5Name.text!
+        } else if payer6.isOn {
+            payer = payer6Name.text!
         }
         
         //querying current payer summary and updating payer details in "trips" collection
@@ -138,7 +210,8 @@ class AddItemVC: UIViewController {
                             var currPayerAmt: Double = payers[payer] ?? 0.0
                         currPayerAmt += totalprice
                         var newtotal = total + totalprice
-                        //update in firestore
+                        
+                            //update in firestore
                         let document = snapshot!.documents.first
                         document!.reference.updateData([
                             "payers.\(payer)": currPayerAmt,
@@ -164,6 +237,12 @@ class AddItemVC: UIViewController {
         }
         if tripper4Switch.isOn {
             payeesArr.append(tripper4Name.text!)
+        }
+        if tripper5Switch.isOn {
+            payeesArr.append(tripper5Name.text!)
+        }
+        if tripper6Switch.isOn {
+            payeesArr.append(tripper6Name.text!)
         }
         
         db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
@@ -191,9 +270,6 @@ class AddItemVC: UIViewController {
                 
             }
         }
-        
-        
-        
         
         // setting item document
         let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid)
