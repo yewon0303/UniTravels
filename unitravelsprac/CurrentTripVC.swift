@@ -13,7 +13,6 @@ import FirebaseAuth
 class CurrentTripVC: UIViewController {
 
     //MARK: Properties
-    
     @IBOutlet weak var tripper1Name: UILabel!
     @IBOutlet weak var tripper2Name: UILabel!
     @IBOutlet weak var tripper3Name: UILabel!
@@ -61,7 +60,7 @@ class CurrentTripVC: UIViewController {
                                         self.currentTripTitle.title = title
                                         //update name and balance(paid for - debt)
                                         let name1 = names[0]
-                                        if ((document.data()["tripper1On"]) != nil) {
+                                        if ((document.data()["tripper1On"]) as! Bool) {
                                             self.tripper1Name.text = name1
                                             self.tripper1.text = "\(payers[name1]! + payees[name1]!)"
                                         } else {
@@ -72,7 +71,7 @@ class CurrentTripVC: UIViewController {
                                         
                                         //repeat for rest
                                         let name2 = names[1]
-                                        if ((document.data()["tripper2On"]) != nil) {
+                                        if ((document.data()["tripper2On"]) as! Bool) {
                                             self.tripper2Name.text = name2
                                             self.tripper2.text = "\(payers[name2]! + payees[name2]!)"
                                         } else {
@@ -82,7 +81,7 @@ class CurrentTripVC: UIViewController {
                                         }
                                         
                                         let name3 = names[2]
-                                        if ((document.data()["tripper3On"]) != nil) {
+                                        if ((document.data()["tripper3On"]) as! Bool) {
                                             self.tripper3Name.text = name3
                                             self.tripper3.text = "\(payers[name3]! + payees[name3]!)"
                                         } else {
@@ -92,7 +91,7 @@ class CurrentTripVC: UIViewController {
                                         }
                                         
                                         let name4 = names[3]
-                                        if ((document.data()["tripper4On"]) != nil) {
+                                        if ((document.data()["tripper4On"]) as! Bool) {
                                             self.tripper4Name.text = name4
                                             self.tripper4.text = "\(payers[name4]! + payees[name4]!)"
                                         } else {
@@ -103,7 +102,7 @@ class CurrentTripVC: UIViewController {
                                         
                                         
                                         let name5 = names[4]
-                                        if ((document.data()["tripper5On"]) != nil) {
+                                        if ((document.data()["tripper5On"]) as! Bool) {
                                             self.tripper5Name.text = name5
                                             self.tripper5.text = "\(payers[name5]! + payees[name5]!)"
                                         } else {
@@ -114,7 +113,7 @@ class CurrentTripVC: UIViewController {
                                         
                                         
                                         let name6 = names[5]
-                                        if ((document.data()["tripper6On"]) != nil) {
+                                        if ((document.data()["tripper6On"]) as! Bool) {
                                             self.tripper6Name.text = name6
                                             self.tripper6.text = "\(payers[name6]! + payees[name6]!)"
                                         } else {
@@ -124,9 +123,7 @@ class CurrentTripVC: UIViewController {
                                         }
                                         
                                     self.total.text = "\(total)"
-                                        
                                     }
-                                    
                                 }
                             }
                         }
