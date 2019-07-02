@@ -56,30 +56,35 @@ class NewTripVC: UIViewController {
         }else{
             names.append("tripper1")
         }
+        
         if tripper2Switch.isOn {
             numTrippers += 1
             names.append("\(tripper2TextField.text!)")
         }else{
             names.append("tripper2")
         }
+        
         if tripper3Switch.isOn {
             numTrippers += 1
             names.append("\(tripper3TextField.text!)")
         }else{
             names.append("tripper3")
         }
+        
         if tripper4Switch.isOn {
             numTrippers += 1
             names.append("\(tripper4TextField.text!)")
         }else{
             names.append("tripper4")
         }
+        
         if tripper5Switch.isOn {
             numTrippers += 1
             names.append("\(tripper5TextField.text!)")
         }else{
             names.append("tripper5")
         }
+        
         if tripper6Switch.isOn {
             numTrippers += 1
             names.append("\(tripper6TextField.text!)")
@@ -99,7 +104,7 @@ class NewTripVC: UIViewController {
         let database = Firestore.firestore()
         let uid = Auth.auth().currentUser!.uid
         
-        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, names: names, payers: trippers, payees: trippers, total: 0.0, tripper1On: tripper1Switch.isOn, tripper2On: tripper2Switch.isOn, tripper3On: tripper3Switch.isOn, tripper4On: tripper4Switch.isOn, tripper5On: tripper5Switch.isOn, tripper6On: tripper6Switch.isOn)
+        let trip = TripModal(destination: DestinationTextField.text!, uid: uid, date: startDateTextField.text!, title: titleTextField.text!, names: names, payers: trippers, payees: trippers, total: 0.0, tripper1On: tripper1Switch.isOn, tripper2On:tripper2Switch.isOn, tripper3On: tripper3Switch.isOn, tripper4On: tripper4Switch.isOn, tripper5On: tripper5Switch.isOn, tripper6On: tripper6Switch.isOn)
         
         let tripRef = database.collection("trips")
         
