@@ -10,13 +10,14 @@ import UIKit
 import FirebaseFirestore
 import FirebaseAuth
 
-class SignUpVC: UIViewController {
+class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //MARK: ~Properties
     var db:Firestore!
     
     var ref: DocumentReference? = nil
     
+    @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
     
     @IBOutlet weak var emailTextField: UITextField!
@@ -31,6 +32,36 @@ class SignUpVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor.black.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+    }
+    
+    @IBAction func profileChangeTapped(_ sender: Any) {
+        //user picks own image
+        let image = UIImagePickerController()
+        image.delegate = self
+        
+        image.sourceType = UIImagePickerController.SourceType.photoLibrary
+        
+        image.allowsEditing = true
+        
+        self.present(image, animated: true)
+        {
+            //after it is complete
+        }
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
+            profileImageView.image = image
+        }else{
+            //error
+        }
+        //image view controller can now hide after getting image?
+        self.dismiss(animated: true, completion: nil)
     }
     
     @IBAction func registerTapped(_ sender: Any) {
