@@ -9,6 +9,7 @@
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
+import Firebase
 
 class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
@@ -32,6 +33,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
+        //to make a circular profile pic view
         profileImageView.layer.borderWidth = 1
         profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor.black.cgColor
@@ -64,6 +66,32 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         self.dismiss(animated: true, completion: nil)
     }
     
+    func uploadProfileImage(_ image: UIImage, completion: @escaping ((_ url: String?)-> ())) {
+        guard let uid = Auth.auth().currentUser?.uid else {return }
+        let storageRef = Storage.storage().reference().child("user/\(uid)")
+        
+        guard let imageData = image.jpegData(compressionQuality: 0.75) else {return}
+        
+        let metaData = StorageMetadata()
+        metaData.contentType = "image/jpg"
+        
+        storageRef.putData(imageData, metadata: metaData) { (metaData, error) in
+            if error == nil , metaData != nil {
+                storageRef.downloadURL{ (URL, error) in
+                    if let error = error {
+                        print(error.localizedDescription)
+                        return
+                    }else{
+                        completion("\(URL!)")
+                    }
+                }
+            }else{
+                //failure
+                completion(nil)
+            }
+        }
+    }
+    
     @IBAction func registerTapped(_ sender: Any) {
         let signUpManager = FirebaseAuthManager()
         if let email = emailTextField.text, let password = passwordTextField.text, let confirmpwd = confirmpwdTextField.text, let username = usernameTextField.text{
@@ -72,19 +100,27 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                 guard let `self` = self else { return }
                 var message: String = ""
                 if (success) {
+                    guard let uid = Auth.auth().currentUser?.uid else {return}
+                    var URL:String?
                     message = "User was sucessfully created."
-                    
+                    //upload profile pic in storage and get url
+                    self.uploadProfileImage(self.profileImageView.image!, completion: { (url) in
+                        URL = url
+                    })
                     //info to be stored in firestore with  email, uid, username and password
-                    let user = UserModal(email: email, uid: (Auth.auth().currentUser!.uid) ,username: username, password: password)
-                    let userRef = self.db.collection("users")
+                    let user = UserModal(email: email, uid: uid ,username: username, password: password)
+                    let userRef = self.db.collection("users").document()
                     
-                    userRef.document().setData(user.dictionary){ err in
+                    userRef.setData(user.dictionary){ err in
                         if err != nil {
                             print("issue here")
                         }else{
                             print("Document was saved")
                         }
                     }
+                    //add url data as well
+                    userRef.setData(["imageURL": URL!], merge: true)
+                    
                 }else{
                     message = "There was an error."
                 }

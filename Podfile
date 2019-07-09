@@ -9,6 +9,8 @@ target 'unitravelsprac' do
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
   pod 'Firebase/Firestore'
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Storage'
 
   target 'unitravelspracTests' do
     inherit! :search_paths
