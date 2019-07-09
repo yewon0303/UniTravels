@@ -444,7 +444,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Py5-lM-7EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462.3188405797105" y="2082.5892857142858"/>
+            <point key="canvasLocation" x="3972" y="2091"/>
         </scene>
         <!--Add-->
         <scene sceneID="wp7-Ll-tJd">
@@ -755,7 +755,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTS-58-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371.0144927536235" y="2082.5892857142858"/>
+            <point key="canvasLocation" x="2577" y="2091"/>
         </scene>
         <!--Items-->
         <scene sceneID="x8b-FO-0kM">
@@ -802,7 +802,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbq-XY-Ee2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4176.811594202899" y="2054.4642857142858"/>
+            <point key="canvasLocation" x="3257" y="2091"/>
         </scene>
         <!--Summary-->
         <scene sceneID="vvi-Lu-Zdn">
