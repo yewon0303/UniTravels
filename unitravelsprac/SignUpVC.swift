@@ -83,10 +83,12 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                         return
                     }else{
                         completion("\(URL!)")
+                        print("url obtained")
                     }
                 }
             }else{
                 //failure
+                print("failure in storing")
                 completion(nil)
             }
         }
