@@ -66,7 +66,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         self.dismiss(animated: true, completion: nil)
     }
     
-    func uploadProfileImage(_ image: UIImage, completion: @escaping ((_ url: String?)-> ())) {
+    func uploadProfileImage(_ image: UIImage, completion: @escaping ((_ url: String?)-> (Void))) {
         guard let uid = Auth.auth().currentUser?.uid else {return }
         let storageRef = Storage.storage().reference().child("user/\(uid)")
         
@@ -103,12 +103,10 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                 var message: String = ""
                 if (success) {
                     guard let uid = Auth.auth().currentUser?.uid else {return}
-                    var URL:String?
+                    
+                    
                     message = "User was sucessfully created."
-                    //upload profile pic in storage and get url
-                    self.uploadProfileImage(self.profileImageView.image!, completion: { (url) in
-                        URL = url
-                    })
+                   
                     //info to be stored in firestore with  email, uid, username and password
                     let user = UserModal(email: email, uid: uid ,username: username, password: password)
                     let userRef = self.db.collection("users").document()
@@ -120,8 +118,11 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                             print("Document was saved")
                         }
                     }
-                    //add url data as well
-                    userRef.setData(["imageURL": URL!], merge: true)
+                    //upload profile pic in storage and get url
+                    self.uploadProfileImage(self.profileImageView.image!, completion: { (url) in
+                        //add url data as well
+                        userRef.setData(["imageURL": url], merge: true)
+                    })
                     
                 }else{
                     message = "There was an error."
