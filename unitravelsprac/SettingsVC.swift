@@ -19,6 +19,7 @@ class SettingsVC: UIViewController {
     @IBOutlet weak var emailadd: UILabel!
     @IBOutlet weak var returnButton: UIButton!
     @IBOutlet weak var destinations: UILabel!
+    @IBOutlet weak var profileImageView: UIImageView!
     
     //MARK: ~Actions
     
@@ -26,6 +27,13 @@ class SettingsVC: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
+        //make profile view circular
+        profileImageView.layer.borderWidth = 1
+        profileImageView.layer.masksToBounds = false
+        profileImageView.layer.borderColor = UIColor.black.cgColor
+        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
+        profileImageView.clipsToBounds = true
+        
         let user = Auth.auth().currentUser
         if let user = user {
             let uid = user.uid
@@ -37,10 +45,19 @@ class SettingsVC: UIViewController {
                     for document in (snapshot?.documents)! {
                         if let username = document.data()["username"] as? String {
                             if let email = document.data()["email"] as? String {
-                                
-                                self.uid.text  = "Username: " + username
-                                self.emailadd.text = "Email address: " + email
-                                //self.profileTextView.text += "\n username: \(username) \n email: \(email)"
+                                if let imageURL = document.data()["imageURL"] as? String {
+                                    self.uid.text  = "Username: " + username
+                                    self.emailadd.text = "Email address: " + email
+                                    //get url from firestore and assign to profile pic
+                                    let url = URL(string: imageURL)
+                                    let data = try? Data(contentsOf: url!)
+                                    
+                                    if let imageData = data {
+                                        let image = UIImage(data: imageData)
+                                        self.profileImageView.image = image
+                                    }
+                                    
+                                }
                             }
                         }
                     }
