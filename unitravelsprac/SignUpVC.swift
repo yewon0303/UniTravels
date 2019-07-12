@@ -34,11 +34,12 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
         //to make a circular profile pic view
+
+        profileImageView.layer.cornerRadius = profileImageView.frame.size.width / 2
+        profileImageView.clipsToBounds = true;
         profileImageView.layer.borderWidth = 1
-        profileImageView.layer.masksToBounds = false
         profileImageView.layer.borderColor = UIColor.black.cgColor
-        profileImageView.layer.cornerRadius = profileImageView.frame.height/2
-        profileImageView.clipsToBounds = true
+        
     }
     
     @IBAction func profileChangeTapped(_ sender: Any) {
