@@ -55,9 +55,8 @@ class MemoriesTableVC: UITableViewController {
             } else {
                 
                 if let snapshot = snapshot {
-                    var count = 0
+                    
                     for document in snapshot.documents {
-                        count += 1
                         let docData = document.data()
                         let memoryURL = docData["memoryURL"] as? String ?? ""
                         
@@ -65,13 +64,10 @@ class MemoriesTableVC: UITableViewController {
                         let url = URL(string: memoryURL)
                         let data = try? Data(contentsOf: url!)
                         
-                        //BUGGY AREA ONLY SHOWS 2 PICS
+                        
                         if let imageData = data {
                             let newMemory = UIImage(data: imageData)
                             self.imagesArray.append(newMemory)
-                            print("image \(count) added")
-                        }else{
-                            print("upload failed")
                         }
                         
                     }

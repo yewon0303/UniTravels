@@ -15,6 +15,8 @@ import FirebaseStorage
 class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //MARK: ~Properties
+    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
     @IBOutlet weak var myImageView: UIImageView!
     
     var db:Firestore!
@@ -83,13 +85,22 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
     
     func uploadProfileImage(_ image: UIImage, completion: @escaping ((_ url: String?)-> (Void))) {
         guard let uid = Auth.auth().currentUser?.uid else {return }
-        let storageRef = Storage.storage().reference().child("memories")
         
+        //use date as path for storage
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short   // You can also use Long, Medium and No style.
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        
+        let inputDate = dateFormatter.string(from: myDatePicker.date)
+        let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(inputDate)")
+        
+        //image data and metadata
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {return}
         
         let metaData = StorageMetadata()
         metaData.contentType = "image/jpg"
         
+        //store image data in storage and download url 
         storageRef.putData(imageData, metadata: metaData) { (metaData, error) in
             if error == nil , metaData != nil {
                 storageRef.downloadURL{ (URL, error) in

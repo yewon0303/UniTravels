@@ -480,32 +480,11 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-Qc-an4">
-                                <rect key="frame" x="46" y="128" width="319" height="465"/>
+                                <rect key="frame" x="46" y="128" width="317" height="381"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="465" id="UWV-Zr-biP"/>
+                                    <constraint firstAttribute="height" constant="381" id="UWV-Zr-biP"/>
                                 </constraints>
                             </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Nk-xgh">
-                                <rect key="frame" x="142" y="619" width="130" height="132"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-9V-QQv">
-                                        <rect key="frame" x="0.0" y="0.0" width="130" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Select photo"/>
-                                        <connections>
-                                            <action selector="selectTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="cjq-GH-oha"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-Fb-pf5">
-                                        <rect key="frame" x="0.0" y="93" width="130" height="39"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
-                                        <state key="normal" title="Upload photo"/>
-                                        <connections>
-                                            <action selector="uploadTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="QEO-Qo-s5s"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8i-bT-1Gv">
                                 <rect key="frame" x="48" y="57" width="52" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
@@ -514,21 +493,49 @@
                                     <action selector="returnTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="4iG-sh-wSL"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Nk-xgh">
+                                <rect key="frame" x="48" y="535" width="320" height="314"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-9V-QQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Select photo"/>
+                                        <connections>
+                                            <action selector="selectTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="cjq-GH-oha"/>
+                                        </connections>
+                                    </button>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="8fa-N8-lrG">
+                                        <rect key="frame" x="0.0" y="49" width="320" height="216"/>
+                                        <date key="date" timeIntervalSinceReferenceDate="584730192.66622603">
+                                            <!--2019-07-13 17:03:12 +0000-->
+                                        </date>
+                                    </datePicker>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-Fb-pf5">
+                                        <rect key="frame" x="0.0" y="275" width="320" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Upload photo"/>
+                                        <connections>
+                                            <action selector="uploadTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="QEO-Qo-s5s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="NxD-Qc-an4" firstAttribute="leading" secondItem="met-Yj-8Ez" secondAttribute="leading" constant="46" id="0cD-dh-cLX"/>
-                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="NxD-Qc-an4" secondAttribute="centerX" constant="1.5" id="9T3-ln-kZB"/>
-                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="pEe-Rh-e0P" secondAttribute="centerX" id="9r7-tX-Wl7"/>
+                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="NxD-Qc-an4" secondAttribute="centerX" constant="3.5" id="9T3-ln-kZB"/>
+                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="pEe-Rh-e0P" secondAttribute="centerX" constant="1" id="9r7-tX-Wl7"/>
                             <constraint firstItem="e8i-bT-1Gv" firstAttribute="leading" secondItem="met-Yj-8Ez" secondAttribute="leading" constant="48" id="9sN-Oo-tbS"/>
                             <constraint firstItem="NxD-Qc-an4" firstAttribute="top" secondItem="met-Yj-8Ez" secondAttribute="top" constant="84" id="Q86-oC-6Bc"/>
                             <constraint firstItem="e8i-bT-1Gv" firstAttribute="top" secondItem="met-Yj-8Ez" secondAttribute="top" constant="13" id="dyJ-X4-WWJ"/>
                             <constraint firstItem="met-Yj-8Ez" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e8i-bT-1Gv" secondAttribute="trailing" symbolic="YES" id="l9f-Uw-Uyh"/>
-                            <constraint firstItem="met-Yj-8Ez" firstAttribute="bottom" secondItem="AGz-Nk-xgh" secondAttribute="bottom" constant="111" id="n9i-Wb-maX"/>
+                            <constraint firstItem="met-Yj-8Ez" firstAttribute="bottom" secondItem="AGz-Nk-xgh" secondAttribute="bottom" constant="13" id="n9i-Wb-maX"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="met-Yj-8Ez"/>
                     </view>
                     <connections>
+                        <outlet property="myDatePicker" destination="8fa-N8-lrG" id="tQd-DF-Vqf"/>
                         <outlet property="myImageView" destination="NxD-Qc-an4" id="Tkt-HS-lyK"/>
                     </connections>
                 </viewController>

@@ -263,11 +263,8 @@ class AddItemVC: UIViewController {
                                 "payees.\(payee)": newDebt
                                 ])
                         }
-                        
-                        
                     }
                 }
-                
             }
         }
         
