@@ -21,19 +21,23 @@ class FirebaseAuthManager {
     }
     
     func createUser(email: String, password: String, confirmpwd: String, completionBlock: @escaping (_ success: Bool) -> Void) {
-        Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
+        
+        if password != confirmpwd {
+            print("passwords do not match")
+            completionBlock(false)
             
-            if let error = error {
-                print("Failed to sign up with error: " , error.localizedDescription)
-                completionBlock(false)
+        }else{
+        
+            Auth.auth().createUser(withEmail: email, password: password) {(authResult, error) in
                 
-            }else if password != confirmpwd {
-                print("passwords do not match")
-                completionBlock(false)
-                
-            }else if let user = authResult?.user {
-                print(user)
-                completionBlock(true)
+                if let error = error {
+                    print("Failed to sign up with error: " , error.localizedDescription)
+                    completionBlock(false)
+                    
+                }else if let user = authResult?.user {
+                    print(user)
+                    completionBlock(true)
+                }
             }
         }
     }

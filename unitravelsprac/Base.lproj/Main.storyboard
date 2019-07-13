@@ -1080,7 +1080,7 @@
                                 </subviews>
                             </stackView>
                             <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="scG-cf-Rve">
-                                <rect key="frame" x="299" y="75" width="95" height="36"/>
+                                <rect key="frame" x="313" y="75" width="81" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
                                         <rect key="frame" x="0.0" y="0.0" width="62" height="36"/>
@@ -1092,12 +1092,12 @@
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-g4-gRM">
-                                        <rect key="frame" x="65" y="3" width="30" height="30"/>
+                                        <rect key="frame" x="65" y="10" width="16" height="16"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to UniTravels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-5K-ebN">
-                                <rect key="frame" x="20.5" y="75" width="194.5" height="23"/>
+                                <rect key="frame" x="34.5" y="75" width="194.5" height="23"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -1270,7 +1270,7 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4DS-VN-RM6"/>
+        <segue reference="3px-0q-5L6"/>
         <segue reference="aOE-T1-U7e"/>
     </inferredMetricsTieBreakers>
 </document>

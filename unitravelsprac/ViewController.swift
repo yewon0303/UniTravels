@@ -27,13 +27,10 @@ class ViewController: UIViewController {
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }
         loginManager.signIn(email: email, pass: password) {[weak self] (success) in
             guard let `self` = self else { return }
-            var message: String = ""
             if (success) {
                 self.afterSuccessfulLogin()
-                message = "User was sucessfully logged in."
             } else {
-                message = "There was an error."
-                let alertController = UIAlertController(title: nil, message: message, preferredStyle: .alert)
+                let alertController = UIAlertController(title: nil, message: "There was an error.", preferredStyle: .alert)
                 alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
                 self.display(alertController: alertController)
             }
