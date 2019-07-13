@@ -276,8 +276,8 @@
                                     <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="4DS-VN-RM6"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
-                                <rect key="frame" x="149" y="789" width="117" height="48"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
+                                <rect key="frame" x="149" y="789" width="116" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Nub-mo-XLc"/>
                                 </constraints>
@@ -385,6 +385,7 @@
                             <constraint firstItem="Gsb-e1-kod" firstAttribute="leading" secondItem="9AX-jY-cps" secondAttribute="leading" constant="117" id="dJl-Uh-A19"/>
                             <constraint firstItem="Pyt-vt-doZ" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="eIE-qC-yZk"/>
                             <constraint firstItem="rJF-EJ-YGW" firstAttribute="top" secondItem="Gsb-e1-kod" secondAttribute="bottom" constant="93" id="hQa-Je-ZTB"/>
+                            <constraint firstItem="9AX-jY-cps" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J9A-Vh-CvK" secondAttribute="trailing" symbolic="YES" id="nb1-dA-0mN"/>
                             <constraint firstItem="zeJ-Kr-l3S" firstAttribute="top" secondItem="9AX-jY-cps" secondAttribute="top" id="sgD-qK-Ulv"/>
                             <constraint firstItem="Pyt-vt-doZ" firstAttribute="top" secondItem="rJF-EJ-YGW" secondAttribute="bottom" constant="84" id="t97-vc-093"/>
                             <constraint firstItem="rJF-EJ-YGW" firstAttribute="trailing" secondItem="E1v-cy-TnK" secondAttribute="trailingMargin" id="yuI-Bn-Mud"/>
@@ -433,6 +434,15 @@
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
+                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aHW-rL-bS4">
+                                    <rect key="frame" x="342" y="15" width="30" height="30"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <state key="normal" image="gallery"/>
+                                    <connections>
+                                        <action selector="uploadTapped:" destination="GXi-DG-uXe" eventType="touchUpInside" id="haz-n3-1Oi"/>
+                                        <segue destination="xzh-PX-YVh" kind="show" identifier="uploadPhoto" id="ae5-CD-JSA"/>
+                                    </connections>
+                                </button>
                             </subviews>
                             <color key="backgroundColor" red="0.69696266770000004" green="0.86640010509999998" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <constraints>
@@ -459,7 +469,72 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Py5-lM-7EH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2462.3188405797105" y="2082.5892857142858"/>
+            <point key="canvasLocation" x="3691" y="2083"/>
+        </scene>
+        <!--Upload MemoryVC-->
+        <scene sceneID="CYy-A0-LCJ">
+            <objects>
+                <viewController id="xzh-PX-YVh" customClass="UploadMemoryVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pEe-Rh-e0P">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NxD-Qc-an4">
+                                <rect key="frame" x="46" y="128" width="319" height="465"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="465" id="UWV-Zr-biP"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="54" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Nk-xgh">
+                                <rect key="frame" x="142" y="619" width="130" height="132"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-9V-QQv">
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Select photo"/>
+                                        <connections>
+                                            <action selector="selectTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="cjq-GH-oha"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-Fb-pf5">
+                                        <rect key="frame" x="0.0" y="93" width="130" height="39"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                        <state key="normal" title="Upload photo"/>
+                                        <connections>
+                                            <action selector="uploadTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="QEO-Qo-s5s"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8i-bT-1Gv">
+                                <rect key="frame" x="48" y="57" width="52" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="4iG-sh-wSL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="NxD-Qc-an4" firstAttribute="leading" secondItem="met-Yj-8Ez" secondAttribute="leading" constant="46" id="0cD-dh-cLX"/>
+                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="NxD-Qc-an4" secondAttribute="centerX" constant="1.5" id="9T3-ln-kZB"/>
+                            <constraint firstItem="AGz-Nk-xgh" firstAttribute="centerX" secondItem="pEe-Rh-e0P" secondAttribute="centerX" id="9r7-tX-Wl7"/>
+                            <constraint firstItem="e8i-bT-1Gv" firstAttribute="leading" secondItem="met-Yj-8Ez" secondAttribute="leading" constant="48" id="9sN-Oo-tbS"/>
+                            <constraint firstItem="NxD-Qc-an4" firstAttribute="top" secondItem="met-Yj-8Ez" secondAttribute="top" constant="84" id="Q86-oC-6Bc"/>
+                            <constraint firstItem="e8i-bT-1Gv" firstAttribute="top" secondItem="met-Yj-8Ez" secondAttribute="top" constant="13" id="dyJ-X4-WWJ"/>
+                            <constraint firstItem="met-Yj-8Ez" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="e8i-bT-1Gv" secondAttribute="trailing" symbolic="YES" id="l9f-Uw-Uyh"/>
+                            <constraint firstItem="met-Yj-8Ez" firstAttribute="bottom" secondItem="AGz-Nk-xgh" secondAttribute="bottom" constant="111" id="n9i-Wb-maX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="met-Yj-8Ez"/>
+                    </view>
+                    <connections>
+                        <outlet property="myImageView" destination="NxD-Qc-an4" id="Tkt-HS-lyK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wrc-09-gHc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4524.6376811594209" y="2082.5892857142858"/>
         </scene>
         <!--Add-->
         <scene sceneID="wp7-Ll-tJd">
@@ -724,8 +799,10 @@
                             <constraint firstItem="fuT-6y-rJD" firstAttribute="leading" secondItem="ePy-A0-zxH" secondAttribute="leading" id="Tbf-oK-l3i"/>
                             <constraint firstItem="ICH-5b-iBz" firstAttribute="trailing" secondItem="ePy-A0-zxH" secondAttribute="trailingMargin" id="Wa2-Re-9hy"/>
                             <constraint firstItem="M33-iQ-BX6" firstAttribute="leading" secondItem="etJ-mZ-Saj" secondAttribute="trailing" constant="1" id="ZYH-Mz-YOJ"/>
+                            <constraint firstItem="ER3-Zo-KKB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="iYZ-Tc-SHl" secondAttribute="trailing" symbolic="YES" id="aCw-ys-OzF"/>
                             <constraint firstItem="iYZ-Tc-SHl" firstAttribute="top" secondItem="etJ-mZ-Saj" secondAttribute="bottom" constant="50" id="dgq-A2-DPW"/>
                             <constraint firstAttribute="trailing" secondItem="fuT-6y-rJD" secondAttribute="trailing" id="gpw-V5-x3A"/>
+                            <constraint firstItem="ER3-Zo-KKB" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="zqh-q7-vve" secondAttribute="trailing" symbolic="YES" id="imb-1O-LM0"/>
                             <constraint firstItem="etJ-mZ-Saj" firstAttribute="baseline" secondItem="lsc-Tl-mKN" secondAttribute="baseline" id="kof-XG-sWZ"/>
                             <constraint firstItem="etJ-mZ-Saj" firstAttribute="top" secondItem="ICH-5b-iBz" secondAttribute="bottom" constant="28" id="lfQ-jc-hKc"/>
                             <constraint firstItem="fuT-6y-rJD" firstAttribute="top" secondItem="ER3-Zo-KKB" secondAttribute="top" id="rA4-bn-Bdk"/>
@@ -770,7 +847,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTS-58-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3371.0144927536235" y="2082.5892857142858"/>
+            <point key="canvasLocation" x="2099" y="2083"/>
         </scene>
         <!--Items-->
         <scene sceneID="x8b-FO-0kM">
@@ -817,7 +894,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="cbq-XY-Ee2" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4176.811594202899" y="2054.4642857142858"/>
+            <point key="canvasLocation" x="2890" y="2083"/>
         </scene>
         <!--Summary-->
         <scene sceneID="vvi-Lu-Zdn">
@@ -966,7 +1043,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLc-P4-hKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3608.6956521739135" y="1343.9732142857142"/>
+            <point key="canvasLocation" x="1312" y="2083"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">
@@ -1270,7 +1347,7 @@
         <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="8qC-mx-YzG"/>
+        <segue reference="yib-8A-SRu"/>
         <segue reference="aOE-T1-U7e"/>
     </inferredMetricsTieBreakers>
 </document>

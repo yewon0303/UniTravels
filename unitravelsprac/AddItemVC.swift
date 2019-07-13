@@ -273,7 +273,7 @@ class AddItemVC: UIViewController {
         
         // setting item document
         let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid)
-        
+        //adding new item under items subcollection under trips collection
         db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
             var message: String = ""
             if err != nil {

@@ -42,6 +42,8 @@
 		EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */; };
 		EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
 		EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
+		EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
+		EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		FBFAA3C5CFF67AACFA6F04B2 /* Pods_unitravelspracTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -85,6 +87,7 @@
 		EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitravelspracTests.swift; sourceTree = "<group>"; };
 		EEBF5BFE22B8C92300A4F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMemoryVC.swift; sourceTree = "<group>"; };
 		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +167,7 @@
 				179B64D622C4863F006E1748 /* AddItemVC.swift */,
 				EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */,
 				EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */,
+				EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
 				EE9681DA22C39A9E00BEE281 /* TripModal.swift */,
@@ -360,6 +364,7 @@
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EE18E8CC22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
+				EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */,
 				179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */,
 				179B64DA22C524AE006E1748 /* CurrentTripVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
@@ -377,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */,
+				EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */,
 				EE86AE5D22BF969000CAB5E8 /* UserModal.swift in Sources */,
 				EE18E8CD22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,

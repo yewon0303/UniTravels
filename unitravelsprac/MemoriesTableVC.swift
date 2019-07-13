@@ -9,7 +9,12 @@
 import UIKit
 
 class MemoriesTableVC: UITableViewController {
-
+    
+    
+    @IBAction func uploadTapped(_ sender: Any) {
+        performSegue(withIdentifier: "uploadPhoto", sender: self)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
