@@ -44,6 +44,8 @@
 		EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
 		EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
+		EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
+		EEEE89CC22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
 		FBFAA3C5CFF67AACFA6F04B2 /* Pods_unitravelspracTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -88,6 +90,7 @@
 		EEBF5BFE22B8C92300A4F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMemoryVC.swift; sourceTree = "<group>"; };
+		EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
 		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -167,6 +170,7 @@
 				179B64D622C4863F006E1748 /* AddItemVC.swift */,
 				EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */,
 				EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */,
+				EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */,
 				EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */,
 				EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */,
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
@@ -372,6 +376,7 @@
 				EE18E8FE22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
 				EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
+				EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */,
 				EE86AE5F22BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
 				EE18E90422C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 			);
@@ -390,6 +395,7 @@
 				EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
 				EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
+				EEEE89CC22D9F0250080FD37 /* ImageTVCell.swift in Sources */,
 				EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */,
 				EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
 				EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */,

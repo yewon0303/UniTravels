@@ -7,91 +7,104 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class MemoriesTableVC: UITableViewController {
     
+    //MARK: ~ Properties
+    var db:Firestore!
+    var imagesArray = [UIImage?]()
+    
+    //MARK: ~Actions
     
     @IBAction func uploadTapped(_ sender: Any) {
         performSegue(withIdentifier: "uploadPhoto", sender: self)
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        NSLog("viewDidAppear is running in current view")
+        //TO clear array
+        imagesArray = [UIImage?]()
+        loadData()
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.tableFooterView = UIView()
+        self.tableView.register(ImageTVCell.self, forCellReuseIdentifier: "ImageViewCell")
+        //init database
+        db = Firestore.firestore()
 
-
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        //dispose of any resources that can be recreated
+    }
+    
+    func loadData() {
+        let uid = (Auth.auth().currentUser?.uid)!
+        db.collection("trips").document(uid).collection("memories").whereField("uid", isEqualTo:uid).getDocuments() { (snapshot, error) in
+            
+            if let error = error {
+                
+                print(error.localizedDescription)
+                
+            } else {
+                
+                if let snapshot = snapshot {
+                    var count = 0
+                    for document in snapshot.documents {
+                        count += 1
+                        let docData = document.data()
+                        let memoryURL = docData["memoryURL"] as? String ?? ""
+                        
+                        //add to image array after getting url from firestore
+                        let url = URL(string: memoryURL)
+                        let data = try? Data(contentsOf: url!)
+                        
+                        //BUGGY AREA ONLY SHOWS 2 PICS
+                        if let imageData = data {
+                            let newMemory = UIImage(data: imageData)
+                            self.imagesArray.append(newMemory)
+                            print("image \(count) added")
+                        }else{
+                            print("upload failed")
+                        }
+                        
+                    }
+                    self.tableView.reloadData()
+                }
+            }
+        }
     }
 
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
-    }
-
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 0
+        return imagesArray.count
     }
-
-    /*
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
-        // Configure the cell...
-
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ImageViewCell") as! ImageTVCell
+        
+        cell.mainImageView.image = imagesArray[indexPath.row]
         return cell
     }
-    */
-
-    /*
-    // Override to support conditional editing of the table view.
-    override func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the specified item to be editable.
-        return true
+    
+    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let currentImage = imagesArray[indexPath.row]
+        let imageCrop = currentImage!.getCropRatio()
+        return tableView.frame.width / imageCrop
     }
-    */
+    
+}
 
-    /*
-    // Override to support editing the table view.
-    override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        if editingStyle == .delete {
-            // Delete the row from the data source
-            tableView.deleteRows(at: [indexPath], with: .fade)
-        } else if editingStyle == .insert {
-            // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-        }    
+extension UIImage {
+    func getCropRatio() -> CGFloat {
+        let widthRatio = self.size.width / self.size.height
+        return widthRatio
     }
-    */
-
-    /*
-    // Override to support rearranging the table view.
-    override func tableView(_ tableView: UITableView, moveRowAt fromIndexPath: IndexPath, to: IndexPath) {
-
-    }
-    */
-
-    /*
-    // Override to support conditional rearranging of the table view.
-    override func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        // Return false if you do not want the item to be re-orderable.
-        return true
-    }
-    */
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
