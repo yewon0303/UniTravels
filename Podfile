@@ -11,6 +11,7 @@ target 'unitravelsprac' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
+  pod 'AZExpandableIconListView'
 
   target 'unitravelspracTests' do
     inherit! :search_paths

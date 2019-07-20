@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		175FDFC022E382A3001B9C66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */; };
+		175FDFC122E382A3001B9C66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */; };
 		179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D622C4863F006E1748 /* AddItemVC.swift */; };
 		179B64D822C4863F006E1748 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D622C4863F006E1748 /* AddItemVC.swift */; };
 		179B64DA22C524AE006E1748 /* CurrentTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D922C524AE006E1748 /* CurrentTripVC.swift */; };
@@ -24,8 +26,6 @@
 		EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
 		EE7BF7CB22B902C800EF3DC9 /* HomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */; };
-		EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
-		EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */; };
 		EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
 		EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */; };
 		EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86AE5B22BF969000CAB5E8 /* UserModal.swift */; };
@@ -60,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		179B64D622C4863F006E1748 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		179B64D922C524AE006E1748 /* CurrentTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripVC.swift; sourceTree = "<group>"; };
 		2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_unitravelspracTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,7 +74,6 @@
 		EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableVC.swift; sourceTree = "<group>"; };
 		EE2144E122C38C2900402B53 /* NewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
 		EE7BF7C922B902C800EF3DC9 /* HomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeVC.swift; sourceTree = "<group>"; };
-		EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		EE7BF7CF22B91C6100EF3DC9 /* FirebaseAuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseAuthManager.swift; sourceTree = "<group>"; };
 		EE86AE5B22BF969000CAB5E8 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
 		EE86AE5E22BFB03500CAB5E8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
@@ -178,7 +178,7 @@
 				EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */,
 				EE18E90022C8BAFB0010ED3F /* Item.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
-				EE7BF7CC22B90A7500EF3DC9 /* GoogleService-Info.plist */,
+				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -277,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EEBF5BF222B8C92300A4F317 /* LaunchScreen.storyboard in Resources */,
-				EE7BF7CD22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */,
+				175FDFC022E382A3001B9C66 /* GoogleService-Info.plist in Resources */,
 				EEBF5BEF22B8C92300A4F317 /* Assets.xcassets in Resources */,
 				EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */,
 			);
@@ -287,7 +287,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EE7BF7CE22B90A7500EF3DC9 /* GoogleService-Info.plist in Resources */,
+				175FDFC122E382A3001B9C66 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -557,13 +557,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRU2UF2D77;
+				DEVELOPMENT_TEAM = C4YNYR985S;
 				INFOPLIST_FILE = unitravelsprac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harshita.unitravelsprac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yewon.unitravelsprac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -576,13 +576,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRU2UF2D77;
+				DEVELOPMENT_TEAM = C4YNYR985S;
 				INFOPLIST_FILE = unitravelsprac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.harshita.unitravelsprac;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yewon.unitravelsprac;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
