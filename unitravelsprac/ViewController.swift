@@ -7,21 +7,42 @@
 //
 
 import UIKit
+import Splitflap
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
     
     //MARK: ~properties
-
     @IBOutlet weak var emailTextField: UITextField!
-
     @IBOutlet weak var passwordTextField: UITextField!
+    
+    let splitflapView = Splitflap(frame: CGRect(x: 35, y: 120, width: 350, height: 50))
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        splitflapView.datasource = self
+        splitflapView.delegate = self
+        
+        view.addSubview(splitflapView)
+        splitflapView.reload()
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        // Set the text to display by animating the flaps
+        splitflapView.setText("UniTravels", animated: true)
+    }
+    
+    // Defines the number of flaps that will be used to display the text
+    func numberOfFlapsInSplitflap(_ splitflap: Splitflap) -> Int {
+        return 10
     }
     
     //MARK: ~actions
+    func splitflap(_ splitflap: Splitflap, rotationDurationForFlapAtIndex index: Int) -> Double {
+        return 0.1
+    }
+    
     @IBAction func goTapped(_ sender: Any) {
         let loginManager = FirebaseAuthManager()
         guard let email = emailTextField.text, let password = passwordTextField.text else { return }

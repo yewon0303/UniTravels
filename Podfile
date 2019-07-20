@@ -12,6 +12,7 @@ target 'unitravelsprac' do
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
   pod 'AZExpandableIconListView'
+  pod 'Splitflap', '~> 4.1.0'
 
   target 'unitravelspracTests' do
     inherit! :search_paths
