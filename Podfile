@@ -13,6 +13,7 @@ target 'unitravelsprac' do
   pod 'Firebase/Storage'
   pod 'AZExpandableIconListView'
   pod 'Splitflap', '~> 4.1.0'
+  pod 'BEMCheckBox'
 
   target 'unitravelspracTests' do
     inherit! :search_paths

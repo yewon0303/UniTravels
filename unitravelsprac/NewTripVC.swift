@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import BEMCheckBox
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
@@ -25,18 +26,18 @@ class NewTripVC: UIViewController {
     @IBOutlet weak var tripper5TextField: UITextField!
     @IBOutlet weak var tripper6TextField: UITextField!
     
-    @IBOutlet weak var tripper1Switch: UISwitch!
-    @IBOutlet weak var tripper2Switch: UISwitch!
-    @IBOutlet weak var tripper3Switch: UISwitch!
-    @IBOutlet weak var tripper4Switch: UISwitch!
-    @IBOutlet weak var tripper5Switch: UISwitch!
-    @IBOutlet weak var tripper6Switch: UISwitch!
+    @IBOutlet weak var tripper1Switch: BEMCheckBox!
+    @IBOutlet weak var tripper2Switch: BEMCheckBox!
+    @IBOutlet weak var tripper3Switch: BEMCheckBox!
+    @IBOutlet weak var tripper4Switch: BEMCheckBox!
+    @IBOutlet weak var tripper5Switch: BEMCheckBox!
+    @IBOutlet weak var tripper6Switch: BEMCheckBox!
     
     
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
-        tripper1Switch.setOn(true, animated: true)
+      tripper1Switch.setOn(true, animated: true)
         tripper2Switch.setOn(true, animated: true)
         tripper3Switch.setOn(true, animated: true)
         tripper4Switch.setOn(true, animated: true)
@@ -50,42 +51,42 @@ class NewTripVC: UIViewController {
     @IBAction func createTapped(_ sender: Any) {
         
         var names: Array<String> = Array()
-        if tripper1Switch.isOn {
+        if tripper1Switch.on == true {
             numTrippers += 1
             names.append("\(tripper1TextField.text!)")
         }else{
             names.append("tripper1")
         }
         
-        if tripper2Switch.isOn {
+        if tripper2Switch.on == true {
             numTrippers += 1
             names.append("\(tripper2TextField.text!)")
         }else{
             names.append("tripper2")
         }
         
-        if tripper3Switch.isOn {
+        if tripper3Switch.on == true {
             numTrippers += 1
             names.append("\(tripper3TextField.text!)")
         }else{
             names.append("tripper3")
         }
         
-        if tripper4Switch.isOn {
+        if tripper4Switch.on == true {
             numTrippers += 1
             names.append("\(tripper4TextField.text!)")
         }else{
             names.append("tripper4")
         }
         
-        if tripper5Switch.isOn {
+        if tripper5Switch.on == true {
             numTrippers += 1
             names.append("\(tripper5TextField.text!)")
         }else{
             names.append("tripper5")
         }
         
-        if tripper6Switch.isOn {
+        if tripper6Switch.on == true {
             numTrippers += 1
             names.append("\(tripper6TextField.text!)")
         }else{
@@ -112,12 +113,12 @@ class NewTripVC: UIViewController {
                              payers: trippers,
                              payees: trippers,
                              total: 0.0,
-                             tripper1On: tripper1Switch.isOn,
-                             tripper2On:tripper2Switch.isOn,
-                             tripper3On: tripper3Switch.isOn,
-                             tripper4On: tripper4Switch.isOn,
-                             tripper5On: tripper5Switch.isOn,
-                             tripper6On: tripper6Switch.isOn)
+                             tripper1On: tripper1Switch.on,
+                             tripper2On:tripper2Switch.on,
+                             tripper3On: tripper3Switch.on,
+                             tripper4On: tripper4Switch.on,
+                             tripper5On: tripper5Switch.on,
+                             tripper6On: tripper6Switch.on)
         
         let tripRef = database.collection("trips")
         
