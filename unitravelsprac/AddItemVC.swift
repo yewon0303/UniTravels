@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import BEMCheckBox
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
@@ -20,12 +21,6 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var pricePerPerson: UILabel!
     
     //Payer (select 1)
-    @IBOutlet weak var payer1: UISwitch!
-    @IBOutlet weak var payer2: UISwitch!
-    @IBOutlet weak var payer3: UISwitch!
-    @IBOutlet weak var payer4: UISwitch!
-    @IBOutlet weak var payer5: UISwitch!
-    @IBOutlet weak var payer6: UISwitch!
     
     @IBOutlet weak var payer1Name: UILabel!
     @IBOutlet weak var payer2Name: UILabel!
@@ -33,6 +28,13 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var payer4Name: UILabel!
     @IBOutlet weak var payer5Name: UILabel!
     @IBOutlet weak var payer6Name: UILabel!
+    
+    @IBOutlet weak var payer1: BEMCheckBox!
+    @IBOutlet weak var payer2: BEMCheckBox!
+    @IBOutlet weak var payer3: BEMCheckBox!
+    @IBOutlet weak var payer4: BEMCheckBox!
+    @IBOutlet weak var payer5: BEMCheckBox!
+    @IBOutlet weak var payer6: BEMCheckBox!
     
     //Trippers sharing this item
     @IBOutlet weak var tripper1Name: UILabel!
@@ -42,12 +44,12 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var tripper5Name: UILabel!
     @IBOutlet weak var tripper6Name: UILabel!
     
-    @IBOutlet weak var tripper1Switch: UISwitch!
-    @IBOutlet weak var tripper2Switch: UISwitch!
-    @IBOutlet weak var tripper3Switch: UISwitch!
-    @IBOutlet weak var tripper4Switch: UISwitch!
-    @IBOutlet weak var tripper5Switch: UISwitch!
-    @IBOutlet weak var tripper6Switch: UISwitch!
+    @IBOutlet weak var tripper1Switch: BEMCheckBox!
+    @IBOutlet weak var tripper2Switch: BEMCheckBox!
+    @IBOutlet weak var tripper3Switch: BEMCheckBox!
+    @IBOutlet weak var tripper4Switch: BEMCheckBox!
+    @IBOutlet weak var tripper5Switch: BEMCheckBox!
+    @IBOutlet weak var tripper6Switch: BEMCheckBox!
     
     //MARK: Actions
     override func viewDidLoad() {
@@ -146,22 +148,22 @@ class AddItemVC: UIViewController {
         
         var num: Int = 0
         
-        if tripper1Switch.isOn {
+        if tripper1Switch.on == true {
             num += 1
         }
-        if tripper2Switch.isOn {
+        if tripper2Switch.on == true {
             num += 1
         }
-        if tripper3Switch.isOn {
+        if tripper3Switch.on == true {
             num += 1
         }
-        if tripper4Switch.isOn {
+        if tripper4Switch.on == true {
             num += 1
         }
-        if tripper5Switch.isOn {
+        if tripper5Switch.on == true {
             num += 1
         }
-        if tripper6Switch.isOn {
+        if tripper6Switch.on == true {
             num += 1
         }
         
@@ -185,17 +187,17 @@ class AddItemVC: UIViewController {
         let costPerPerson: Double = Double(pricePerPerson.text!) as? Double ?? 0.0
         var payer:String = ""
         
-        if payer1.isOn {
+        if payer1.on == true {
             payer = payer1Name.text!
-        } else if payer2.isOn {
+        } else if payer2.on == true {
             payer = payer2Name.text!
-        } else if payer3.isOn {
+        } else if payer3.on == true {
             payer = payer3Name.text!
-        } else if payer4.isOn {
+        } else if payer4.on == true {
             payer = payer4Name.text!
-        } else if payer5.isOn {
+        } else if payer5.on == true {
             payer = payer5Name.text!
-        } else if payer6.isOn {
+        } else if payer6.on == true {
             payer = payer6Name.text!
         }
         
@@ -226,22 +228,22 @@ class AddItemVC: UIViewController {
         
         // getting names of payees, storing in array, updating in "trips" collection
         var payeesArr: Array<String> = Array()
-        if tripper1Switch.isOn {
+        if tripper1Switch.on == true {
             payeesArr.append(tripper1Name.text!)
         }
-        if tripper2Switch.isOn {
+        if tripper2Switch.on == true {
             payeesArr.append(tripper2Name.text!)
         }
-        if tripper3Switch.isOn {
+        if tripper3Switch.on == true {
             payeesArr.append(tripper3Name.text!)
         }
-        if tripper4Switch.isOn {
+        if tripper4Switch.on == true {
             payeesArr.append(tripper4Name.text!)
         }
-        if tripper5Switch.isOn {
+        if tripper5Switch.on == true {
             payeesArr.append(tripper5Name.text!)
         }
-        if tripper6Switch.isOn {
+        if tripper6Switch.on == true {
             payeesArr.append(tripper6Name.text!)
         }
         
