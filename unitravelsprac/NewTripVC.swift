@@ -38,11 +38,11 @@ class NewTripVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
       tripper1Switch.setOn(true, animated: true)
-        tripper2Switch.setOn(true, animated: true)
-        tripper3Switch.setOn(true, animated: true)
-        tripper4Switch.setOn(true, animated: true)
-        tripper5Switch.setOn(true, animated: true)
-        tripper6Switch.setOn(true, animated: true)
+        tripper2Switch.setOn(false, animated: true)
+        tripper3Switch.setOn(false, animated: true)
+        tripper4Switch.setOn(false, animated: true)
+        tripper5Switch.setOn(false, animated: true)
+        tripper6Switch.setOn(false, animated: true)
         
     }
     
