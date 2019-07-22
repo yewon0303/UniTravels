@@ -790,7 +790,7 @@
                         <outlet property="numberOfPeople" destination="lDq-rP-4Bk" id="YSJ-GE-8wG"/>
                         <outlet property="payer1" destination="Hll-CX-KbE" id="pFY-1n-fEL"/>
                         <outlet property="payer1Name" destination="6Y7-Gb-Ufr" id="H0N-HW-aY0"/>
-                        <outlet property="payer2" destination="veL-0g-El2" id="zFb-4K-4ZM"/>
+                        <outlet property="payer2" destination="bTK-XJ-geG" id="PLP-F0-sqF"/>
                         <outlet property="payer2Name" destination="Ukq-Rq-75R" id="G4z-Pl-gSq"/>
                         <outlet property="payer3" destination="veL-0g-El2" id="xkg-3E-KSd"/>
                         <outlet property="payer3Name" destination="f3f-RI-5zU" id="Eph-IT-E0f"/>
@@ -852,6 +852,7 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iyz-jr-gce" id="Xnk-Wu-8GC">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="61.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <color key="backgroundColor" red="0.95461129519999999" green="0.87023321750000004" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </tableViewCellContentView>
                                 <color key="backgroundColor" red="0.9540237476236163" green="0.95686274510000002" blue="0.90762546995248128" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </tableViewCell>

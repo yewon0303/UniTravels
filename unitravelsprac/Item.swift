@@ -16,11 +16,13 @@ protocol DocumentSerializeable {
 struct Item {
     var name: String
     var price: Double
+    var payer: String
     
     var dictionary: [String: Any] {
         return [
             "name": name,
-            "price":price
+            "price": price,
+            "payer": payer
         ]
     }
 }
@@ -29,9 +31,10 @@ struct Item {
 extension Item : DocumentSerializeable {
     init?(dictionary: [String : Any]) {
         guard let name = dictionary["name"] as? String,
-            let price = dictionary["price"] as? Double else {return nil}
+            let price = dictionary["price"] as? Double,
+            let payer = dictionary["payer"] as? String else {return nil}
         
-        self.init(name: name, price: price)
+        self.init(name: name, price: price, payer: payer)
         
     }
 }
