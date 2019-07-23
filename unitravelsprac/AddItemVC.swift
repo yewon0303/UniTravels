@@ -20,6 +20,10 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var numberOfPeople: UILabel!
     @IBOutlet weak var pricePerPerson: UILabel!
     
+    var Timestamp: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
+    
     //Payer (select 1)
     
     @IBOutlet weak var payer1Name: UILabel!
@@ -271,7 +275,7 @@ class AddItemVC: UIViewController {
         }
         
         // setting item document
-        let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid)
+        let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid, timestamp: Timestamp)
         //adding new item under items subcollection under trips collection
         db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
             var message: String = ""
