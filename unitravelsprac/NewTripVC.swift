@@ -33,6 +33,7 @@ class NewTripVC: UIViewController {
     @IBOutlet weak var tripper5Switch: BEMCheckBox!
     @IBOutlet weak var tripper6Switch: BEMCheckBox!
     
+    private var datePicker: UIDatePicker?
     
     //MARK: ~Actions
     override func viewDidLoad() {
@@ -44,6 +45,33 @@ class NewTripVC: UIViewController {
         tripper5Switch.setOn(false, animated: true)
         tripper6Switch.setOn(false, animated: true)
         
+        //code for date picker
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(NewTripVC.viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        startDateTextField.inputView = datePicker
+        
+    }
+    
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+        
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd/MM/yyyy"
+        startDateTextField.text = dateFormatter.string(from: datePicker.date)
+        //view.endEditing(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     var numTrippers:Int = 0

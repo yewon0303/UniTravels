@@ -7,12 +7,12 @@
 		<key>AZExpandableIconListView.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>20</integer>
+			<integer>21</integer>
 		</dict>
 		<key>BEMCheckBox.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>22</integer>
+			<integer>23</integer>
 		</dict>
 		<key>BoringSSL-GRPC.xcscheme</key>
 		<dict>
@@ -98,6 +98,16 @@
 			<key>orderHint</key>
 			<integer>10</integer>
 		</dict>
+		<key>PasswordTextField-PasswordTextField.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+		<key>PasswordTextField.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>22</integer>
+		</dict>
 		<key>Pods-unitravelsprac.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -122,7 +132,7 @@
 		<key>Splitflap.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>25</integer>
 		</dict>
 		<key>gRPC-C++-gRPCCertificates-Cpp.xcscheme</key>
 		<dict>
