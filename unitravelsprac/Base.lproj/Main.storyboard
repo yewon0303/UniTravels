@@ -473,24 +473,18 @@
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="AGz-Nk-xgh">
-                                <rect key="frame" x="131" y="591" width="152" height="128"/>
+                                <rect key="frame" x="142" y="631" width="130" height="88"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="riJ-9V-QQv">
-                                        <rect key="frame" x="0.0" y="0.0" width="152" height="39"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="130" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Select photo"/>
                                         <connections>
                                             <action selector="selectTapped:" destination="xzh-PX-YVh" eventType="touchUpInside" id="cjq-GH-oha"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Pick a date and time" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Jt9-Hs-VsE">
-                                        <rect key="frame" x="0.0" y="49" width="152" height="30"/>
-                                        <nil key="textColor"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpa-Fb-pf5">
-                                        <rect key="frame" x="0.0" y="89" width="152" height="39"/>
+                                        <rect key="frame" x="0.0" y="49" width="130" height="39"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="22"/>
                                         <state key="normal" title="Upload photo"/>
                                         <connections>
@@ -514,7 +508,6 @@
                         <viewLayoutGuide key="safeArea" id="met-Yj-8Ez"/>
                     </view>
                     <connections>
-                        <outlet property="inputTextField" destination="Jt9-Hs-VsE" id="5Ra-Sy-KDy"/>
                         <outlet property="myImageView" destination="NxD-Qc-an4" id="Tkt-HS-lyK"/>
                     </connections>
                 </viewController>

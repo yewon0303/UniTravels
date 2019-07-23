@@ -16,47 +16,19 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
     
     //MARK: ~Properties
     
-    @IBOutlet weak var inputTextField: UITextField!
-    
     @IBOutlet weak var myImageView: UIImageView!
     
     var db:Firestore!
     
-     private var datePicker: UIDatePicker?
+    var Timestamp: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
     
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
-        
-        //code for date picker to appear
-        datePicker = UIDatePicker()
-        datePicker?.datePickerMode = .date
-        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
-        
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UploadMemoryVC.viewTapped(gestureRecognizer:)))
-        
-        view.addGestureRecognizer(tapGesture)
-        
-        inputTextField.inputView = datePicker
-    }
-    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
-        view.endEditing(true)
-        
-    }
-    
-    @objc func dateChanged(datePicker: UIDatePicker) {
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.short   // You can also use Long, Medium and No style.
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        inputTextField.text = dateFormatter.string(from: datePicker.date)
-        
-        view.endEditing(true)
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
     }
     
     @IBAction func selectTapped(_ sender: Any) {
@@ -92,7 +64,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let image = myImageView.image else {return}
         //upload profile pic in storage and get url and add url data into firestore
         self.uploadProfileImage(image, completion: { (url) in
-            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid, "timestamp": self.inputTextField.text ]) { err in
+            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid, "timestamp": self.Timestamp ]) { err in
                 var message: String = ""
                 if err != nil {
                     print("issue here at new items info")
@@ -118,8 +90,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let uid = Auth.auth().currentUser?.uid else {return }
         
         //use date as path for storage
-        guard let inputDate = self.inputTextField.text else {return}
-        let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(inputDate)")
+        let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(self.Timestamp)")
         
         //image data and metadata
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {return}
