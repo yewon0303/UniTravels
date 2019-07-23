@@ -15,17 +15,48 @@ import FirebaseStorage
 class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
     //MARK: ~Properties
-    @IBOutlet weak var myDatePicker: UIDatePicker!
+    
+    @IBOutlet weak var inputTextField: UITextField!
     
     @IBOutlet weak var myImageView: UIImageView!
     
     var db:Firestore!
+    
+     private var datePicker: UIDatePicker?
     
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         db = Firestore.firestore()
+        
+        //code for date picker to appear
+        datePicker = UIDatePicker()
+        datePicker?.datePickerMode = .date
+        datePicker?.addTarget(self, action: #selector(dateChanged(datePicker:)), for: .valueChanged)
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(UploadMemoryVC.viewTapped(gestureRecognizer:)))
+        
+        view.addGestureRecognizer(tapGesture)
+        
+        inputTextField.inputView = datePicker
+    }
+    @objc func viewTapped(gestureRecognizer: UITapGestureRecognizer) {
+        view.endEditing(true)
+        
+    }
+    
+    @objc func dateChanged(datePicker: UIDatePicker) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.short   // You can also use Long, Medium and No style.
+        dateFormatter.timeStyle = DateFormatter.Style.short
+        inputTextField.text = dateFormatter.string(from: datePicker.date)
+        
+        view.endEditing(true)
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
     }
     
     @IBAction func selectTapped(_ sender: Any) {
@@ -87,11 +118,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let uid = Auth.auth().currentUser?.uid else {return }
         
         //use date as path for storage
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateStyle = DateFormatter.Style.short   // You can also use Long, Medium and No style.
-        dateFormatter.timeStyle = DateFormatter.Style.short
-        
-        let inputDate = dateFormatter.string(from: myDatePicker.date)
+        guard let inputDate = self.inputTextField.text else {return}
         let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(inputDate)")
         
         //image data and metadata
