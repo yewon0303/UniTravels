@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import AZExpandableIconListView
 
 class HomeVC: UIViewController {
     //MARK: ~Properties
@@ -27,7 +26,7 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        /*
         create_new.isHidden = true
         gallery.isHidden = true
         folder.isHidden = true
@@ -42,35 +41,9 @@ class HomeVC: UIViewController {
         let gallery_img: UIImage = self.gallery.image!
         let folder_img: UIImage = self.folder.image!
         let face_ID_img: UIImage = self.face_ID.image!
+        */
         
-        let expandableFirstRow = AZExpandableIconListView(frame: CGRect(x: 60, y: 420, width: UIScreen.main.bounds.size.width - 20, height: 130), images: [create_new_img, gallery_img])
-        view.addSubview(expandableFirstRow)
-        
-        let expandable = AZExpandableIconListView(frame: CGRect(x: 60, y: 630, width: UIScreen.main.bounds.size.width - 20, height: 130), images: [folder_img, face_ID_img])
-        view.addSubview(expandable)
-        
-        expandableFirstRow.imageSpacing = 100
-        expandable.imageSpacing = 100
-        
-        expandableFirstRow.onExpanded = {
-            self.newTrip.isHidden = false
-            self.currentTrip.isHidden = false
-        }
-        
-        expandable.onExpanded = {
-            self.pastTrips.isHidden = false
-            self.settings.isHidden = false
-        }
-        
-        expandableFirstRow.onCollapsed = {
-            self.newTrip.isHidden = true
-            self.currentTrip.isHidden = true
-        }
-        
-        expandable.onCollapsed = {
-            self.pastTrips.isHidden = true
-            self.settings.isHidden = true
-        }
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "forest")!)
     }
     
     @IBAction func newTripTapped(_ sender: Any) {

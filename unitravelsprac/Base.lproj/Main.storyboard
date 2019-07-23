@@ -1103,127 +1103,101 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Yr-E6d">
-                                <rect key="frame" x="26" y="792" width="50" height="70"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-SF-vqt">
+                                <rect key="frame" x="0.0" y="122" width="414" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="poy-zL-IVD">
-                                <rect key="frame" x="84" y="535" width="98" height="52"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="backgroundColor" red="0.8784313725490196" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="New trip">
                                     <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="HEO-7d-zFU"/>
+                                    <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="lsX-YJ-31B"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="current" translatesAutoresizingMaskIntoConstraints="NO" id="uXH-TR-dCV">
-                                <rect key="frame" x="84" y="792" width="50" height="70"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="scG-cf-Rve">
+                                <rect key="frame" x="265" y="44" width="129" height="64"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vqY-0Y-HZy">
-                                <rect key="frame" x="240" y="541" width="127" height="40"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                <state key="normal" title="Current trip">
-                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="U5k-TP-5Op"/>
-                                    <segue destination="A1G-ce-438" kind="show" identifier="currentTrip" id="qGq-ru-hqD"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="past" translatesAutoresizingMaskIntoConstraints="NO" id="iic-2Q-qeR">
-                                <rect key="frame" x="142" y="792" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-96-w7L">
-                                <rect key="frame" x="200" y="792" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="scG-cf-Rve">
-                                <rect key="frame" x="265" y="75" width="129" height="36"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
-                                        <rect key="frame" x="0.0" y="0.0" width="62" height="36"/>
+                                        <rect key="frame" x="0.0" y="14" width="62" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <state key="normal" title="Logout"/>
+                                        <state key="normal" title="Logout">
+                                            <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
                                         <connections>
                                             <action selector="logoutTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="F6V-Ml-KoL"/>
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="signedOut" id="fFb-dY-qcA"/>
                                         </connections>
                                     </button>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-1" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-g4-gRM">
-                                        <rect key="frame" x="65" y="0.0" width="64" height="36"/>
+                                        <rect key="frame" x="65" y="0.0" width="64" height="64"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to UniTravels" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ph-5K-ebN">
-                                <rect key="frame" x="27" y="148" width="294" height="23"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
-                                <color key="textColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unitravel.001 2" translatesAutoresizingMaskIntoConstraints="NO" id="R4j-eb-kae">
-                                <rect key="frame" x="63" y="179" width="289" height="217"/>
-                                <gestureRecognizers/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="217" id="Gk5-gH-pcy"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XQK-3u-gOs">
-                                <rect key="frame" x="84" y="743" width="107" height="41"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="past" translatesAutoresizingMaskIntoConstraints="NO" id="iic-2Q-qeR">
+                                <rect key="frame" x="182" y="599" width="50" height="70"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpk-x9-bOS">
+                                <rect key="frame" x="0.0" y="491" width="414" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.62546764960000001" green="0.6852442782" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="Past trips">
                                     <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="YVd-LU-Iir"/>
-                                    <segue destination="Fbr-Hx-6cQ" kind="show" identifier="pastTripsList" id="QPl-uE-sXh"/>
+                                    <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="Cda-tB-Bj0"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fTk-xM-uJb">
-                                <rect key="frame" x="273" y="743" width="79" height="40"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z8-qY-cAe">
+                                <rect key="frame" x="0.0" y="308" width="414" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="25"/>
+                                <color key="backgroundColor" red="0.62546764960000001" green="1" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <state key="normal" title="Current trip">
+                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="DNK-sq-aGQ"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="current" translatesAutoresizingMaskIntoConstraints="NO" id="uXH-TR-dCV">
+                                <rect key="frame" x="182" y="413" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Yr-E6d">
+                                <rect key="frame" x="182" y="230" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-kB-oW8">
+                                <rect key="frame" x="0.0" y="677" width="414" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.89431117959999995" green="0.6852442782" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
                                 <state key="normal" title="Setting">
                                     <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
                                 <connections>
-                                    <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="kqy-gC-s79"/>
-                                    <segue destination="4Jq-cU-VVo" kind="show" identifier="goSettings" id="oSE-0T-pHD"/>
+                                    <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="I9T-Fs-IsT"/>
                                 </connections>
                             </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-96-w7L">
+                                <rect key="frame" x="182" y="784" width="50" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92118558180076082" green="0.92459837147887325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
-                        <constraints>
-                            <constraint firstItem="7Ph-5K-ebN" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="27" id="5ce-xw-TNj"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="7Ph-5K-ebN" secondAttribute="bottom" constant="8" id="9DG-Lb-5Us"/>
-                            <constraint firstItem="scG-cf-Rve" firstAttribute="trailing" secondItem="yMC-ut-a4Q" secondAttribute="trailingMargin" id="ArQ-95-o4Q"/>
-                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="7Ph-5K-ebN" secondAttribute="trailing" constant="93" id="GdM-yk-1K8"/>
-                            <constraint firstItem="7Ph-5K-ebN" firstAttribute="top" secondItem="scG-cf-Rve" secondAttribute="bottom" constant="37" id="H77-88-hYL"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="scG-cf-Rve" secondAttribute="bottom" constant="68" id="KI8-au-PjG"/>
-                            <constraint firstItem="scG-cf-Rve" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" constant="31" id="OzA-0l-aF4"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="scG-cf-Rve" secondAttribute="bottom" constant="68" id="XCw-ug-Gkw"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="top" secondItem="Kgb-BE-CCO" secondAttribute="top" constant="135" id="mOu-pp-ZBN"/>
-                            <constraint firstItem="Kgb-BE-CCO" firstAttribute="trailing" secondItem="R4j-eb-kae" secondAttribute="trailing" constant="62" id="skL-i7-xKq"/>
-                            <constraint firstItem="R4j-eb-kae" firstAttribute="leading" secondItem="Kgb-BE-CCO" secondAttribute="leading" constant="63" id="xAo-eM-5lN"/>
-                        </constraints>
                         <viewLayoutGuide key="safeArea" id="Kgb-BE-CCO"/>
                     </view>
                     <navigationItem key="navigationItem" id="L1j-Zm-0Qq"/>
                     <connections>
                         <outlet property="create_new" destination="8tJ-Yr-E6d" id="qTg-GM-ShW"/>
-                        <outlet property="currentTrip" destination="vqY-0Y-HZy" id="dlk-kz-eJW"/>
                         <outlet property="face_ID" destination="IjX-96-w7L" id="F4R-zg-6Sg"/>
                         <outlet property="folder" destination="iic-2Q-qeR" id="dt7-t8-xeO"/>
                         <outlet property="gallery" destination="uXH-TR-dCV" id="M91-9S-1lE"/>
-                        <outlet property="newTrip" destination="poy-zL-IVD" id="jcV-8w-wJV"/>
-                        <outlet property="pastTrips" destination="XQK-3u-gOs" id="OKL-Kj-ctC"/>
-                        <outlet property="settings" destination="fTk-xM-uJb" id="EAg-e6-wIR"/>
                         <segue destination="ySM-3M-Dqw" kind="show" identifier="newTrip" id="cSu-FB-PvV"/>
                     </connections>
                 </viewController>
@@ -1409,10 +1383,9 @@
         <image name="order" width="30" height="30"/>
         <image name="past" width="500" height="500"/>
         <image name="profile" width="64" height="64"/>
-        <image name="unitravel.001 2" width="1024" height="768"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4DS-VN-RM6"/>
-        <segue reference="aOE-T1-U7e"/>
+        <segue reference="8qC-mx-YzG"/>
+        <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
