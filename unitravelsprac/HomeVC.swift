@@ -14,10 +14,8 @@ class HomeVC: UIViewController {
     @IBOutlet weak var gallery: UIImageView!
     @IBOutlet weak var folder: UIImageView!
     @IBOutlet weak var face_ID: UIImageView!
-
     
     //MARK: ~Actions
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -32,9 +30,11 @@ class HomeVC: UIViewController {
         performSegue(withIdentifier: "currentTrip", sender: self)
     }
     @IBAction func pastTripTapped(_ sender: Any) {
+        performSegue(withIdentifier: "pastTrip", sender: self)
     }
 
     @IBAction func settingTapped(_ sender: Any) {
+        performSegue(withIdentifier: "settings", sender: self)
     }
     
     @IBAction func logoutTapped(_ sender: Any) {

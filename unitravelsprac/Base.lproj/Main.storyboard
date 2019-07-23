@@ -1199,6 +1199,9 @@
                         <outlet property="folder" destination="iic-2Q-qeR" id="dt7-t8-xeO"/>
                         <outlet property="gallery" destination="uXH-TR-dCV" id="M91-9S-1lE"/>
                         <segue destination="ySM-3M-Dqw" kind="show" identifier="newTrip" id="cSu-FB-PvV"/>
+                        <segue destination="4Jq-cU-VVo" kind="show" identifier="settings" id="k1v-Ic-9Ph"/>
+                        <segue destination="A1G-ce-438" kind="show" identifier="currentTrip" id="00J-gx-nGa"/>
+                        <segue destination="Fbr-Hx-6cQ" kind="show" identifier="pastTrip" id="nQ2-Li-UzA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3pY-pe-9kR" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1385,7 +1388,8 @@
         <image name="profile" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4DS-VN-RM6"/>
+        <segue reference="00J-gx-nGa"/>
+        <segue reference="yib-8A-SRu"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>
