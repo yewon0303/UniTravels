@@ -113,35 +113,32 @@
                                     <action selector="returnTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="vWs-yf-UDK"/>
                                 </connections>
                             </button>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-N6-86g">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zBz-N6-86g">
+                                <rect key="frame" x="0.0" y="44" width="436" height="44"/>
                                 <items>
                                     <navigationItem title="Sign Up" id="3TD-hN-KfC"/>
                                 </items>
                             </navigationBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_ID" translatesAutoresizingMaskIntoConstraints="NO" id="uea-Yf-1LP">
+                                <rect key="frame" x="168" y="133" width="100" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="5jK-WQ-imA"/>
+                                    <constraint firstAttribute="width" constant="100" id="hbT-4z-FtV"/>
+                                </constraints>
+                            </imageView>
                             <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="251" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-nP-Gaj" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="50" y="410" width="125.5" height="34"/>
+                                <rect key="frame" x="50" y="410" width="126" height="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="next"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="emW-T4-tlT" customClass="PasswordTextField" customModule="PasswordTextField">
-                                <rect key="frame" x="50" y="452" width="217.5" height="34"/>
+                                <rect key="frame" x="50" y="452" width="218" height="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fO-D1-QVZ">
-                                <rect key="frame" x="154" y="528" width="107" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <state key="normal" title="Register">
-                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <connections>
-                                    <action selector="registerTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="yNv-aL-6PG"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-Jq-Bgk">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-Jq-Bgk">
                                 <rect key="frame" x="132" y="241" width="150" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <state key="normal" title="Tap to Change"/>
@@ -149,7 +146,7 @@
                                     <action selector="profileChangeTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="AJw-ua-x1C"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqa-Da-p0K" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Username" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqa-Da-p0K" customClass="TweeAttributedTextField" customModule="TweeTextField">
                                 <rect key="frame" x="50" y="305" width="224" height="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -170,7 +167,7 @@
                                     <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Username"/>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-l1-rY0" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                            <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-l1-rY0" customClass="TweeAttributedTextField" customModule="TweeTextField">
                                 <rect key="frame" x="50" y="358" width="313" height="34"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
@@ -191,42 +188,41 @@
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_ID" translatesAutoresizingMaskIntoConstraints="NO" id="uea-Yf-1LP">
-                                <rect key="frame" x="157" y="133" width="100" height="100"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="100" id="5jK-WQ-imA"/>
-                                    <constraint firstAttribute="width" constant="100" id="hbT-4z-FtV"/>
-                                </constraints>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fO-D1-QVZ">
+                                <rect key="frame" x="154" y="494" width="128" height="48"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Register">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="registerTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="yNv-aL-6PG"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92160582540000002" green="0.92384064200000005" blue="0.9973230958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="4fO-D1-QVZ" firstAttribute="top" secondItem="emW-T4-tlT" secondAttribute="bottom" constant="42" id="0xY-pl-ZeL"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="eVd-nP-Gaj" secondAttribute="trailing" constant="238.5" id="4L1-sp-Gj8"/>
-                            <constraint firstItem="QAU-l1-rY0" firstAttribute="top" secondItem="Fqa-Da-p0K" secondAttribute="bottom" constant="19" id="85p-BP-Fl7"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="fxt-Jq-Bgk" secondAttribute="trailing" constant="132" id="DdD-xZ-lwf"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="QAU-l1-rY0" secondAttribute="trailing" constant="51" id="Dvk-4e-hRy"/>
-                            <constraint firstItem="uea-Yf-1LP" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="157" id="E0g-oa-wsf"/>
-                            <constraint firstItem="Fqa-Da-p0K" firstAttribute="top" secondItem="IzV-aw-VCS" secondAttribute="bottom" constant="169" id="Hcf-ov-Ymx"/>
-                            <constraint firstItem="eVd-nP-Gaj" firstAttribute="top" secondItem="QAU-l1-rY0" secondAttribute="bottom" constant="18" id="HjW-Uj-jcZ"/>
-                            <constraint firstItem="emW-T4-tlT" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="Kgi-Ho-xfg"/>
-                            <constraint firstItem="fxt-Jq-Bgk" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="132" id="NYH-Oc-Uaz"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="bottom" secondItem="4fO-D1-QVZ" secondAttribute="bottom" constant="286" id="NZT-KZ-UOS"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="4fO-D1-QVZ" secondAttribute="trailing" constant="153" id="OIu-5D-uHM"/>
-                            <constraint firstItem="Fqa-Da-p0K" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="OXD-we-rsb"/>
-                            <constraint firstItem="fxt-Jq-Bgk" firstAttribute="top" secondItem="uea-Yf-1LP" secondAttribute="bottom" constant="8" id="ToI-bE-hTL"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="IzV-aw-VCS" secondAttribute="trailing" constant="311" id="aNq-t8-lW9"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="emW-T4-tlT" secondAttribute="trailing" constant="146.5" id="b1W-kH-CuD"/>
-                            <constraint firstItem="eVd-nP-Gaj" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="eQc-Rl-Qe7"/>
-                            <constraint firstItem="QAU-l1-rY0" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="h2z-hJ-wdL"/>
-                            <constraint firstItem="emW-T4-tlT" firstAttribute="top" secondItem="eVd-nP-Gaj" secondAttribute="bottom" constant="8" id="hK7-6w-Ul4"/>
-                            <constraint firstItem="IzV-aw-VCS" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="20" id="hWp-ZA-4It"/>
-                            <constraint firstItem="Fqa-Da-p0K" firstAttribute="top" secondItem="fxt-Jq-Bgk" secondAttribute="bottom" constant="30" id="jVB-ZG-6OD"/>
-                            <constraint firstItem="uea-Yf-1LP" firstAttribute="top" secondItem="zBz-N6-86g" secondAttribute="bottom" constant="45" id="lDq-Yi-DGs"/>
-                            <constraint firstItem="IzV-aw-VCS" firstAttribute="top" secondItem="zBz-N6-86g" secondAttribute="bottom" constant="6" id="lXa-5A-aPs"/>
-                            <constraint firstItem="4fO-D1-QVZ" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="154" id="uPe-D4-a1F"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="uea-Yf-1LP" secondAttribute="trailing" constant="157" id="xT7-cw-lpB"/>
-                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="Fqa-Da-p0K" secondAttribute="trailing" constant="140" id="zMU-cF-l2g"/>
+                            <constraint firstItem="uea-Yf-1LP" firstAttribute="centerX" secondItem="QAU-l1-rY0" secondAttribute="centerX" id="0oi-KC-zdU"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="50" id="4sf-fE-9JK"/>
+                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="IzV-aw-VCS" secondAttribute="trailing" constant="311" id="5oN-2n-5Ss"/>
+                            <constraint firstItem="uea-Yf-1LP" firstAttribute="top" secondItem="NEY-Bc-I6b" secondAttribute="top" constant="133" id="7Us-kX-IkL"/>
+                            <constraint firstItem="t6l-P4-rSW" firstAttribute="trailing" secondItem="4fO-D1-QVZ" secondAttribute="trailing" constant="132" id="8Ha-Dj-w9S"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="leading" secondItem="Fqa-Da-p0K" secondAttribute="leading" id="9Cz-fB-YaU"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="leading" secondItem="eVd-nP-Gaj" secondAttribute="leading" id="ArX-y7-6yQ"/>
+                            <constraint firstItem="eVd-nP-Gaj" firstAttribute="top" secondItem="QAU-l1-rY0" secondAttribute="bottom" constant="18" id="HUX-KS-bYp"/>
+                            <constraint firstItem="uea-Yf-1LP" firstAttribute="top" secondItem="zBz-N6-86g" secondAttribute="bottom" constant="45" id="IeO-YA-EmQ"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="top" secondItem="Fqa-Da-p0K" secondAttribute="bottom" constant="19" id="J3s-Xi-qwC"/>
+                            <constraint firstItem="uea-Yf-1LP" firstAttribute="centerX" secondItem="fxt-Jq-Bgk" secondAttribute="centerX" id="NKo-71-hHF"/>
+                            <constraint firstItem="IzV-aw-VCS" firstAttribute="top" secondItem="zBz-N6-86g" secondAttribute="bottom" constant="6" id="O1w-Yg-BX1"/>
+                            <constraint firstItem="IzV-aw-VCS" firstAttribute="leading" secondItem="NEY-Bc-I6b" secondAttribute="leadingMargin" id="aqD-I5-q3b"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="leading" secondItem="emW-T4-tlT" secondAttribute="leading" id="bTY-dI-xSU"/>
+                            <constraint firstItem="t6l-P4-rSW" firstAttribute="bottom" secondItem="4fO-D1-QVZ" secondAttribute="bottom" constant="320" id="gz2-J1-uIg"/>
+                            <constraint firstItem="fxt-Jq-Bgk" firstAttribute="top" secondItem="uea-Yf-1LP" secondAttribute="bottom" constant="8" symbolic="YES" id="hFi-yk-OgG"/>
+                            <constraint firstItem="4fO-D1-QVZ" firstAttribute="centerX" secondItem="zBz-N6-86g" secondAttribute="centerX" id="kBB-F5-8Mq"/>
+                            <constraint firstItem="4fO-D1-QVZ" firstAttribute="leading" secondItem="t6l-P4-rSW" secondAttribute="leading" constant="154" id="lGg-aQ-9lU"/>
+                            <constraint firstItem="uea-Yf-1LP" firstAttribute="centerX" secondItem="zBz-N6-86g" secondAttribute="centerX" id="loS-c6-dqh"/>
+                            <constraint firstItem="4fO-D1-QVZ" firstAttribute="top" secondItem="emW-T4-tlT" secondAttribute="bottom" constant="8" symbolic="YES" id="noX-MZ-2Zb"/>
+                            <constraint firstItem="QAU-l1-rY0" firstAttribute="top" secondItem="NEY-Bc-I6b" secondAttribute="top" constant="358" id="oqU-Ju-B6Y"/>
+                            <constraint firstItem="zBz-N6-86g" firstAttribute="leading" secondItem="NEY-Bc-I6b" secondAttribute="leading" id="qpY-Zn-0jg"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="t6l-P4-rSW"/>
                     </view>
@@ -258,127 +254,161 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-e1-kod">
-                                <rect key="frame" x="117" y="154" width="180" height="212"/>
+                                <rect key="frame" x="117" y="154" width="180" height="182"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Trip title" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bh-1Px">
-                                        <rect key="frame" x="0.0" y="0.0" width="180" height="44"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip title" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="vQn-bh-1Px" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                        <rect key="frame" x="0.0" y="0.0" width="180" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Trip Title"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Destination" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-7f-rlG">
-                                        <rect key="frame" x="0.0" y="84" width="180" height="44"/>
-                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Destination" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QyE-7f-rlG" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                        <rect key="frame" x="0.0" y="74" width="180" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" textContentType="location"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                                <real key="value" value="15"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                                <real key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                                <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                                <real key="value" value="0.29999999999999999"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Destination"/>
+                                        </userDefinedRuntimeAttributes>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="DD/MM/YYYY" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1jL-bJ-9iM">
-                                        <rect key="frame" x="0.0" y="168" width="180" height="44"/>
+                                        <rect key="frame" x="0.0" y="148" width="180" height="34"/>
                                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="25"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-Vh-CvK">
-                                <rect key="frame" x="39" y="102" width="52" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="return"/>
-                                <connections>
-                                    <action selector="returnTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="qcq-Qw-V8R"/>
-                                    <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="4DS-VN-RM6"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
                                 <rect key="frame" x="149" y="789" width="116" height="48"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="48" id="Nub-mo-XLc"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="30"/>
-                                <state key="normal" title="Create"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <state key="normal" title="Create">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="createTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="6A0-Zr-yji"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trippers" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DKw-a2-phJ">
-                                <rect key="frame" x="163" y="407" width="89" height="48"/>
+                                <rect key="frame" x="156" y="407" width="104" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper 1" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-PZ-feV">
-                                <rect key="frame" x="25" y="484" width="111" height="52"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 1" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Me4-PZ-feV">
+                                <rect key="frame" x="26" y="451" width="111" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper4" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-n5-gPr">
-                                <rect key="frame" x="221" y="487" width="113" height="49"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 4" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-n5-gPr">
+                                <rect key="frame" x="222" y="454" width="113" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper 2" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-jN-LzM">
-                                <rect key="frame" x="25" y="583" width="111" height="49"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 2" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-jN-LzM">
+                                <rect key="frame" x="26" y="550" width="111" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper5" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qpc-jV-ams">
-                                <rect key="frame" x="221" y="583" width="113" height="49"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 5" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qpc-jV-ams">
+                                <rect key="frame" x="222" y="550" width="113" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper 3" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-wN-Smc">
-                                <rect key="frame" x="25" y="682" width="111" height="49"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 3" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-wN-Smc">
+                                <rect key="frame" x="26" y="649" width="111" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="tripper6" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="udc-ol-Yxd">
-                                <rect key="frame" x="221" y="683" width="113" height="49"/>
+                            <textField opaque="NO" contentMode="scaleAspectFit" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 6" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="udc-ol-Yxd">
+                                <rect key="frame" x="222" y="650" width="113" height="49"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Light" family="Noteworthy" pointSize="28"/>
+                                <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvO-ZZ-1yF" customClass="BEMCheckBox">
-                                <rect key="frame" x="142" y="484" width="60" height="52"/>
+                                <rect key="frame" x="143" y="451" width="60" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INg-OW-h08" customClass="BEMCheckBox">
-                                <rect key="frame" x="340" y="484" width="47" height="52"/>
+                                <rect key="frame" x="341" y="451" width="47" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-ZP-8dV" customClass="BEMCheckBox">
-                                <rect key="frame" x="340" y="580" width="47" height="52"/>
+                                <rect key="frame" x="341" y="547" width="47" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BU-Rj-b2b" customClass="BEMCheckBox">
-                                <rect key="frame" x="142" y="581" width="60" height="51"/>
+                                <rect key="frame" x="143" y="548" width="60" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-G7-wXl" customClass="BEMCheckBox">
-                                <rect key="frame" x="142" y="682" width="60" height="51"/>
+                                <rect key="frame" x="143" y="649" width="60" height="51"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-pq-PDI" customClass="BEMCheckBox">
-                                <rect key="frame" x="340" y="683" width="47" height="52"/>
+                                <rect key="frame" x="341" y="650" width="47" height="52"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J9A-Vh-CvK">
+                                <rect key="frame" x="20" y="88" width="58" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Return">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="returnTapped:" destination="ySM-3M-Dqw" eventType="touchUpInside" id="qcq-Qw-V8R"/>
+                                    <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="4DS-VN-RM6"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92160582540000002" green="0.92384064200000005" blue="0.9973230958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -386,22 +416,22 @@
                             <constraint firstItem="Gsb-e1-kod" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="CaI-8d-IBL"/>
                             <constraint firstItem="Pyt-vt-doZ" firstAttribute="leading" secondItem="9AX-jY-cps" secondAttribute="leading" constant="149" id="MOb-sO-RZm"/>
                             <constraint firstItem="9AX-jY-cps" firstAttribute="bottom" secondItem="Pyt-vt-doZ" secondAttribute="bottom" constant="25" id="PUx-gh-R4I"/>
-                            <constraint firstItem="J9A-Vh-CvK" firstAttribute="leading" secondItem="9AX-jY-cps" secondAttribute="leading" constant="39" id="Q3o-5p-kPY"/>
                             <constraint firstItem="zeJ-Kr-l3S" firstAttribute="leading" secondItem="E1v-cy-TnK" secondAttribute="leading" id="R3A-wV-NSS"/>
                             <constraint firstItem="Gsb-e1-kod" firstAttribute="top" secondItem="E1v-cy-TnK" secondAttribute="top" constant="154" id="Wrx-fH-rEX"/>
+                            <constraint firstItem="J9A-Vh-CvK" firstAttribute="top" secondItem="zeJ-Kr-l3S" secondAttribute="bottom" id="a3A-M9-ZLF"/>
                             <constraint firstItem="Gsb-e1-kod" firstAttribute="leading" secondItem="9AX-jY-cps" secondAttribute="leading" constant="117" id="dJl-Uh-A19"/>
                             <constraint firstItem="Pyt-vt-doZ" firstAttribute="centerX" secondItem="E1v-cy-TnK" secondAttribute="centerX" id="eIE-qC-yZk"/>
                             <constraint firstItem="9AX-jY-cps" firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="J9A-Vh-CvK" secondAttribute="trailing" symbolic="YES" id="nb1-dA-0mN"/>
                             <constraint firstItem="zeJ-Kr-l3S" firstAttribute="top" secondItem="9AX-jY-cps" secondAttribute="top" id="sgD-qK-Ulv"/>
-                            <constraint firstItem="J9A-Vh-CvK" firstAttribute="top" secondItem="zeJ-Kr-l3S" secondAttribute="bottom" constant="14" id="z0u-CU-nx1"/>
+                            <constraint firstItem="J9A-Vh-CvK" firstAttribute="leading" secondItem="E1v-cy-TnK" secondAttribute="leadingMargin" id="v0g-TO-Dz8"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="9AX-jY-cps"/>
                     </view>
                     <connections>
-                        <outlet property="DestinationTextField" destination="QyE-7f-rlG" id="zAQ-ja-zCu"/>
+                        <outlet property="DestinationTextField" destination="QyE-7f-rlG" id="ygF-ZQ-zm4"/>
                         <outlet property="TrippersLabel" destination="DKw-a2-phJ" id="ePo-nU-jR9"/>
                         <outlet property="startDateTextField" destination="1jL-bJ-9iM" id="TDb-GD-NlU"/>
-                        <outlet property="titleTextField" destination="vQn-bh-1Px" id="KBE-16-lBM"/>
+                        <outlet property="titleTextField" destination="vQn-bh-1Px" id="qU5-lx-EhW"/>
                         <outlet property="tripper1Switch" destination="CvO-ZZ-1yF" id="WZk-Vr-JKD"/>
                         <outlet property="tripper1TextField" destination="Me4-PZ-feV" id="RqT-KH-UJY"/>
                         <outlet property="tripper2Switch" destination="0BU-Rj-b2b" id="xia-kP-4DG"/>
@@ -554,96 +584,121 @@
                                     <navigationItem title="Add Item" id="eRR-ee-99E"/>
                                 </items>
                             </navigationBar>
-                            <label autoresizesSubviews="NO" opaque="NO" userInteractionEnabled="NO" contentMode="left" fixedFrame="YES" text="Item Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lY2-p8-Efq">
-                                <rect key="frame" x="20" y="103" width="94" height="31"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Item Name" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-W1-7L3">
-                                <rect key="frame" x="20" y="134" width="133" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Item Name" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Odf-W1-7L3" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                <rect key="frame" x="20" y="134" width="243" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <textInputTraits key="textInputTraits" textContentType="name"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="Item Name"/>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Item Price" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NuK-oK-wPC">
-                                <rect key="frame" x="20" y="172" width="86" height="32"/>
+                                <rect key="frame" x="20" y="172" width="87" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="0.0" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-Vk-DDX">
-                                <rect key="frame" x="20" y="203" width="78" height="30"/>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="0.0" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="KJO-Vk-DDX" customClass="TweeAttributedTextField" customModule="TweeTextField">
+                                <rect key="frame" x="20" y="196" width="78" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minimumPlaceholderFontSize">
+                                        <real key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="originalPlaceholderFontSize">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="placeholderDuration">
+                                        <real key="value" value="0.29999999999999999"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="tweePlaceholder" value="0.00"/>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="placeholderColor">
+                                        <color key="value" cocoaTouchSystemColor="lightTextColor"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Tripper 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Y7-Gb-Ufr">
                                 <rect key="frame" x="25" y="312" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ukq-Rq-75R">
                                 <rect key="frame" x="25" y="369" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f3f-RI-5zU">
                                 <rect key="frame" x="25" y="423" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAh-Iy-aPG">
                                 <rect key="frame" x="25" y="479" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ogC-qJ-aTH">
                                 <rect key="frame" x="25" y="532" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vUi-EV-S6w">
                                 <rect key="frame" x="25" y="581" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trippers sharing this item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-yF-fP0">
-                                <rect key="frame" x="176" y="262" width="209" height="32"/>
+                                <rect key="frame" x="169" y="262" width="225" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zqh-q7-vve">
                                 <rect key="frame" x="20" y="756" width="60" height="42"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="30"/>
-                                <state key="normal" title="Add"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Add">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
                                 <connections>
                                     <action selector="addTapped:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="HfS-Hi-Wit"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Payer (tick 1)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mC8-Fq-zfP">
-                                <rect key="frame" x="20" y="262" width="110" height="32"/>
+                                <rect key="frame" x="20" y="262" width="116" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -677,61 +732,52 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYZ-Tc-SHl">
-                                <rect key="frame" x="291" y="673" width="94" height="39"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="MarkerFelt-Thin" family="Marker Felt" pointSize="22"/>
-                                <state key="normal" title="Calculate"/>
-                                <connections>
-                                    <action selector="perPerson:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="8UI-CL-58R"/>
-                                </connections>
-                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" fixedFrame="YES" text="Tripper 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMC-x1-J8r">
                                 <rect key="frame" x="237" y="312" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BJc-Po-6d6">
                                 <rect key="frame" x="237" y="371" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NEE-Qh-h1S">
                                 <rect key="frame" x="237" y="426" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4w-CI-0rl">
                                 <rect key="frame" x="237" y="481" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cge-BL-yae">
                                 <rect key="frame" x="237" y="534" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HCT-4d-Tsb">
                                 <rect key="frame" x="237" y="583" width="89" height="28"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="17"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="____ Trippers" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lDq-rP-4Bk">
-                                <rect key="frame" x="276" y="636" width="107" height="29"/>
+                                <rect key="frame" x="276" y="636" width="102" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -766,7 +812,7 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" fixedFrame="YES" text="-" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lsc-Tl-mKN">
-                                <rect key="frame" x="197" y="720" width="134.5" height="24"/>
+                                <rect key="frame" x="191" y="720" width="134.5" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
                                 <nil key="textColor"/>
@@ -775,17 +821,28 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Price per person:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="etJ-mZ-Saj">
                                 <rect key="frame" x="25" y="720" width="147" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="20"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M33-iQ-BX6">
-                                <rect key="frame" x="180" y="720" width="12.5" height="24"/>
+                                <rect key="frame" x="180" y="720" width="13" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iYZ-Tc-SHl">
+                                <rect key="frame" x="280" y="657" width="98" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
+                                <state key="normal" title="Calculate">
+                                    <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="perPerson:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="8UI-CL-58R"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92160582540000002" green="0.92384064200000005" blue="0.9973230958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -797,7 +854,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Add" image="duplicate" id="UNQ-OB-bLC"/>
                     <connections>
-                        <outlet property="itemName" destination="Odf-W1-7L3" id="tIA-EF-lgH"/>
+                        <outlet property="itemName" destination="Odf-W1-7L3" id="dEE-Ua-jzt"/>
                         <outlet property="numberOfPeople" destination="lDq-rP-4Bk" id="YSJ-GE-8wG"/>
                         <outlet property="payer1" destination="Hll-CX-KbE" id="pFY-1n-fEL"/>
                         <outlet property="payer1Name" destination="6Y7-Gb-Ufr" id="H0N-HW-aY0"/>
@@ -811,7 +868,7 @@
                         <outlet property="payer5Name" destination="ogC-qJ-aTH" id="cVC-xS-Fqc"/>
                         <outlet property="payer6" destination="K7t-7k-jLK" id="JSb-mD-KNu"/>
                         <outlet property="payer6Name" destination="vUi-EV-S6w" id="LXp-e2-KGR"/>
-                        <outlet property="price" destination="KJO-Vk-DDX" id="1dN-RM-zDA"/>
+                        <outlet property="price" destination="KJO-Vk-DDX" id="1nr-nN-mT8"/>
                         <outlet property="pricePerPerson" destination="lsc-Tl-mKN" id="pQP-bE-oRG"/>
                         <outlet property="tripper1Name" destination="cMC-x1-J8r" id="RlT-nd-gv1"/>
                         <outlet property="tripper1Switch" destination="bal-fT-YXz" id="sIe-SK-oog"/>
@@ -895,44 +952,44 @@
                                 </items>
                             </navigationBar>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 1 (Me)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ywr-rz-kAh">
-                                <rect key="frame" x="51" y="173" width="142" height="40"/>
+                                <rect key="frame" x="51" y="173" width="149" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Tv-nq-hsk">
                                 <rect key="frame" x="239" y="173" width="124" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oYh-lq-0bl">
                                 <rect key="frame" x="62" y="343" width="121" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 5" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IE8-q4-OIU">
                                 <rect key="frame" x="62" y="509" width="121" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total spent:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Oc-hE-F4u">
-                                <rect key="frame" x="75" y="679" width="121" height="40"/>
+                                <rect key="frame" x="75" y="679" width="159" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uSL-8X-MLq">
                                 <rect key="frame" x="227" y="343" width="126" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -958,8 +1015,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="66P-FZ-lhx">
-                                <rect key="frame" x="39" y="108" width="46" height="30"/>
+                                <rect key="frame" x="20" y="88" width="58" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <state key="normal" title="Return"/>
                                 <connections>
                                     <action selector="returnButton:" destination="jDM-s5-shi" eventType="touchUpInside" id="iPB-TX-acy"/>
@@ -983,7 +1041,7 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tripper 6" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ewO-1o-Nro">
                                 <rect key="frame" x="239" y="509" width="124" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="25"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -1002,10 +1060,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="60I-Nz-cl3">
-                                <rect key="frame" x="310" y="105" width="63" height="36"/>
+                                <rect key="frame" x="330" y="88" width="66" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="archive"/>
+                                <state key="normal" title="Archive"/>
                                 <connections>
                                     <action selector="archiveTapped:" destination="jDM-s5-shi" eventType="touchUpInside" id="g3Z-dt-e4I"/>
                                 </connections>
@@ -1035,7 +1093,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mLc-P4-hKS" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1312" y="2083"/>
+            <point key="canvasLocation" x="1311.5942028985507" y="2082.5892857142858"/>
         </scene>
         <!--HomeVC-->
         <scene sceneID="tVL-QC-XAB">

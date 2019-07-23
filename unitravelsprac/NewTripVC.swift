@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import TweeTextField
 import BEMCheckBox
 import UIKit
 import FirebaseFirestore
@@ -14,8 +15,8 @@ import FirebaseAuth
 class NewTripVC: UIViewController {
     
     //MARK: ~Properties
-    @IBOutlet weak var titleTextField: UITextField!
-    @IBOutlet weak var DestinationTextField: UITextField!
+    @IBOutlet weak var titleTextField: TweeAttributedTextField!
+    @IBOutlet weak var DestinationTextField: TweeAttributedTextField!
     @IBOutlet weak var startDateTextField: UITextField!
     @IBOutlet weak var TrippersLabel: UILabel!
     

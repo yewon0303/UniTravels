@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import TweeTextField
 import BEMCheckBox
 import UIKit
 import FirebaseFirestore
@@ -15,8 +16,8 @@ class AddItemVC: UIViewController {
 
     //MARK: Properties
      var db: Firestore!
-    @IBOutlet weak var itemName: UITextField!
-    @IBOutlet weak var price: UITextField!
+    @IBOutlet weak var itemName: TweeAttributedTextField!
+    @IBOutlet weak var price: TweeAttributedTextField!
     @IBOutlet weak var numberOfPeople: UILabel!
     @IBOutlet weak var pricePerPerson: UILabel!
     
