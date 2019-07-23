@@ -92,6 +92,11 @@ class PastTripTableVC: UITableViewController {
     }
     
     
+    @IBAction func returnTapped(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
 }
 
 
