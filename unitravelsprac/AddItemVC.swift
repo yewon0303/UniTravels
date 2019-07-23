@@ -223,94 +223,94 @@ class AddItemVC: UIViewController {
             let alertControl = UIAlertController(title: nil, message: "Please select only 1 Payer" , preferredStyle: .alert)
             alertControl.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
             self.display(alertController: alertControl)
-        }
-        
-        //querying current payer summary and updating payer details in "trips" collection
-        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
-            if error != nil {
-                print(error!)
-            }else{
-                for document in (snapshot?.documents)! {
-                    if let payers = document.data()["payers"] as? [String:Double] {
-                        if let total = document.data()["total"] as? Double {
-                            var currPayerAmt: Double = payers[payer] ?? 0.0
-                        currPayerAmt += totalprice
-                        var newtotal = total + totalprice
-                        
-                            //update in firestore
-                        let document = snapshot!.documents.first
-                        document!.reference.updateData([
-                            "payers.\(payer)": currPayerAmt,
-                            "total": newtotal
-                            ])
+        } else {
+            //querying current payer summary and updating payer details in "trips" collection
+            db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+                if error != nil {
+                    print(error!)
+                }else{
+                    for document in (snapshot?.documents)! {
+                        if let payers = document.data()["payers"] as? [String:Double] {
+                            if let total = document.data()["total"] as? Double {
+                                var currPayerAmt: Double = payers[payer] ?? 0.0
+                                currPayerAmt += totalprice
+                                var newtotal = total + totalprice
+                                
+                                //update in firestore
+                                let document = snapshot!.documents.first
+                                document!.reference.updateData([
+                                    "payers.\(payer)": currPayerAmt,
+                                    "total": newtotal
+                                    ])
+                            }
                         }
                     }
                 }
             }
-        }
-        
-        
-        // getting names of payees, storing in array, updating in "trips" collection
-        var payeesArr: Array<String> = Array()
-        if tripper1Switch.on == true {
-            payeesArr.append(tripper1Name.text!)
-        }
-        if tripper2Switch.on == true {
-            payeesArr.append(tripper2Name.text!)
-        }
-        if tripper3Switch.on == true {
-            payeesArr.append(tripper3Name.text!)
-        }
-        if tripper4Switch.on == true {
-            payeesArr.append(tripper4Name.text!)
-        }
-        if tripper5Switch.on == true {
-            payeesArr.append(tripper5Name.text!)
-        }
-        if tripper6Switch.on == true {
-            payeesArr.append(tripper6Name.text!)
-        }
-        
-        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
-            if error != nil {
-                print(error!)
-            }else{
-                for document in (snapshot?.documents)! {
-                    if let payeesMap = document.data()["payees"] as? [String:Double] {
-                        
-                        //loop through all payees and update in firestore
-                        for index in 0...(payeesArr.count-1) {
-                            let payee = payeesArr[index]
-                            var newDebt: Double = payeesMap[payee]!
-                            newDebt -= costPerPerson
-                            //update in firestore
-                            let document = snapshot!.documents.first
-                            document!.reference.updateData([
-                                "payees.\(payee)": newDebt
-                                ])
+            
+            // getting names of payees, storing in array, updating in "trips" collection
+            var payeesArr: Array<String> = Array()
+            if tripper1Switch.on == true {
+                payeesArr.append(tripper1Name.text!)
+            }
+            if tripper2Switch.on == true {
+                payeesArr.append(tripper2Name.text!)
+            }
+            if tripper3Switch.on == true {
+                payeesArr.append(tripper3Name.text!)
+            }
+            if tripper4Switch.on == true {
+                payeesArr.append(tripper4Name.text!)
+            }
+            if tripper5Switch.on == true {
+                payeesArr.append(tripper5Name.text!)
+            }
+            if tripper6Switch.on == true {
+                payeesArr.append(tripper6Name.text!)
+            }
+            
+            db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+                if error != nil {
+                    print(error!)
+                }else{
+                    for document in (snapshot?.documents)! {
+                        if let payeesMap = document.data()["payees"] as? [String:Double] {
+                            
+                            //loop through all payees and update in firestore
+                            for index in 0...(payeesArr.count-1) {
+                                let payee = payeesArr[index]
+                                var newDebt: Double = payeesMap[payee]!
+                                newDebt -= costPerPerson
+                                //update in firestore
+                                let document = snapshot!.documents.first
+                                document!.reference.updateData([
+                                    "payees.\(payee)": newDebt
+                                    ])
+                            }
                         }
                     }
                 }
             }
-        }
-        
-        // setting item document
-        let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid, timestamp: Timestamp)
-        //adding new item under items subcollection under trips collection
-        db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
-            var message: String = ""
-            if err != nil {
-                print("issue here at new items info")
-                message = "There was an error."
-            }else{
-                print("item document was saved")
-                message = "\(self.itemName.text!) successfully added!"
+            
+            // setting item document
+            let items = ItemModal.init(item: itemName.text!, price: totalprice, perperson: costPerPerson, payer: payer, payees: payeesArr, uid: uid, timestamp: Timestamp)
+            //adding new item under items subcollection under trips collection
+            db.collection("trips").document(uid).collection("items").document().setData(items.dictionary) { err in
+                var message: String = ""
+                if err != nil {
+                    print("issue here at new items info")
+                    message = "There was an error."
+                }else{
+                    print("item document was saved")
+                    message = "\(self.itemName.text!) successfully added!"
+                }
+                //alert for creation of new trip
+                let alertController = UIAlertController(title: nil, message: message , preferredStyle: .alert)
+                alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+                self.display(alertController: alertController)
             }
-            //alert for creation of new trip
-            let alertController = UIAlertController(title: nil, message: message , preferredStyle: .alert)
-            alertController.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
-            self.display(alertController: alertController)
         }
+
     }
     
         func display(alertController: UIAlertController) {
