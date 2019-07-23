@@ -191,19 +191,38 @@ class AddItemVC: UIViewController {
         let totalprice: Double = Double(price.text!) as? Double ?? 0.0
         let costPerPerson: Double = Double(pricePerPerson.text!) as? Double ?? 0.0
         var payer:String = ""
+        var payerCheck: NSInteger = 0
         
         if payer1.on == true {
+            payerCheck += 1
             payer = payer1Name.text!
-        } else if payer2.on == true {
+        }
+        if payer2.on == true {
+            payerCheck += 1
             payer = payer2Name.text!
-        } else if payer3.on == true {
+        }
+        if payer3.on == true {
+            payerCheck += 1
             payer = payer3Name.text!
-        } else if payer4.on == true {
+        }
+        if payer4.on == true {
+            payerCheck += 1
             payer = payer4Name.text!
-        } else if payer5.on == true {
+        }
+        if payer5.on == true {
+            payerCheck += 1
             payer = payer5Name.text!
-        } else if payer6.on == true {
+        }
+        if payer6.on == true {
+            payerCheck += 1
             payer = payer6Name.text!
+        }
+        
+        //checks if only 1 payer is selected
+        if payerCheck != 1 {
+            let alertControl = UIAlertController(title: nil, message: "Please select only 1 Payer" , preferredStyle: .alert)
+            alertControl.addAction(UIAlertAction(title: "OK", style: .cancel, handler: nil))
+            self.display(alertController: alertControl)
         }
         
         //querying current payer summary and updating payer details in "trips" collection

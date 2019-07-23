@@ -10,12 +10,6 @@ import UIKit
 
 class HomeVC: UIViewController {
     //MARK: ~Properties
-    
-    @IBOutlet weak var newTrip: UIButton!
-    @IBOutlet weak var currentTrip: UIButton!
-    @IBOutlet weak var pastTrips: UIButton!
-    @IBOutlet weak var settings: UIButton!
-    
     @IBOutlet weak var create_new: UIImageView!
     @IBOutlet weak var gallery: UIImageView!
     @IBOutlet weak var folder: UIImageView!
@@ -26,22 +20,6 @@ class HomeVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
-        create_new.isHidden = true
-        gallery.isHidden = true
-        folder.isHidden = true
-        face_ID.isHidden = true
-        
-        newTrip.isHidden = true
-        currentTrip.isHidden = true
-        pastTrips.isHidden = true
-        settings.isHidden = true
-        
-        let create_new_img: UIImage = self.create_new.image!
-        let gallery_img: UIImage = self.gallery.image!
-        let folder_img: UIImage = self.folder.image!
-        let face_ID_img: UIImage = self.face_ID.image!
-        */
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "forest")!)
     }

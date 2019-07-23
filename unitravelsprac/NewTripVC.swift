@@ -60,7 +60,7 @@ class NewTripVC: UIViewController {
         
         view.addGestureRecognizer(tapGesture)
         
-        startDateTextField.inputView = datePicker
+        //startDateTextField.inputView = datePicker
         
     }
     
