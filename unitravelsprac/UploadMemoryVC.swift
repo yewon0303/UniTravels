@@ -92,7 +92,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let image = myImageView.image else {return}
         //upload profile pic in storage and get url and add url data into firestore
         self.uploadProfileImage(image, completion: { (url) in
-            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid]) { err in
+            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid, "timestamp": self.inputTextField.text ]) { err in
                 var message: String = ""
                 if err != nil {
                     print("issue here at new items info")
