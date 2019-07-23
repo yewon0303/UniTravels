@@ -1255,16 +1255,16 @@
             </objects>
             <point key="canvasLocation" x="2023" y="-1036"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Past Trip TableVC-->
         <scene sceneID="qfY-mu-MFQ">
             <objects>
-                <tableViewController id="Fbr-Hx-6cQ" sceneMemberID="viewController">
+                <tableViewController id="Fbr-Hx-6cQ" customClass="PastTripTableVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="pge-7F-HWl">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="NwX-WV-AC1">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="tripID" id="NwX-WV-AC1">
                                 <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NwX-WV-AC1" id="HR8-L3-XOD">
@@ -1281,7 +1281,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u0X-Zo-0sG" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2099" y="-334"/>
+            <point key="canvasLocation" x="2099" y="-358"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="kxr-gk-s7Z">
