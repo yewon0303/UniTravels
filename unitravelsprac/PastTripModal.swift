@@ -20,6 +20,8 @@ struct PastTripModal {
     var title: String
     var names: Any
     var total: Double
+    var startingTimestamp: String
+    var endingTimestamp: String
 
     
     
@@ -30,7 +32,9 @@ struct PastTripModal {
             "date": date,
             "title": title,
             "names": names,
-            "total": total
+            "total": total,
+            "startingTimestamp": startingTimestamp,
+            "endingTimestamp": endingTimestamp
         ]
     }
 }
@@ -42,8 +46,10 @@ extension PastTripModal: DocumentPastTripSerializable {
             let date = dictionary["date"] as? String,
             let title = dictionary["title"] as? String,
             let names = dictionary["names"] as? Any,
+            let startingTimestamp = dictionary["startingTimestamp"] as? String,
+            let endingTimestamp = dictionary["endingTimestamp"] as? String,
             let total = dictionary["total"] as? Double else {return nil}
-            self.init(destination: destination, uid: uid, date: date, title: title, names: names, total: total)
+            self.init(destination: destination, uid: uid, date: date, title: title, names: names, total: total, startingTimestamp: startingTimestamp, endingTimestamp: endingTimestamp)
     }
     
 }

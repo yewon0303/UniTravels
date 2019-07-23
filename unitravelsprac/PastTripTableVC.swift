@@ -50,7 +50,7 @@ class PastTripTableVC: UITableViewController {
                         let destination = data["destination"] as? String ?? ""
                         let title = data["title"] as? String ?? ""
                         let names = data["names"] as Any
-                        let newTrip = PastTripModal(destination: destination, uid: uid, date: date, title: title, names: names, total: total)
+                        let newTrip = PastTripModal(destination: destination, uid: uid, date: date, title: title, names: names, total: total,startingTimestamp: "", endingTimestamp: "")
                         self.tripsArray.append(newTrip)
                     }
                     self.tableView.reloadData()

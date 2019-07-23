@@ -38,6 +38,11 @@ class CurrentTripVC: UIViewController {
     var destination: String = ""
     var allNames = [String]()
     var totalcost: Double = 0.0
+    var startingTimestamp: String = ""
+    
+    var Timestamp: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
     
     
     //MARK: Actions
@@ -60,80 +65,83 @@ class CurrentTripVC: UIViewController {
                                     if let total = document.data()["total"] as? Double {
                                         if let date = document.data()["date"] as? String {
                                             if let destination = document.data()["destination"] as? String {
-                                                self.currentTripTitle.title = title
-                                                
-                                                //update name and balance(paid for - debt)
-                                                let name1 = names[0]
-                                                if ((document.data()["tripper1On"]) as! Bool) {
-                                                    self.tripper1Name.text = name1
-                                                    self.tripper1.text = "$\(payers[name1]! + payees[name1]!)"
+                                                if let startingTimestamp = document.data()["startingTimestamp"] as? String {
+                                                    self.currentTripTitle.title = title
                                                     
-                                                } else {
-                                                    self.tripper1Name.isHidden = true
-                                                    self.tripper1.isHidden = true
-                                                }
-                                                
-                                                //repeat for rest
-                                                let name2 = names[1]
-                                                if ((document.data()["tripper2On"]) as! Bool) {
-                                                    self.tripper2Name.text = name2
-                                                    self.tripper2.text = "$\(payers[name2]! + payees[name2]!)"
+                                                    //update name and balance(paid for - debt)
+                                                    let name1 = names[0]
+                                                    if ((document.data()["tripper1On"]) as! Bool) {
+                                                        self.tripper1Name.text = name1
+                                                        self.tripper1.text = "$\(payers[name1]! + payees[name1]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper1Name.isHidden = true
+                                                        self.tripper1.isHidden = true
+                                                    }
                                                     
-                                                } else {
-                                                    self.tripper2Name.isHidden = true
-                                                    self.tripper2.isHidden = true
-                                                }
-                                                
-                                                let name3 = names[2]
-                                                if ((document.data()["tripper3On"]) as! Bool) {
-                                                    self.tripper3Name.text = name3
-                                                    self.tripper3.text = "$\(payers[name3]! + payees[name3]!)"
+                                                    //repeat for rest
+                                                    let name2 = names[1]
+                                                    if ((document.data()["tripper2On"]) as! Bool) {
+                                                        self.tripper2Name.text = name2
+                                                        self.tripper2.text = "$\(payers[name2]! + payees[name2]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper2Name.isHidden = true
+                                                        self.tripper2.isHidden = true
+                                                    }
                                                     
-                                                } else {
-                                                    self.tripper3Name.isHidden = true
-                                                    self.tripper3.isHidden = true
-                                                }
-                                                
-                                                let name4 = names[3]
-                                                if ((document.data()["tripper4On"]) as! Bool) {
-                                                    self.tripper4Name.text = name4
-                                                    self.tripper4.text = "$\(payers[name4]! + payees[name4]!)"
+                                                    let name3 = names[2]
+                                                    if ((document.data()["tripper3On"]) as! Bool) {
+                                                        self.tripper3Name.text = name3
+                                                        self.tripper3.text = "$\(payers[name3]! + payees[name3]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper3Name.isHidden = true
+                                                        self.tripper3.isHidden = true
+                                                    }
                                                     
-                                                } else {
-                                                    self.tripper4Name.isHidden = true
-                                                    self.tripper4.isHidden = true
-                                                }
-                                                
-                                                
-                                                let name5 = names[4]
-                                                if ((document.data()["tripper5On"]) as! Bool) {
-                                                    self.tripper5Name.text = name5
-                                                    self.tripper5.text = "$\(payers[name5]! + payees[name5]!)"
+                                                    let name4 = names[3]
+                                                    if ((document.data()["tripper4On"]) as! Bool) {
+                                                        self.tripper4Name.text = name4
+                                                        self.tripper4.text = "$\(payers[name4]! + payees[name4]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper4Name.isHidden = true
+                                                        self.tripper4.isHidden = true
+                                                    }
                                                     
-                                                } else {
-                                                    self.tripper5Name.isHidden = true
-                                                    self.tripper5.isHidden = true
-                                                }
-                                                
-                                                
-                                                let name6 = names[5]
-                                                if ((document.data()["tripper6On"]) as! Bool) {
-                                                    self.tripper6Name.text = name6
-                                                    self.tripper6.text = "$\(payers[name6]! + payees[name6]!)"
                                                     
-                                                } else {
-                                                    self.tripper6Name.isHidden = true
-                                                    self.tripper6.isHidden = true
+                                                    let name5 = names[4]
+                                                    if ((document.data()["tripper5On"]) as! Bool) {
+                                                        self.tripper5Name.text = name5
+                                                        self.tripper5.text = "$\(payers[name5]! + payees[name5]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper5Name.isHidden = true
+                                                        self.tripper5.isHidden = true
+                                                    }
+                                                    
+                                                    
+                                                    let name6 = names[5]
+                                                    if ((document.data()["tripper6On"]) as! Bool) {
+                                                        self.tripper6Name.text = name6
+                                                        self.tripper6.text = "$\(payers[name6]! + payees[name6]!)"
+                                                        
+                                                    } else {
+                                                        self.tripper6Name.isHidden = true
+                                                        self.tripper6.isHidden = true
+                                                    }
+                                                    
+                                                    self.total.text = "$\(total)"
+                                                    
+                                                    //assign to global variables
+                                                    self.tripTitle = title
+                                                    self.date = date
+                                                    self.destination = destination
+                                                    self.totalcost = total
+                                                    self.allNames = names
+                                                    self.startingTimestamp = startingTimestamp
                                                 }
-                                                
-                                                self.total.text = "$\(total)"
-                                                
-                                                //assign to global variables
-                                                self.tripTitle = title
-                                                self.date = date
-                                                self.destination = destination
-                                                self.totalcost = total
-                                                self.allNames = names
                                             }
                                         }
                                     }
@@ -161,7 +169,7 @@ class CurrentTripVC: UIViewController {
         //set new field "archived" in current trip
         db.collection("trips").document(uid!).setData([ "archived": true ], merge: true)
         // create new document under past trips under users - copy details
-        let trip = PastTripModal(destination: destination, uid: uid!, date: date, title: tripTitle, names: allNames, total: totalcost)
+        let trip = PastTripModal(destination: destination, uid: uid!, date: date, title: tripTitle, names: allNames, total: totalcost, startingTimestamp: startingTimestamp, endingTimestamp: Timestamp)
         
         let tripRef = db.collection("users").document(uid!).collection("past trips")
         

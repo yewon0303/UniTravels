@@ -35,6 +35,11 @@ class NewTripVC: UIViewController {
     
     private var datePicker: UIDatePicker?
     
+    var Timestamp: String {
+        return "\(NSDate().timeIntervalSince1970 * 1000)"
+    }
+    
+    
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,7 +72,7 @@ class NewTripVC: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd/MM/yyyy"
         startDateTextField.text = dateFormatter.string(from: datePicker.date)
-        //view.endEditing(true)
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {
@@ -146,7 +151,8 @@ class NewTripVC: UIViewController {
                              tripper3On: tripper3Switch.on,
                              tripper4On: tripper4Switch.on,
                              tripper5On: tripper5Switch.on,
-                             tripper6On: tripper6Switch.on)
+                             tripper6On: tripper6Switch.on,
+                             startingTimestamp: Timestamp)
         
         let tripRef = database.collection("trips")
         

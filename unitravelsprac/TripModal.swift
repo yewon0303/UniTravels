@@ -28,6 +28,7 @@ struct TripModal {
     var tripper4On: Bool
     var tripper5On: Bool
     var tripper6On: Bool
+    var startingTimestamp: String
     
     
     var dictionary: [String: Any] {
@@ -45,7 +46,8 @@ struct TripModal {
             "tripper3On": tripper3On,
             "tripper4On": tripper4On,
             "tripper5On": tripper5On,
-            "tripper6On": tripper6On
+            "tripper6On": tripper6On,
+            "startingTimestamp": startingTimestamp
         ]
     }
 }
@@ -65,8 +67,9 @@ extension TripModal: DocumentTripSerializable {
             let tripper4On = dictionary["tripper4On"] as? Bool,
             let tripper5On = dictionary["tripper5On"] as? Bool,
             let tripper6On = dictionary["tripper6On"] as? Bool,
+            let startingTimestamp = dictionary["startingTimestamp"] as? String,
         let total = dictionary["total"] as? Double else {return nil}
-        self.init(destination: destination, uid: uid, date: date, title: title, names: names, payers: payers, payees: payees, total: total, tripper1On: tripper1On, tripper2On: tripper2On, tripper3On: tripper3On, tripper4On: tripper4On, tripper5On: tripper5On, tripper6On: tripper6On)
+        self.init(destination: destination, uid: uid, date: date, title: title, names: names, payers: payers, payees: payees, total: total, tripper1On: tripper1On, tripper2On: tripper2On, tripper3On: tripper3On, tripper4On: tripper4On, tripper5On: tripper5On, tripper6On: tripper6On, startingTimestamp: startingTimestamp)
     }
     
 }
