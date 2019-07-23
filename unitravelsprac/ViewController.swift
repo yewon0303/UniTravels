@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import TweeTextField
 import PasswordTextField
 import UIKit
 import Splitflap
@@ -13,7 +14,8 @@ import Splitflap
 class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
     
     //MARK: ~properties
-    @IBOutlet weak var emailTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: TweeAttributedTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
 
     let splitflapView = Splitflap(frame: CGRect(x: 35, y: 120, width: 350, height: 50))
@@ -25,6 +27,8 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
         
         view.addSubview(splitflapView)
         splitflapView.reload()
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "adventure")!)
     }
     
     override func viewDidAppear(_ animated: Bool) {

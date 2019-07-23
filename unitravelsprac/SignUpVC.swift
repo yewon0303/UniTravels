@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import TweeTextField
 import PasswordTextField
 import UIKit
 import FirebaseFirestore
@@ -16,20 +17,17 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
     //MARK: ~Properties
     var db:Firestore!
-    
     var ref: DocumentReference? = nil
     
     @IBOutlet weak var profileImageView: UIImageView!
-    @IBOutlet weak var usernameTextField: UITextField!
-    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var usernameTextField: TweeAttributedTextField!
+    @IBOutlet weak var emailTextField: TweeAttributedTextField!
     @IBOutlet weak var passwordTextField: PasswordTextField!
     @IBOutlet weak var confirmpwdTextField: PasswordTextField!
     
     //MARK: ~Action
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         db = Firestore.firestore()
         //to make a circular profile pic view
 
@@ -38,6 +36,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
         profileImageView.layer.borderWidth = 1
         profileImageView.layer.borderColor = UIColor.black.cgColor
         
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "adventure")!)
     }
     
     @IBAction func profileChangeTapped(_ sender: Any) {

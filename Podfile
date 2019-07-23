@@ -15,6 +15,7 @@ target 'unitravelsprac' do
   pod 'Splitflap', '~> 4.1.0'
   pod 'BEMCheckBox'
   pod 'PasswordTextField'
+  pod 'TweeTextField'
 
   target 'unitravelspracTests' do
     inherit! :search_paths
