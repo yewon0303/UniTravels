@@ -110,7 +110,7 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
                    
                     //info to be stored in firestore with  email, uid, username and password
                     let user = UserModal(email: email, uid: uid ,username: username, password: password)
-                    let userRef = self.db.collection("users").document()
+                    let userRef = self.db.collection("users").document(uid)
                     
                     userRef.setData(user.dictionary){ err in
                         if err != nil {

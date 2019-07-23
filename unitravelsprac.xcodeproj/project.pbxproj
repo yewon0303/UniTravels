@@ -34,6 +34,8 @@
 		EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE86AE5E22BFB03500CAB5E8 /* SettingsVC.swift */; };
 		EE9681DB22C39A9E00BEE281 /* TripModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9681DA22C39A9E00BEE281 /* TripModal.swift */; };
 		EE9681DC22C39A9E00BEE281 /* TripModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE9681DA22C39A9E00BEE281 /* TripModal.swift */; };
+		EEA9031B22E6AC37006875EA /* PastTripModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9031A22E6AC37006875EA /* PastTripModal.swift */; };
+		EEA9031C22E6AC37006875EA /* PastTripModal.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEA9031A22E6AC37006875EA /* PastTripModal.swift */; };
 		EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */; };
 		EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BE922B8C91F00A4F317 /* ViewController.swift */; };
 		EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */; };
@@ -78,6 +80,7 @@
 		EE86AE5B22BF969000CAB5E8 /* UserModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModal.swift; sourceTree = "<group>"; };
 		EE86AE5E22BFB03500CAB5E8 /* SettingsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsVC.swift; sourceTree = "<group>"; };
 		EE9681DA22C39A9E00BEE281 /* TripModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripModal.swift; sourceTree = "<group>"; };
+		EEA9031A22E6AC37006875EA /* PastTripModal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastTripModal.swift; sourceTree = "<group>"; };
 		EEBF5BE422B8C91F00A4F317 /* unitravelsprac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = unitravelsprac.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EEBF5BE922B8C91F00A4F317 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -176,6 +179,7 @@
 				EE86AE5B22BF969000CAB5E8 /* UserModal.swift */,
 				EE9681DA22C39A9E00BEE281 /* TripModal.swift */,
 				EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */,
+				EEA9031A22E6AC37006875EA /* PastTripModal.swift */,
 				EE18E90022C8BAFB0010ED3F /* Item.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
@@ -374,6 +378,7 @@
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE18E90122C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FE22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
+				EEA9031B22E6AC37006875EA /* PastTripModal.swift in Sources */,
 				EEBF5BE822B8C91F00A4F317 /* AppDelegate.swift in Sources */,
 				EE7BF7D022B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */,
@@ -393,6 +398,7 @@
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE18E90222C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
+				EEA9031C22E6AC37006875EA /* PastTripModal.swift in Sources */,
 				EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
 				EEEE89CC22D9F0250080FD37 /* ImageTVCell.swift in Sources */,

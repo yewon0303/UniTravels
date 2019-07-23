@@ -147,5 +147,6 @@ class NewTripVC: UIViewController {
     @IBAction func returnTapped(_ sender: Any) {
         performSegue(withIdentifier: "goHomeFromNewTrip", sender: self)
     }
+        
     
 }
