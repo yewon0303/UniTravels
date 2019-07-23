@@ -18,13 +18,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8ra-Sa-Xk8">
-                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                <items>
-                                    <navigationItem title="UniTravels" id="z4M-Hh-IEG"/>
-                                </items>
-                            </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4BH-On-s8R">
                                 <rect key="frame" x="107" y="442" width="200" height="356"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -50,9 +43,9 @@
                                                 <color key="textColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kIM-bQ-NL1">
-                                                <rect key="frame" x="27" y="136" width="146" height="40"/>
-                                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="kIM-bQ-NL1" customClass="PasswordTextField" customModule="PasswordTextField">
+                                                <rect key="frame" x="27.5" y="136" width="145.5" height="40"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                                             </textField>
@@ -99,7 +92,7 @@
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="Vb1-rm-lZ8" id="duJ-pX-p3l"/>
-                        <outlet property="passwordTextField" destination="kIM-bQ-NL1" id="VVB-SJ-SWe"/>
+                        <outlet property="passwordTextField" destination="kIM-bQ-NL1" id="NQ1-bu-GJB"/>
                         <segue destination="RGR-3S-SHT" kind="show" identifier="signUp" id="mFA-cI-Ogc"/>
                         <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHome" id="8qC-mx-YzG"/>
                     </connections>
@@ -132,66 +125,66 @@
                                 </items>
                             </navigationBar>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="28" translatesAutoresizingMaskIntoConstraints="NO" id="pvM-Hb-kFs">
-                                <rect key="frame" x="98" y="111" width="218" height="674"/>
+                                <rect key="frame" x="98.5" y="111" width="217.5" height="674"/>
                                 <subviews>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="face_ID" translatesAutoresizingMaskIntoConstraints="NO" id="uea-Yf-1LP">
-                                        <rect key="frame" x="59" y="0.0" width="100" height="100"/>
+                                        <rect key="frame" x="58.5" y="0.0" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="100" id="5jK-WQ-imA"/>
                                             <constraint firstAttribute="width" constant="100" id="hbT-4z-FtV"/>
                                         </constraints>
                                     </imageView>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fxt-Jq-Bgk">
-                                        <rect key="frame" x="59" y="128" width="100" height="30"/>
+                                        <rect key="frame" x="58.5" y="128" width="100" height="30"/>
                                         <state key="normal" title="Tap to Change"/>
                                         <connections>
                                             <action selector="profileChangeTapped:" destination="RGR-3S-SHT" eventType="touchUpInside" id="AJw-ua-x1C"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="86r-eM-glV">
-                                        <rect key="frame" x="38.5" y="186" width="141" height="36"/>
+                                        <rect key="frame" x="38" y="186" width="141" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Username" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Fqa-Da-p0K">
-                                        <rect key="frame" x="43" y="250" width="132" height="34"/>
+                                        <rect key="frame" x="42.5" y="250" width="132" height="34"/>
                                         <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Email address:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iLw-Qc-Oyn">
-                                        <rect key="frame" x="15.5" y="312" width="187" height="36"/>
+                                        <rect key="frame" x="15" y="312" width="187" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Email address" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="QAU-l1-rY0">
-                                        <rect key="frame" x="23.5" y="376" width="171" height="34"/>
+                                        <rect key="frame" x="23" y="376" width="171" height="34"/>
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits" smartInsertDeleteType="yes" textContentType="email"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7BW-m5-sQG">
-                                        <rect key="frame" x="43" y="438" width="132.5" height="36"/>
+                                        <rect key="frame" x="42.5" y="438" width="132.5" height="36"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-nP-Gaj">
-                                        <rect key="frame" x="46" y="502" width="126" height="34"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eVd-nP-Gaj" customClass="PasswordTextField" customModule="PasswordTextField">
+                                        <rect key="frame" x="46" y="502" width="125.5" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Confirm password" borderStyle="roundedRect" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="emW-T4-tlT">
-                                        <rect key="frame" x="0.0" y="564" width="218" height="34"/>
-                                        <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Confirm password" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="emW-T4-tlT" customClass="PasswordTextField" customModule="PasswordTextField">
+                                        <rect key="frame" x="0.0" y="564" width="217.5" height="34"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4fO-D1-QVZ">
-                                        <rect key="frame" x="55.5" y="626" width="107" height="48"/>
+                                        <rect key="frame" x="55" y="626" width="107" height="48"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                         <state key="normal" title="Register"/>
                                         <connections>
@@ -213,9 +206,9 @@
                         <viewLayoutGuide key="safeArea" id="t6l-P4-rSW"/>
                     </view>
                     <connections>
-                        <outlet property="confirmpwdTextField" destination="emW-T4-tlT" id="haj-E0-pzp"/>
+                        <outlet property="confirmpwdTextField" destination="emW-T4-tlT" id="Nts-5y-2qY"/>
                         <outlet property="emailTextField" destination="QAU-l1-rY0" id="TGD-pL-jlw"/>
-                        <outlet property="passwordTextField" destination="eVd-nP-Gaj" id="bYM-AP-pEX"/>
+                        <outlet property="passwordTextField" destination="eVd-nP-Gaj" id="cXa-Oh-5SB"/>
                         <outlet property="profileImageView" destination="uea-Yf-1LP" id="JCb-qc-CMk"/>
                         <outlet property="usernameTextField" destination="Fqa-Da-p0K" id="J5Y-Mp-mxb"/>
                         <segue destination="BYZ-38-t0r" kind="show" identifier="returnToLogin" id="aOE-T1-U7e"/>

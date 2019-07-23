@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import PasswordTextField
 import UIKit
 import FirebaseFirestore
 import FirebaseAuth
@@ -20,12 +21,9 @@ class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerC
     
     @IBOutlet weak var profileImageView: UIImageView!
     @IBOutlet weak var usernameTextField: UITextField!
-    
     @IBOutlet weak var emailTextField: UITextField!
-
-    @IBOutlet weak var passwordTextField: UITextField!
-
-    @IBOutlet weak var confirmpwdTextField: UITextField!
+    @IBOutlet weak var passwordTextField: PasswordTextField!
+    @IBOutlet weak var confirmpwdTextField: PasswordTextField!
     
     //MARK: ~Action
     

@@ -14,6 +14,7 @@ target 'unitravelsprac' do
   pod 'AZExpandableIconListView'
   pod 'Splitflap', '~> 4.1.0'
   pod 'BEMCheckBox'
+  pod 'PasswordTextField'
 
   target 'unitravelspracTests' do
     inherit! :search_paths

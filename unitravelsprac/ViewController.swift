@@ -6,6 +6,7 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import PasswordTextField
 import UIKit
 import Splitflap
 
@@ -13,8 +14,8 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
     
     //MARK: ~properties
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var passwordTextField: UITextField!
-    
+    @IBOutlet weak var passwordTextField: PasswordTextField!
+
     let splitflapView = Splitflap(frame: CGRect(x: 35, y: 120, width: 350, height: 50))
     
     override func viewDidLoad() {
