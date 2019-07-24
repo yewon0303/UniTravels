@@ -46,32 +46,46 @@ class MemoriesTableVC: UITableViewController {
     
     func loadData() {
         let uid = (Auth.auth().currentUser?.uid)!
-        db.collection("trips").document(uid).collection("memories").whereField("uid", isEqualTo:uid).getDocuments() { (snapshot, error) in
-            
-            if let error = error {
-                
-                print(error.localizedDescription)
-                
-            } else {
-                
-                if let snapshot = snapshot {
-                    
-                    for document in snapshot.documents {
-                        let docData = document.data()
-                        let memoryURL = docData["memoryURL"] as? String ?? ""
-                        
-                        //add to image array after getting url from firestore
-                        let url = URL(string: memoryURL)
-                        let data = try? Data(contentsOf: url!)
-                        
-                        
-                        if let imageData = data {
-                            let newMemory = UIImage(data: imageData)
-                            self.imagesArray.append(newMemory)
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    //get starting timestamp
+                    if let startingTimestamp = document.data()["startingTimestamp"] as? Double {
+                        self.db.collection("trips").document(uid).collection("memories")
+                            .order(by: "timestamp", descending: true)
+                            .whereField("timestamp", isGreaterThan: startingTimestamp)
+                            .getDocuments() { (snapshot, error) in
+                                
+                                if let error = error {
+                                    
+                                    print(error.localizedDescription)
+                                    
+                                } else {
+                                    
+                                    if let snapshot = snapshot {
+                                        
+                                        for document in snapshot.documents {
+                                            let docData = document.data()
+                                            let memoryURL = docData["memoryURL"] as? String ?? ""
+                                            
+                                            //add to image array after getting url from firestore
+                                            let url = URL(string: memoryURL)
+                                            let data = try? Data(contentsOf: url!)
+                                            
+                                            
+                                            if let imageData = data {
+                                                let newMemory = UIImage(data: imageData)
+                                                self.imagesArray.append(newMemory)
+                                            }
+                                            
+                                        }
+                                        self.tableView.reloadData()
+                                    }
+                                }
                         }
-                        
                     }
-                    self.tableView.reloadData()
                 }
             }
         }

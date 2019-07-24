@@ -32,7 +32,6 @@ class ItemListTableVC: UITableViewController {
    
     func loadData() {
         let uid = (Auth.auth().currentUser?.uid)!
-        var starting = 0.0
         
         db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
             if error != nil {
@@ -41,12 +40,11 @@ class ItemListTableVC: UITableViewController {
                 for document in (snapshot?.documents)! {
                     //get starting timestamp
                     if let startingTimestamp = document.data()["startingTimestamp"] as? Double {
-                        starting = startingTimestamp
                         
                         //get items and add to array
                         self.db.collection("trips").document(uid).collection("items")
                             .order(by: "timestamp", descending: true)
-                            .whereField("timestamp", isGreaterThan: starting)
+                            .whereField("timestamp", isGreaterThan: startingTimestamp)
                             .getDocuments() { (snapshot, error) in
                                 
                                 if let error = error {
