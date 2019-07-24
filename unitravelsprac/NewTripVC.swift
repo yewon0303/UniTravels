@@ -37,7 +37,7 @@ class NewTripVC: UIViewController {
     private var datePicker: UIDatePicker?
     
     var Timestamp: String {
-        return "\(NSDate().timeIntervalSince1970 * 1000)"
+        return "\(NSDate().timeIntervalSince1970)"
     }
     
     

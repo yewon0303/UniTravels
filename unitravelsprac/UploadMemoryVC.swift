@@ -21,7 +21,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
     var db:Firestore!
     
     var timestamp: String {
-        return "\(NSDate().timeIntervalSince1970 * 1000)"
+        return "\(NSDate().timeIntervalSince1970)"
     }
     
     

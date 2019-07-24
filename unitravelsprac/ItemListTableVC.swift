@@ -32,44 +32,51 @@ class ItemListTableVC: UITableViewController {
    
     func loadData() {
         let uid = (Auth.auth().currentUser?.uid)!
-        var starting = ""
+        var starting = 0.0
+        
         db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
             if error != nil {
                 print(error!)
             }else{
                 for document in (snapshot?.documents)! {
-                    //update details acc to firestore
-                    if let startingTimestamp = document.data()["startingTimestamp"] as? String {
+                    //get starting timestamp
+                    if let startingTimestamp = document.data()["startingTimestamp"] as? Double {
                         starting = startingTimestamp
+                        
+                        //get items and add to array
+                        self.db.collection("trips").document(uid).collection("items")
+                            .order(by: "timestamp", descending: true)
+                            .whereField("timestamp", isGreaterThan: starting)
+                            .getDocuments() { (snapshot, error) in
+                                
+                                if let error = error {
+                                    
+                                    print(error.localizedDescription)
+                                    
+                                } else {
+                                    
+                                    if let snapshot = snapshot {
+                                        
+                                        for document in snapshot.documents {
+                                            
+                                            let data = document.data()
+                                            let name = data["item"] as? String ?? ""
+                                            let price = data["price"] as? Double ?? 0.0
+                                            let payer = data["payer"] as? String ?? ""
+                                            let newItem = Item(name: name, price: price, payer: payer)
+                                            self.itemArray.append(newItem)
+                                           
+                                        }
+                                        self.tableView.reloadData()
+                                    }
+                                }
+                        }
+                        
                     }
                 }
             }
         }
-                        
-                        
-        let itemsref = db.collection("trips").document(uid).collection("items").whereField("uid", isEqualTo:uid).getDocuments() { (snapshot, error) in
-            //itemsref.whereField("timestamp", isGreaterThanOrEqualTo: starting)
-            if let error = error {
-                
-                print(error.localizedDescription)
-                
-            } else {
-                
-                if let snapshot = snapshot {
-                    
-                    for document in snapshot.documents {
-                        
-                        let data = document.data()
-                        let name = data["item"] as? String ?? ""
-                        let price = data["price"] as? Double ?? 0.0
-                        let payer = data["payer"] as? String ?? ""
-                        let newItem = Item(name: name, price: price, payer: payer)
-                        self.itemArray.append(newItem)
-                    }
-                    self.tableView.reloadData()
-                }
-            }
-        }
+        
     }
     
     override func viewDidAppear(_ animated: Bool) {

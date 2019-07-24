@@ -41,7 +41,7 @@ class CurrentTripVC: UIViewController {
     var startingTimestamp: Double = 0.0
     
     var Timestamp: String {
-        return "\(NSDate().timeIntervalSince1970 * 1000)"
+        return "\(NSDate().timeIntervalSince1970)"
     }
     
     
@@ -195,14 +195,14 @@ class CurrentTripVC: UIViewController {
                 print("Document successfully removed!")
             }
         }
-        //delete its subcollections items and memories
+        /*//delete its subcollections items and memories
         db.collection("trips").document(uid!).delete() { err in
             if let err = err {
                 print("Error removing document: \(err)")
             } else {
                 print("Document successfully removed!")
             }
-        }
+        }*/
     }
     
     func display(alertController: UIAlertController) {

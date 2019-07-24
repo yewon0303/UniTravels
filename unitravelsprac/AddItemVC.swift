@@ -22,7 +22,7 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var pricePerPerson: UILabel!
     
     var Timestamp: String {
-        return "\(NSDate().timeIntervalSince1970 * 1000)"
+        return "\(NSDate().timeIntervalSince1970)"
     }
     
     //Payer (select 1)
