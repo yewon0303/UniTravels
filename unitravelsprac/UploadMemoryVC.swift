@@ -20,9 +20,10 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
     
     var db:Firestore!
     
-    var Timestamp: String {
+    var timestamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
     }
+    
     
     //MARK: ~Actions
     override func viewDidLoad() {
@@ -64,7 +65,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let image = myImageView.image else {return}
         //upload profile pic in storage and get url and add url data into firestore
         self.uploadProfileImage(image, completion: { (url) in
-            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid, "timestamp": self.Timestamp ]) { err in
+            self.db.collection("trips").document(uid).collection("memories").document().setData(["memoryURL": url as Any, "uid": uid, "timestamp": Double(self.timestamp)! ]) { err in
                 var message: String = ""
                 if err != nil {
                     print("issue here at new items info")
@@ -90,7 +91,7 @@ class UploadMemoryVC: UIViewController, UINavigationControllerDelegate, UIImageP
         guard let uid = Auth.auth().currentUser?.uid else {return }
         
         //use date as path for storage
-        let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(self.Timestamp)")
+        let storageRef = Storage.storage().reference().child("memories/users/\(uid)\(self.timestamp)")
         
         //image data and metadata
         guard let imageData = image.jpegData(compressionQuality: 0.75) else {return}

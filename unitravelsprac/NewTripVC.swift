@@ -153,7 +153,7 @@ class NewTripVC: UIViewController {
                              tripper4On: tripper4Switch.on,
                              tripper5On: tripper5Switch.on,
                              tripper6On: tripper6Switch.on,
-                             startingTimestamp: Timestamp)
+                             startingTimestamp: Double(Timestamp)!)
         
         let tripRef = database.collection("trips")
         

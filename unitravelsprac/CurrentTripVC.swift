@@ -38,7 +38,7 @@ class CurrentTripVC: UIViewController {
     var destination: String = ""
     var allNames = [String]()
     var totalcost: Double = 0.0
-    var startingTimestamp: String = ""
+    var startingTimestamp: Double = 0.0
     
     var Timestamp: String {
         return "\(NSDate().timeIntervalSince1970 * 1000)"
@@ -65,7 +65,7 @@ class CurrentTripVC: UIViewController {
                                     if let total = document.data()["total"] as? Double {
                                         if let date = document.data()["date"] as? String {
                                             if let destination = document.data()["destination"] as? String {
-                                                if let startingTimestamp = document.data()["startingTimestamp"] as? String {
+                                                if let startingTimestamp = document.data()["startingTimestamp"] as? Double {
                                                     self.currentTripTitle.title = title
                                                     
                                                     //update name and balance(paid for - debt)
@@ -169,7 +169,7 @@ class CurrentTripVC: UIViewController {
         //set new field "archived" in current trip
         db.collection("trips").document(uid!).setData([ "archived": true ], merge: true)
         // create new document under past trips under users - copy details
-        let trip = PastTripModal(destination: destination, uid: uid!, date: date, title: tripTitle, names: allNames, total: totalcost, startingTimestamp: startingTimestamp, endingTimestamp: Timestamp)
+        let trip = PastTripModal(destination: destination, uid: uid!, date: date, title: tripTitle, names: allNames, total: totalcost, startingTimestamp: startingTimestamp, endingTimestamp: Double(Timestamp)!)
         
         let tripRef = db.collection("users").document(uid!).collection("past trips")
         

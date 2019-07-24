@@ -32,8 +32,23 @@ class ItemListTableVC: UITableViewController {
    
     func loadData() {
         let uid = (Auth.auth().currentUser?.uid)!
-        db.collection("trips").document(uid).collection("items").whereField("uid", isEqualTo:uid).getDocuments() { (snapshot, error) in
-            
+        var starting = ""
+        db.collection("trips").whereField("uid", isEqualTo: uid).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    //update details acc to firestore
+                    if let startingTimestamp = document.data()["startingTimestamp"] as? String {
+                        starting = startingTimestamp
+                    }
+                }
+            }
+        }
+                        
+                        
+        let itemsref = db.collection("trips").document(uid).collection("items").whereField("uid", isEqualTo:uid).getDocuments() { (snapshot, error) in
+            //itemsref.whereField("timestamp", isGreaterThanOrEqualTo: starting)
             if let error = error {
                 
                 print(error.localizedDescription)
@@ -58,7 +73,6 @@ class ItemListTableVC: UITableViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        NSLog("viewDidAppear is running in current view")
         itemArray = [Item]()
         loadData()
         
