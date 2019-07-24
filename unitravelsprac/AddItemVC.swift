@@ -316,4 +316,8 @@ class AddItemVC: UIViewController {
         func display(alertController: UIAlertController) {
             self.present(alertController, animated: true, completion: nil)
         }
+    
+    @IBAction func currencyQuestionTapped(_ sender: Any) {
+        performSegue(withIdentifier: "exchangeRate", sender: self)
+    }
 }

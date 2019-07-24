@@ -843,6 +843,15 @@
                                     <action selector="perPerson:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="8UI-CL-58R"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eNQ-8S-LKs">
+                                <rect key="frame" x="106" y="196" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="help"/>
+                                <connections>
+                                    <action selector="currencyQuestionTapped:" destination="EUi-1F-RNZ" eventType="touchUpInside" id="Pos-iY-P7P"/>
+                                    <segue destination="ENb-jM-Fdk" kind="show" identifier="exchangeRate" id="jxK-Zs-eCk"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.92160582540000002" green="0.92384064200000005" blue="0.9973230958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -887,6 +896,157 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TTS-58-DzY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2098.5507246376815" y="2082.5892857142858"/>
+        </scene>
+        <!--Currency ExchangeVC-->
+        <scene sceneID="Ib0-wk-jOL">
+            <objects>
+                <viewController id="ENb-jM-Fdk" customClass="CurrencyExchangeVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ci2-Rl-N0i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-mO-WDn">
+                                <rect key="frame" x="336" y="68" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="help"/>
+                                <connections>
+                                    <action selector="detailsTapped:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="ycQ-Fa-mEJ"/>
+                                    <segue destination="nHd-Ib-u4L" kind="show" identifier="currencyDetails" id="oJv-6A-t84"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdL-2I-KdQ">
+                                <rect key="frame" x="51" y="68" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="Gty-p9-qBU"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="SGD" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Lx8-Rk-vM8">
+                                <rect key="frame" x="159" y="165" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6az-vM-2ZO">
+                                <rect key="frame" x="159" y="263" width="97" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Base:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DXy-RF-Iji">
+                                <rect key="frame" x="186" y="136" width="43" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="63X-Sh-Otn">
+                                <rect key="frame" x="172" y="234" width="71" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcl-nZ-fPh">
+                                <rect key="frame" x="139" y="345" width="135" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Find exchange rate!"/>
+                                <connections>
+                                    <action selector="findRate:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="eDB-XH-OAV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 base to currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqF-jS-wyI">
+                                <rect key="frame" x="51" y="438" width="315" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="5Fb-sZ-E5L"/>
+                    </view>
+                    <connections>
+                        <outlet property="OutputLabel" destination="uqF-jS-wyI" id="NTX-Xb-X4p"/>
+                        <outlet property="baseTextField" destination="Lx8-Rk-vM8" id="UkK-3d-Rx1"/>
+                        <outlet property="currencyTextField" destination="6az-vM-2ZO" id="jMv-M1-8nc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KZc-gv-Sxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2098.5507246376815" y="2804.4642857142858"/>
+        </scene>
+        <!--Currency DetailsVC-->
+        <scene sceneID="YIY-qn-gGh">
+            <objects>
+                <viewController id="nHd-Ib-u4L" customClass="CurrencyDetailsVC" customModule="unitravelsprac" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o48-QG-SKb">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1D5-et-kKB">
+                                <rect key="frame" x="47" y="68" width="42" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="return"/>
+                                <connections>
+                                    <action selector="returnTapped:" destination="nHd-Ib-u4L" eventType="touchUpInside" id="OiR-qe-46X"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="ANf-EJ-GDm">
+                                <rect key="frame" x="47" y="123" width="322" height="707"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <mutableString key="text">"CAD": CANADIAN DOLLAR
+"HKD": HONG KONG DOLLAR
+"ISK": ICELANDIC KRONA
+"PHP": PHILIPPINE PESO
+"DKK": DANISH KRONE
+"HUF": HUNGARIAN FORINT
+"CZK": CZECH KORUNA
+"AUD": AUSTRALIAN DOLLAR
+"RON": NEW ROMANIAN LEU
+"SEK": SWEDISH KRONA
+"IDR":  INDONESIAN RUPIAH
+"INR": INDIAN RUPEE
+"BRL": BRAZILIAN REAL
+"RUB": RUSSIAN ROUBLE
+"HRK": CROATIAN KUNA
+"JPY": JAPANESE YEN
+"THB": THAI BAHT
+"CHF": SWISS FRANC
+"SGD": SINGAPORE DOLLAR
+"PLN": POLISH ZLOTY
+"BGN": BULGARIAN LEV
+"TRY": NEW TURKISH LIRA
+"CNY": CHINESE YUAN RENMINBI
+"NOK": NORWEGIAN KRONE
+"NZD": NEW ZEALAND DOLLAR
+"ZAR": SOUTH AFRICAN RAND
+"USD": US DOLLAR
+"MXN": MEXICAN PESO
+"ILS": ISRAELI SHEKEL
+"GBP": POUND STERLING
+"KRW": SOUTH KOREAN WON
+"MYR": MALAYSIAN RINGGIT
+"EUR": EUROPEAN EURO
+</mutableString>
+                                <fontDescription key="fontDescription" name="Charter-Roman" family="Charter" pointSize="17"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="9uJ-Mw-9xH"/>
+                    </view>
+                    <connections>
+                        <outlet property="currencyTextView" destination="ANf-EJ-GDm" id="e4g-qQ-PMA"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Q0d-DP-N8H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2890" y="2804"/>
         </scene>
         <!--Items-->
         <scene sceneID="x8b-FO-0kM">
@@ -1383,12 +1543,12 @@
         <image name="exit-1" width="64" height="64"/>
         <image name="face_ID" width="30" height="30"/>
         <image name="gallery" width="30" height="30"/>
+        <image name="help" width="30" height="30"/>
         <image name="order" width="30" height="30"/>
         <image name="past" width="500" height="500"/>
         <image name="profile" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="00J-gx-nGa"/>
         <segue reference="yib-8A-SRu"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
