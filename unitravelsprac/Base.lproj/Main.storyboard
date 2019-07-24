@@ -905,15 +905,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-mO-WDn">
-                                <rect key="frame" x="336" y="68" width="30" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" image="help"/>
-                                <connections>
-                                    <action selector="detailsTapped:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="ycQ-Fa-mEJ"/>
-                                    <segue destination="nHd-Ib-u4L" kind="show" identifier="currencyDetails" id="oJv-6A-t84"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YdL-2I-KdQ">
                                 <rect key="frame" x="51" y="68" width="42" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -958,13 +949,22 @@
                                     <action selector="findRate:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="eDB-XH-OAV"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 base to currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqF-jS-wyI">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1 base to __ currency" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uqF-jS-wyI">
                                 <rect key="frame" x="51" y="438" width="315" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D6t-mO-WDn">
+                                <rect key="frame" x="264" y="165" width="30" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="info"/>
+                                <connections>
+                                    <action selector="detailsTapped:" destination="ENb-jM-Fdk" eventType="touchUpInside" id="ycQ-Fa-mEJ"/>
+                                    <segue destination="nHd-Ib-u4L" kind="show" identifier="currencyDetails" id="oJv-6A-t84"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="5Fb-sZ-E5L"/>
@@ -1544,6 +1544,7 @@
         <image name="face_ID" width="30" height="30"/>
         <image name="gallery" width="30" height="30"/>
         <image name="help" width="30" height="30"/>
+        <image name="info" width="30" height="30"/>
         <image name="order" width="30" height="30"/>
         <image name="past" width="500" height="500"/>
         <image name="profile" width="64" height="64"/>

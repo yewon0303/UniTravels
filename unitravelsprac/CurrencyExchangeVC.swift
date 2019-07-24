@@ -11,7 +11,6 @@ import UIKit
 class CurrencyExchangeVC: UIViewController {
     
     //MARK: ~Properties
-    var exchangeRates = [String]()
     
     @IBOutlet weak var baseTextField: UITextField!
     
@@ -41,17 +40,12 @@ class CurrencyExchangeVC: UIViewController {
                     
                 case .success(let response):
                     
-                    self?.exchangeRates.removeAll(keepingCapacity: false)
-                    
-                    self?.title = response.date
-                    
                     let keys = response.rates.keys.sorted()
                     
                     for key in keys {
                         
                         guard let value = response.rates[key] else { continue }
                         
-                        self?.exchangeRates.append("1 \(response.base) = \(value) \(key)")
                         self!.OutputLabel.text = "1 \(response.base) = \(value) \(key)"
                     }
                     
