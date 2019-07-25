@@ -45,9 +45,9 @@ class CurrencyExchangeVC: UIViewController {
                         
                         guard let value = response.rates[key] else { continue }
 
-                        let input: Double = Double(self!.inputAmount.text!) as? Double ?? 1.0
+                        let input: Double = Double(self!.inputAmount.text!) ?? 1.0
                         
-                        self!.OutputLabel.text = "\(input) \(response.base) = \(value) \(key)"
+                        self!.OutputLabel.text = "\(input) \(response.base) = \(value * input) \(key)"
                     }
                     
                 case .failure(let networkError):

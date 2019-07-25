@@ -79,7 +79,10 @@ class ItemListTableVC: UITableViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         itemArray = [Item]()
-        loadData()
+        DispatchQueue.main.async {
+            self.loadData()
+        }
+        
         
     }
     

@@ -26,7 +26,9 @@ class MemoriesTableVC: UITableViewController {
         NSLog("viewDidAppear is running in current view")
         //TO clear array
         imagesArray = [UIImage?]()
-        loadData()
+        DispatchQueue.main.async {
+            self.loadData()
+        }
         
     }
     
