@@ -6,24 +6,23 @@
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
+import TweeTextField
 import UIKit
 
 class CurrencyExchangeVC: UIViewController {
     
     //MARK: ~Properties
     
-    @IBOutlet weak var baseTextField: UITextField!
-    
+    @IBOutlet weak var baseTextField: TweeAttributedTextField!
     @IBOutlet weak var currencyTextField: UITextField!
-    
     @IBOutlet weak var OutputLabel: UILabel!
+    @IBOutlet weak var inputAmount: UITextField!
     
     //MARK: ~Actions
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
     
     
@@ -41,12 +40,15 @@ class CurrencyExchangeVC: UIViewController {
                 case .success(let response):
                     
                     let keys = response.rates.keys.sorted()
+                    print(response.date)
                     
                     for key in keys {
                         
                         guard let value = response.rates[key] else { continue }
+
+                        let input: Double = Double(self!.inputAmount.text!) as? Double ?? 1.0
                         
-                        self!.OutputLabel.text = "1 \(response.base) = \(value) \(key)"
+                        self!.OutputLabel.text = "\(input) \(response.base) = \(value) \(key)"
                     }
                     
                 case .failure(let networkError):
@@ -72,18 +74,6 @@ class CurrencyExchangeVC: UIViewController {
     @IBAction func detailsTapped(_ sender: Any) {
         performSegue(withIdentifier: "currencyDetails", sender: self)
     }
-    
-    
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
