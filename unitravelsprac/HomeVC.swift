@@ -79,4 +79,9 @@ class HomeVC: UIViewController {
     func display(alertController: UIAlertController) {
         self.present(alertController, animated: true, completion: nil)
     }
+    
+    
+    @IBAction func menuTapped(_ sender: Any) {
+        performSegue(withIdentifier: "friends", sender: self)
+    }
 }
