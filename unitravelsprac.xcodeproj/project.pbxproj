@@ -7,6 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		170B902B22E96FB500DEBCCE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902A22E96FB400DEBCCE /* PlayfairDisplay-Regular.ttf */; };
+		170B902C22E96FB500DEBCCE /* PlayfairDisplay-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902A22E96FB400DEBCCE /* PlayfairDisplay-Regular.ttf */; };
+		170B903222E9714500DEBCCE /* PlayfairDisplay-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902D22E9714400DEBCCE /* PlayfairDisplay-BlackItalic.ttf */; };
+		170B903322E9714500DEBCCE /* PlayfairDisplay-BlackItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902D22E9714400DEBCCE /* PlayfairDisplay-BlackItalic.ttf */; };
+		170B903422E9714500DEBCCE /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902E22E9714400DEBCCE /* PlayfairDisplay-Bold.ttf */; };
+		170B903522E9714500DEBCCE /* PlayfairDisplay-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902E22E9714400DEBCCE /* PlayfairDisplay-Bold.ttf */; };
+		170B903622E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902F22E9714500DEBCCE /* PlayfairDisplay-Italic.ttf */; };
+		170B903722E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B902F22E9714500DEBCCE /* PlayfairDisplay-Italic.ttf */; };
+		170B903822E9714500DEBCCE /* PlayfairDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B903022E9714500DEBCCE /* PlayfairDisplay-Black.ttf */; };
+		170B903922E9714500DEBCCE /* PlayfairDisplay-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B903022E9714500DEBCCE /* PlayfairDisplay-Black.ttf */; };
+		170B903A22E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B903122E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf */; };
+		170B903B22E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 170B903122E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf */; };
 		175FDFC022E382A3001B9C66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */; };
 		175FDFC122E382A3001B9C66 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */; };
 		179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 179B64D622C4863F006E1748 /* AddItemVC.swift */; };
@@ -70,6 +82,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		170B902A22E96FB400DEBCCE /* PlayfairDisplay-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Regular.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-Regular.ttf"; sourceTree = "<group>"; };
+		170B902D22E9714400DEBCCE /* PlayfairDisplay-BlackItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-BlackItalic.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-BlackItalic.ttf"; sourceTree = "<group>"; };
+		170B902E22E9714400DEBCCE /* PlayfairDisplay-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Bold.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-Bold.ttf"; sourceTree = "<group>"; };
+		170B902F22E9714500DEBCCE /* PlayfairDisplay-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Italic.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-Italic.ttf"; sourceTree = "<group>"; };
+		170B903022E9714500DEBCCE /* PlayfairDisplay-Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-Black.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-Black.ttf"; sourceTree = "<group>"; };
+		170B903122E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "PlayfairDisplay-BoldItalic.ttf"; path = "Playfair-Display-master/fonts/TTF/PlayfairDisplay-BoldItalic.ttf"; sourceTree = "<group>"; };
 		175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		179B64D622C4863F006E1748 /* AddItemVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddItemVC.swift; sourceTree = "<group>"; };
 		179B64D922C524AE006E1748 /* CurrentTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentTripVC.swift; sourceTree = "<group>"; };
@@ -152,6 +170,12 @@
 		EEBF5BDB22B8C91F00A4F317 = {
 			isa = PBXGroup;
 			children = (
+				170B903022E9714500DEBCCE /* PlayfairDisplay-Black.ttf */,
+				170B902D22E9714400DEBCCE /* PlayfairDisplay-BlackItalic.ttf */,
+				170B902E22E9714400DEBCCE /* PlayfairDisplay-Bold.ttf */,
+				170B903122E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf */,
+				170B902F22E9714500DEBCCE /* PlayfairDisplay-Italic.ttf */,
+				170B902A22E96FB400DEBCCE /* PlayfairDisplay-Regular.ttf */,
 				EEBF5BE622B8C91F00A4F317 /* unitravelsprac */,
 				EEBF5BFB22B8C92300A4F317 /* unitravelspracTests */,
 				EEBF5BE522B8C91F00A4F317 /* Products */,
@@ -296,10 +320,16 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170B902B22E96FB500DEBCCE /* PlayfairDisplay-Regular.ttf in Resources */,
+				170B903422E9714500DEBCCE /* PlayfairDisplay-Bold.ttf in Resources */,
+				170B903A22E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf in Resources */,
+				170B903222E9714500DEBCCE /* PlayfairDisplay-BlackItalic.ttf in Resources */,
 				EEBF5BF222B8C92300A4F317 /* LaunchScreen.storyboard in Resources */,
 				175FDFC022E382A3001B9C66 /* GoogleService-Info.plist in Resources */,
 				EEBF5BEF22B8C92300A4F317 /* Assets.xcassets in Resources */,
 				EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */,
+				170B903622E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */,
+				170B903822E9714500DEBCCE /* PlayfairDisplay-Black.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,7 +337,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				170B903722E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */,
+				170B903522E9714500DEBCCE /* PlayfairDisplay-Bold.ttf in Resources */,
+				170B902C22E96FB500DEBCCE /* PlayfairDisplay-Regular.ttf in Resources */,
+				170B903322E9714500DEBCCE /* PlayfairDisplay-BlackItalic.ttf in Resources */,
 				175FDFC122E382A3001B9C66 /* GoogleService-Info.plist in Resources */,
+				170B903922E9714500DEBCCE /* PlayfairDisplay-Black.ttf in Resources */,
+				170B903B22E9714500DEBCCE /* PlayfairDisplay-BoldItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -587,7 +623,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRU2UF2D77;
+				DEVELOPMENT_TEAM = C4YNYR985S;
 				INFOPLIST_FILE = unitravelsprac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -606,7 +642,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = NRU2UF2D77;
+				DEVELOPMENT_TEAM = C4YNYR985S;
 				INFOPLIST_FILE = unitravelsprac/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

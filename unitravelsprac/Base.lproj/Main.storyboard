@@ -9,6 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="PlayfairDisplay-Bold.ttf">
+            <string>PlayfairDisplay-Bold</string>
+        </array>
+        <array key="PlayfairDisplay-BoldItalic.ttf">
+            <string>PlayfairDisplay-BoldItalic</string>
+        </array>
+        <array key="PlayfairDisplay-Regular.ttf">
+            <string>PlayfairDisplay-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -48,9 +59,9 @@
                                 <textInputTraits key="textInputTraits" textContentType="password"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zih-30-xmC">
-                                <rect key="frame" x="45" y="359" width="60" height="60"/>
+                                <rect key="frame" x="52" y="347" width="56" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="40"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Bold" family="Playfair Display" pointSize="45"/>
                                 <state key="normal" title="GO">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -59,9 +70,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tqM-hl-j69">
-                                <rect key="frame" x="45" y="416" width="170" height="42"/>
+                                <rect key="frame" x="52" y="400" width="197" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="35"/>
                                 <state key="normal" title="Sign in as guest">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -70,9 +81,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PVX-Ki-Mh3">
-                                <rect key="frame" x="45" y="457" width="106" height="48"/>
+                                <rect key="frame" x="52" y="440" width="103" height="59"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="35"/>
                                 <state key="normal" title="Sign up!">
                                     <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
@@ -1297,22 +1308,62 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Vh0-SF-vqt">
                                 <rect key="frame" x="0.0" y="122" width="414" height="185"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8784313725490196" green="1" blue="1" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
+                                <color key="backgroundColor" red="1" green="0.93333333333333335" blue="0.93333333333333335" alpha="0.14999999999999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-BoldItalic" family="Playfair Display" pointSize="40"/>
                                 <state key="normal" title="New trip">
-                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="newTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="lsX-YJ-31B"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z8-qY-cAe">
+                                <rect key="frame" x="0.0" y="306" width="414" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.42352941176470588" green="0.35686274509803922" blue="0.4823529411764706" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-BoldItalic" family="Playfair Display" pointSize="40"/>
+                                <state key="normal" title="Current trip">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="DNK-sq-aGQ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-kB-oW8">
+                                <rect key="frame" x="0.0" y="676" width="414" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.20784313730000001" green="0.36078431370000003" blue="0.49019607840000001" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-BoldItalic" family="Playfair Display" pointSize="40"/>
+                                <state key="normal" title="Setting">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="I9T-Fs-IsT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GG0-fF-tvg">
+                                <rect key="frame" x="0.0" y="491" width="414" height="185"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.72941176470588232" green="0.32549019607843138" blue="0.4392156862745098" alpha="0.25" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="PlayfairDisplay-BoldItalic" family="Playfair Display" pointSize="40"/>
+                                <state key="normal" title="Past trips">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="FZj-qZ-xXi"/>
+                                </connections>
+                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" alignment="center" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="scG-cf-Rve">
-                                <rect key="frame" x="265" y="44" width="129" height="64"/>
+                                <rect key="frame" x="255" y="44" width="139" height="72"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vf6-uw-TbF">
-                                        <rect key="frame" x="0.0" y="14" width="62" height="36"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <rect key="frame" x="0.0" y="13" width="64" height="46"/>
+                                        <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="25"/>
                                         <state key="normal" title="Logout">
                                             <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         </state>
@@ -1321,63 +1372,11 @@
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="signedOut" id="fFb-dY-qcA"/>
                                         </connections>
                                     </button>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="exit-1" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-g4-gRM">
-                                        <rect key="frame" x="65" y="0.0" width="64" height="64"/>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logout-pastel" translatesAutoresizingMaskIntoConstraints="NO" id="iiH-g4-gRM">
+                                        <rect key="frame" x="67" y="0.0" width="72" height="72"/>
                                     </imageView>
                                 </subviews>
                             </stackView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="past" translatesAutoresizingMaskIntoConstraints="NO" id="iic-2Q-qeR">
-                                <rect key="frame" x="182" y="599" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wpk-x9-bOS">
-                                <rect key="frame" x="0.0" y="491" width="414" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.62546764960000001" green="0.6852442782" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="Past trips">
-                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="pastTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="Cda-tB-Bj0"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Z8-qY-cAe">
-                                <rect key="frame" x="0.0" y="306" width="414" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.62546764960000001" green="1" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="Current trip">
-                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="currentTripTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="DNK-sq-aGQ"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="current" translatesAutoresizingMaskIntoConstraints="NO" id="uXH-TR-dCV">
-                                <rect key="frame" x="182" y="413" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="create" translatesAutoresizingMaskIntoConstraints="NO" id="8tJ-Yr-E6d">
-                                <rect key="frame" x="182" y="230" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXg-kB-oW8">
-                                <rect key="frame" x="0.0" y="677" width="414" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.89431117959999995" green="0.6852442782" blue="0.90597491200000002" alpha="0.55000000000000004" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="45"/>
-                                <state key="normal" title="Setting">
-                                    <color key="titleColor" red="0.48772865529999998" green="0.36466532950000002" blue="0.12929424640000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="settingTapped:" destination="fI8-Bw-ZTd" eventType="touchUpInside" id="I9T-Fs-IsT"/>
-                                </connections>
-                            </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" placeholderIntrinsicWidth="50" placeholderIntrinsicHeight="70" image="profile" translatesAutoresizingMaskIntoConstraints="NO" id="IjX-96-w7L">
-                                <rect key="frame" x="182" y="784" width="50" height="70"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.92118558180076082" green="0.92459837147887325" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <gestureRecognizers/>
@@ -1385,10 +1384,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="L1j-Zm-0Qq"/>
                     <connections>
-                        <outlet property="create_new" destination="8tJ-Yr-E6d" id="qTg-GM-ShW"/>
-                        <outlet property="face_ID" destination="IjX-96-w7L" id="F4R-zg-6Sg"/>
-                        <outlet property="folder" destination="iic-2Q-qeR" id="dt7-t8-xeO"/>
-                        <outlet property="gallery" destination="uXH-TR-dCV" id="M91-9S-1lE"/>
+                        <outlet property="currentTrip" destination="3Z8-qY-cAe" id="4Ux-a9-bnv"/>
+                        <outlet property="newTrip" destination="Vh0-SF-vqt" id="GJQ-U6-UZb"/>
+                        <outlet property="pastTrips" destination="GG0-fF-tvg" id="wY1-aa-hFp"/>
+                        <outlet property="setting" destination="qXg-kB-oW8" id="pEM-Wo-u69"/>
                         <segue destination="ySM-3M-Dqw" kind="show" identifier="newTrip" id="cSu-FB-PvV"/>
                         <segue destination="4Jq-cU-VVo" kind="show" identifier="settings" id="k1v-Ic-9Ph"/>
                         <segue destination="A1G-ce-438" kind="show" identifier="currentTrip" id="00J-gx-nGa"/>
@@ -1463,7 +1462,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" red="0.92160582540000002" green="0.92384064200000005" blue="0.9973230958" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.840218186378479" green="0.80534321069717407" blue="0.94828635454177856" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="qcJ-bY-l6N" firstAttribute="leading" secondItem="iAc-Pe-6Hk" secondAttribute="leading" id="Kx3-FV-pn0"/>
                             <constraint firstItem="iAc-Pe-6Hk" firstAttribute="top" secondItem="rYX-f4-DwT" secondAttribute="top" constant="171" id="Tbc-JB-c9x"/>
@@ -1568,20 +1567,16 @@
     <resources>
         <image name="camera" width="30" height="30"/>
         <image name="coins" width="30" height="30"/>
-        <image name="create" width="80" height="80"/>
-        <image name="current" width="64" height="64"/>
         <image name="duplicate" width="30" height="30"/>
-        <image name="exit-1" width="64" height="64"/>
         <image name="face_ID" width="30" height="30"/>
         <image name="gallery" width="30" height="30"/>
         <image name="help" width="30" height="30"/>
         <image name="info" width="30" height="30"/>
+        <image name="logout-pastel" width="72" height="72"/>
         <image name="order" width="30" height="30"/>
-        <image name="past" width="500" height="500"/>
-        <image name="profile" width="64" height="64"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="yib-8A-SRu"/>
+        <segue reference="8qC-mx-YzG"/>
         <segue reference="fFb-dY-qcA"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -40,7 +40,6 @@ class CurrencyExchangeVC: UIViewController {
                 case .success(let response):
                     
                     let keys = response.rates.keys.sorted()
-                    print(response.date)
                     
                     for key in keys {
                         

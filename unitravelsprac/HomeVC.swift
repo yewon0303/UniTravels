@@ -10,16 +10,32 @@ import UIKit
 
 class HomeVC: UIViewController {
     //MARK: ~Properties
-    @IBOutlet weak var create_new: UIImageView!
-    @IBOutlet weak var gallery: UIImageView!
-    @IBOutlet weak var folder: UIImageView!
-    @IBOutlet weak var face_ID: UIImageView!
+    @IBOutlet weak var newTrip: UIButton!
+    @IBOutlet weak var currentTrip: UIButton!
+    @IBOutlet weak var pastTrips: UIButton!
+    @IBOutlet weak var setting: UIButton!
+    
     
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "forest")!)
+        newTrip.layer.borderWidth = 1.0
+        currentTrip.layer.borderWidth = 1.0
+        pastTrips.layer.borderWidth = 1.0
+        setting.layer.borderWidth = 1.0
+        
+        newTrip.layer.borderColor = UIColor.white.cgColor
+        currentTrip.layer.borderColor = UIColor.white.cgColor
+        pastTrips.layer.borderColor = UIColor.white.cgColor
+        setting.layer.borderColor = UIColor.white.cgColor
+        
+        newTrip.layer.shadowOffset = CGSize(width:50, height: 10)
+        currentTrip.layer.shadowOffset = CGSize(width:10, height: 1)
+        pastTrips.layer.shadowOffset = CGSize(width:10, height: 1)
+        setting.layer.shadowOffset = CGSize(width:10, height: 1)
+        
+        self.view.backgroundColor = UIColor(patternImage: UIImage(named: "mountainpic")!)
     }
     
     @IBAction func newTripTapped(_ sender: Any) {
