@@ -19,6 +19,8 @@ struct UserModal {
     var username: String
     var password: String
     var privacy: String
+    var friends: Array<String>
+    var requests: Array<String>
     
     var dictionary: [String: Any] {
         return [
@@ -26,7 +28,9 @@ struct UserModal {
             "uid": uid,
             "username": username,
             "password": password,
-            "privacy": privacy
+            "privacy": privacy,
+            "friends": friends,
+            "requests": requests
         ]
     }
 }
@@ -37,8 +41,10 @@ extension UserModal: DocumentUserSerializable {
             let uid = dictionary["uid"] as? String,
             let username = dictionary["username"] as? String,
             let privacy = dictionary["privacy"] as? String,
+            let friends = dictionary["friends"] as? Array<String>,
+            let requests = dictionary["requests"] as? Array<String>,
             let password = dictionary["password"] as? String else {return nil}
-        self.init(email: email, uid: uid, username: username, password: password, privacy: privacy)
+        self.init(email: email, uid: uid, username: username, password: password, privacy: privacy, friends: friends, requests: requests)
     }
 
 }

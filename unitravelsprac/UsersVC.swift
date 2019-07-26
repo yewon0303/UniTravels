@@ -105,7 +105,29 @@ extension UsersVC: UITableViewDataSource, UITableViewDelegate {
 
 extension UsersVC: UserTableView {
     func onClickCell(index: Int) {
-        print(index)
+        var email = ""
+        if searching {
+            email = searchEmailArray[index]
+        }else{
+            email = emailArray[index]
+        }
+        //get other user uid
+        db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    let data = document.data()
+                    let userId = data["uid"] as? String ?? ""
+                        //add button - send request
+                        self.db.collection("users").document(userId).updateData([
+                        "requests": FieldValue.arrayUnion(["\(userId)"])
+                        ])
+                        print("request sent to \(userId)")
+                }
+            }
+        }
+        
     }
 }
 
