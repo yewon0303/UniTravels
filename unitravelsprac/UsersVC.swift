@@ -69,6 +69,40 @@ class UsersVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
+    func createAlert(title: String, message: String, email: String) {
+        let alert = UIAlertController(title: "CONFIRMATION", message: "send request to \(email)?", preferredStyle: .alert)
+        //create yes button
+        alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            //carry out sending request action
+            self.db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
+                if error != nil {
+                    print(error!)
+                }else{
+                    for document in (snapshot?.documents)! {
+                        let data = document.data()
+                        let userId = data["uid"] as? String ?? ""
+                        
+                        //add button - send request
+                        
+                        self.db.collection("users").document(userId).updateData([
+                            "requests": FieldValue.arrayUnion(["\(userId)"])
+                            ])
+                        print("request sent to \(userId)")
+                        
+                    }
+                }
+            }
+            
+            
+        }))
+        //create no button
+        alert.addAction(UIAlertAction(title: "NO", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("no request sent")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 
@@ -111,24 +145,10 @@ extension UsersVC: UserTableView {
         }else{
             email = emailArray[index]
         }
-        //get other user uid
-        db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
-            if error != nil {
-                print(error!)
-            }else{
-                for document in (snapshot?.documents)! {
-                    let data = document.data()
-                    let userId = data["uid"] as? String ?? ""
-                        //add button - send request
-                        self.db.collection("users").document(userId).updateData([
-                        "requests": FieldValue.arrayUnion(["\(userId)"])
-                        ])
-                        print("request sent to \(userId)")
-                }
-            }
-        }
+        self.createAlert(title: "CONFIRMATION", message: "Send request to \(email)?", email: email)
         
     }
+    
 }
 
 extension UsersVC: UISearchBarDelegate{
