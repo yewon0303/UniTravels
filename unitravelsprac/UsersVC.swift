@@ -87,13 +87,25 @@ extension UsersVC: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell") as? UserTVCell
         if searching {
-            cell?.textLabel?.text = searchEmailArray[indexPath.row]
+            cell?.labelName.text = searchEmailArray[indexPath.row]
         }else{
-            cell?.textLabel?.text = emailArray[indexPath.row]
+            cell?.labelName.text = emailArray[indexPath.row]
         }
+        cell?.cellDelegate = self
+        cell?.index = indexPath
         return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 75
+    }
+}
+
+extension UsersVC: UserTableView {
+    func onClickCell(index: Int) {
+        print(index)
     }
 }
 
@@ -111,5 +123,7 @@ extension UsersVC: UISearchBarDelegate{
         tableView.reloadData()
     }
 }
+
+
 
 
