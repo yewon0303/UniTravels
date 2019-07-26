@@ -72,6 +72,10 @@
 		EEC29E2422EB545700CDD5CD /* RequestTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2222EB545700CDD5CD /* RequestTVCell.swift */; };
 		EEC29E2622EB548C00CDD5CD /* RequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2522EB548C00CDD5CD /* RequestsVC.swift */; };
 		EEC29E2722EB548C00CDD5CD /* RequestsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2522EB548C00CDD5CD /* RequestsVC.swift */; };
+		EEC29E2922EB6B0E00CDD5CD /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2822EB6B0E00CDD5CD /* FriendsVC.swift */; };
+		EEC29E2A22EB6B0E00CDD5CD /* FriendsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2822EB6B0E00CDD5CD /* FriendsVC.swift */; };
+		EEC29E2C22EB6B4700CDD5CD /* FriendTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */; };
+		EEC29E2D22EB6B4700CDD5CD /* FriendTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */; };
 		EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
@@ -134,6 +138,8 @@
 		EEC29E1F22EB2DE800CDD5CD /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
 		EEC29E2222EB545700CDD5CD /* RequestTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTVCell.swift; sourceTree = "<group>"; };
 		EEC29E2522EB548C00CDD5CD /* RequestsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestsVC.swift; sourceTree = "<group>"; };
+		EEC29E2822EB6B0E00CDD5CD /* FriendsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendsVC.swift; sourceTree = "<group>"; };
+		EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTVCell.swift; sourceTree = "<group>"; };
 		EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMemoryVC.swift; sourceTree = "<group>"; };
 		EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
 		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -237,6 +243,8 @@
 				EEC29E1F22EB2DE800CDD5CD /* UserTVCell.swift */,
 				EEC29E2522EB548C00CDD5CD /* RequestsVC.swift */,
 				EEC29E2222EB545700CDD5CD /* RequestTVCell.swift */,
+				EEC29E2822EB6B0E00CDD5CD /* FriendsVC.swift */,
+				EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
 			);
@@ -437,8 +445,10 @@
 				EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */,
 				EE71981322E8B25100AE39ED /* Networking.swift in Sources */,
 				EEC29E2322EB545700CDD5CD /* RequestTVCell.swift in Sources */,
+				EEC29E2C22EB6B4700CDD5CD /* FriendTVCell.swift in Sources */,
 				EE9681DB22C39A9E00BEE281 /* TripModal.swift in Sources */,
 				EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */,
+				EEC29E2922EB6B0E00CDD5CD /* FriendsVC.swift in Sources */,
 				EEA9031E22E6C097006875EA /* PastTripTableVC.swift in Sources */,
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
@@ -491,7 +501,9 @@
 				179B64D822C4863F006E1748 /* AddItemVC.swift in Sources */,
 				EE4D4FAD22EAC7B3004FA016 /* UsersVC.swift in Sources */,
 				EE9681DC22C39A9E00BEE281 /* TripModal.swift in Sources */,
+				EEC29E2A22EB6B0E00CDD5CD /* FriendsVC.swift in Sources */,
 				179B64DB22C524AF006E1748 /* CurrentTripVC.swift in Sources */,
+				EEC29E2D22EB6B4700CDD5CD /* FriendTVCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

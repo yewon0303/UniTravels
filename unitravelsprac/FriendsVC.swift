@@ -1,20 +1,20 @@
 //
-//  RequestsVC.swift
+//  FriendsVC.swift
 //  unitravelsprac
 //
-//  Created by Tiyari Harshita on 26/7/19.
+//  Created by Tiyari Harshita on 27/7/19.
 //  Copyright © 2019 Tiyari Harshita. All rights reserved.
 //
 
 import UIKit
-import FirebaseAuth
 import FirebaseFirestore
+import FirebaseAuth
 
-class RequestsVC: UIViewController {
+class FriendsVC: UIViewController {
     
     //MARK: Properties
     var db: Firestore!
-    var requestsArray = [String]()
+    var friendsArray = [String]()
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -29,13 +29,11 @@ class RequestsVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        requestsArray = [String]()
+        friendsArray = [String]()
         
         self.loadData()
         
-        
     }
-    
     
     func loadData() {
         let uid = Auth.auth().currentUser?.uid
@@ -45,23 +43,23 @@ class RequestsVC: UIViewController {
             }else{
                 for document in (snapshot?.documents)! {
                     let data = document.data()
-                    let requests = data["requests"] as? Array<String> ?? []
+                    let friends = data["friends"] as? Array<String> ?? []
                     //get emails of each uid
-                    for i in requests.indices {
-                        print(i)
-                        self.db.collection("users").whereField("uid", isEqualTo: requests[i]).getDocuments { (snapshot, error) in
+                    for i in friends.indices {
+                        
+                        self.db.collection("users").whereField("uid", isEqualTo: friends[i]).getDocuments { (snapshot, error) in
                             if error != nil {
                                 print(error!)
                             }else{
                                 for document in (snapshot?.documents)! {
                                     let data = document.data()
                                     let email = data["email"] as? String ?? ""
-                                    self.requestsArray.append(email)
-                                    print(email)
+                                    self.friendsArray.append(email)
+                                    
                                     
                                 }
                                 self.tableView.reloadData()
-    
+                                
                             }
                             
                         }
@@ -71,7 +69,7 @@ class RequestsVC: UIViewController {
                 }
                 
             }
-           
+            
         }
     }
     
@@ -81,7 +79,7 @@ class RequestsVC: UIViewController {
         alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
             
-            //carry out accepting request action
+            //carry out removing friend
             let uid = Auth.auth().currentUser?.uid
             self.db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
                 if error != nil {
@@ -94,15 +92,13 @@ class RequestsVC: UIViewController {
                         //add button - add your uid to friends of others and remove from requests and vice versa
                         
                         self.db.collection("users").document(otherId).updateData([
-                            "friends": FieldValue.arrayUnion(["\(uid!)"]),
-                            "requests": FieldValue.arrayRemove(["\(uid!)"])
+                            "friends": FieldValue.arrayRemove(["\(uid!)"])
                             ])
                         
                         self.db.collection("users").document(uid!).updateData([
-                            "friends": FieldValue.arrayUnion(["\(otherId)"]),
-                            "requests": FieldValue.arrayRemove(["\(otherId)"])
+                            "friends": FieldValue.arrayRemove(["\(otherId)"])
                             ])
-                        print("friends with \(otherId)")
+                        print(" not friends with \(otherId)")
                         
                     }
                 }
@@ -121,20 +117,20 @@ class RequestsVC: UIViewController {
 
 }
 
-extension RequestsVC: UITableViewDataSource, UITableViewDelegate {
+extension FriendsVC: UITableViewDataSource, UITableViewDelegate {
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return requestsArray.count
+        return friendsArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "requestCell") as? RequestTVCell
-            cell?.labelName.text = requestsArray[indexPath.row]
-       
+        let cell = tableView.dequeueReusableCell(withIdentifier: "friendCell") as? FriendTVCell
+        cell?.labelName.text = friendsArray[indexPath.row]
+        
         cell?.cellDelegate = self
         cell?.index = indexPath
         return cell!
@@ -145,9 +141,10 @@ extension RequestsVC: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension RequestsVC: RequestTableView {
+extension FriendsVC: FriendTableView {
     func onClickCell(index: Int) {
-        let email = requestsArray[index]
-        self.createAlert(title: "CONFIRMATION", message: "Accept request from \(email)?", email: email)
+        let email = friendsArray[index]
+        self.createAlert(title: "CONFIRMATION", message: "Remove \(email) as friend?", email: email)
     }
 }
+
