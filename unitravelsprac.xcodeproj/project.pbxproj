@@ -66,6 +66,10 @@
 		EEBF5BFD22B8C92300A4F317 /* unitravelspracTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */; };
 		EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
 		EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */; };
+		EEC29E1B22EAF63F00CDD5CD /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E1922EAF63F00CDD5CD /* UserTVCell.swift */; };
+		EEC29E1C22EAF63F00CDD5CD /* UserTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC29E1922EAF63F00CDD5CD /* UserTVCell.swift */; };
+		EEC29E1D22EAF63F00CDD5CD /* UserTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC29E1A22EAF63F00CDD5CD /* UserTVCell.xib */; };
+		EEC29E1E22EAF63F00CDD5CD /* UserTVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EEC29E1A22EAF63F00CDD5CD /* UserTVCell.xib */; };
 		EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
@@ -125,6 +129,8 @@
 		EEBF5BFC22B8C92300A4F317 /* unitravelspracTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unitravelspracTests.swift; sourceTree = "<group>"; };
 		EEBF5BFE22B8C92300A4F317 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EEBF5C0A22B8CEFD00A4F317 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		EEC29E1922EAF63F00CDD5CD /* UserTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserTVCell.swift; sourceTree = "<group>"; };
+		EEC29E1A22EAF63F00CDD5CD /* UserTVCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = UserTVCell.xib; sourceTree = "<group>"; };
 		EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMemoryVC.swift; sourceTree = "<group>"; };
 		EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
 		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 		EEBF5BE622B8C91F00A4F317 /* unitravelsprac */ = {
 			isa = PBXGroup;
 			children = (
+				EEC29E1822EAF60200CDD5CD /* UserCell */,
 				EEBF5BE722B8C91F00A4F317 /* AppDelegate.swift */,
 				EEBF5BEB22B8C91F00A4F317 /* Main.storyboard */,
 				EEBF5BEE22B8C92300A4F317 /* Assets.xcassets */,
@@ -238,6 +245,15 @@
 				EEBF5BFE22B8C92300A4F317 /* Info.plist */,
 			);
 			path = unitravelspracTests;
+			sourceTree = "<group>";
+		};
+		EEC29E1822EAF60200CDD5CD /* UserCell */ = {
+			isa = PBXGroup;
+			children = (
+				EEC29E1922EAF63F00CDD5CD /* UserTVCell.swift */,
+				EEC29E1A22EAF63F00CDD5CD /* UserTVCell.xib */,
+			);
+			path = UserCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -332,6 +348,7 @@
 				175FDFC022E382A3001B9C66 /* GoogleService-Info.plist in Resources */,
 				EEBF5BEF22B8C92300A4F317 /* Assets.xcassets in Resources */,
 				EEBF5BED22B8C91F00A4F317 /* Main.storyboard in Resources */,
+				EEC29E1D22EAF63F00CDD5CD /* UserTVCell.xib in Resources */,
 				170B903622E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */,
 				170B903822E9714500DEBCCE /* PlayfairDisplay-Black.ttf in Resources */,
 			);
@@ -341,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EEC29E1E22EAF63F00CDD5CD /* UserTVCell.xib in Resources */,
 				170B903722E9714500DEBCCE /* PlayfairDisplay-Italic.ttf in Resources */,
 				170B903522E9714500DEBCCE /* PlayfairDisplay-Bold.ttf in Resources */,
 				170B902C22E96FB500DEBCCE /* PlayfairDisplay-Regular.ttf in Resources */,
@@ -434,6 +452,7 @@
 				EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */,
 				179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */,
 				179B64DA22C524AE006E1748 /* CurrentTripVC.swift in Sources */,
+				EEC29E1B22EAF63F00CDD5CD /* UserTVCell.swift in Sources */,
 				EE71981022E8AF4100AE39ED /* CurrencyDetailsVC.swift in Sources */,
 				EEBF5C0B22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE18E90122C8BAFB0010ED3F /* Item.swift in Sources */,
@@ -469,6 +488,7 @@
 				EE71980E22E8AF0800AE39ED /* CurrencyExchangeVC.swift in Sources */,
 				EE86AE6022BFB03500CAB5E8 /* SettingsVC.swift in Sources */,
 				EEA9031F22E6C097006875EA /* PastTripTableVC.swift in Sources */,
+				EEC29E1C22EAF63F00CDD5CD /* UserTVCell.swift in Sources */,
 				EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */,
 				179B64D822C4863F006E1748 /* AddItemVC.swift in Sources */,
 				EE4D4FAD22EAC7B3004FA016 /* UsersVC.swift in Sources */,
