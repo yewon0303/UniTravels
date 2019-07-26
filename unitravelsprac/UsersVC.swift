@@ -16,7 +16,11 @@ class UsersVC: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var userArray = [String]()
+    var userArray = ["apple", "orange", "zebra", "zoo", "add", "opera"]
+    
+    var searchUser = [String]()
+    
+    var searching = false
     
     //MARK: ~Actions
 
@@ -24,6 +28,7 @@ class UsersVC: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
     }
     
     
@@ -36,12 +41,35 @@ class UsersVC: UIViewController {
 
 extension UsersVC: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        userArray.count
+        if searching {
+            return searchUser.count
+        }else{
+            return userArray.count
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
-        cell?.textLabel?.text = userArray[indexPath.row]
+        if searching {
+            cell?.textLabel?.text = searchUser[indexPath.row]
+        }else{
+           cell?.textLabel?.text = userArray[indexPath.row]
+        }
         return cell!
+    }
+}
+
+extension UsersVC: UISearchBarDelegate{
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        //find all elements that start with prefix and store in searchUser array
+        searchUser = userArray.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searching = true
+        tableView.reloadData()
+    }
+    
+    func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+        searching = false
+        searchBar.text = ""
+        tableView.reloadData()
     }
 }
