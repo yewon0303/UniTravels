@@ -7,18 +7,21 @@
 //
 
 import UIKit
+import FirebaseAuth
+import FirebaseFirestore
 
 class UsersVC: UIViewController {
     
     //MARK: ~Properties
+    var db: Firestore!
     
     @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var tableView: UITableView!
     
-    var userArray = ["apple", "orange", "zebra", "zoo", "add", "opera"]
-    
-    var searchUser = [String]()
+    var emailArray = [String]()
+
+    var searchEmailArray = [String]()
     
     var searching = false
     
@@ -26,9 +29,34 @@ class UsersVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        db = Firestore.firestore()
 
         // Do any additional setup after loading the view.
         
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        
+            self.loadData()
+        
+    }
+    func loadData() {
+        
+            db.collection("users").whereField("privacy", isEqualTo: "public").getDocuments { (snapshot, error) in
+            if error != nil {
+                print(error!)
+            }else{
+                for document in (snapshot?.documents)! {
+                    let data = document.data()
+                    let email = data["email"] as? String ?? ""
+                    self.emailArray.append(email)
+                    
+                }
+                self.tableView.reloadData()
+                    
+            }
+                    
+        }
     }
     
     
@@ -44,20 +72,21 @@ extension UsersVC: UITableViewDataSource, UITableViewDelegate {
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         if searching {
-            return searchUser.count
+            return searchEmailArray.count
         }else{
-            return userArray.count
+            return emailArray.count
         }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell")
         if searching {
-            cell?.textLabel?.text = searchUser[indexPath.row]
+            cell?.textLabel?.text = searchEmailArray[indexPath.row]
         }else{
-           cell?.textLabel?.text = userArray[indexPath.row]
+            cell?.textLabel?.text = emailArray[indexPath.row]
         }
         return cell!
     }
@@ -66,7 +95,7 @@ extension UsersVC: UITableViewDataSource, UITableViewDelegate {
 extension UsersVC: UISearchBarDelegate{
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         //find all elements that start with prefix and store in searchUser array
-        searchUser = userArray.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
+        searchEmailArray = emailArray.filter({$0.lowercased().prefix(searchText.count) == searchText.lowercased()})
         searching = true
         tableView.reloadData()
     }
@@ -77,3 +106,5 @@ extension UsersVC: UISearchBarDelegate{
         tableView.reloadData()
     }
 }
+
+

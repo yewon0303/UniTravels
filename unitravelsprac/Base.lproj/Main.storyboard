@@ -264,11 +264,11 @@
                                     <navigationItem title="New Trip" id="6gg-lz-gzw"/>
                                 </items>
                             </navigationBar>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WQF-Dc-qED">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WQF-Dc-qED">
                                 <rect key="frame" x="0.0" y="68" width="408" height="789"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 3" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="2kD-wN-Smc">
-                                        <rect key="frame" x="26" y="581" width="111" height="49"/>
+                                        <rect key="frame" x="26" y="547" width="111" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="4Ju-ad-eYA"/>
                                         </constraints>
@@ -285,18 +285,18 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-ZP-8dV" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7ha-ZP-8dV" customClass="BEMCheckBox">
                                         <rect key="frame" x="341" y="479" width="47" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 5" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qpc-jV-ams">
-                                        <rect key="frame" x="222" y="482" width="113" height="49"/>
+                                    <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 5" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Qpc-jV-ams">
+                                        <rect key="frame" x="222" y="465" width="113" height="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-G7-wXl" customClass="BEMCheckBox">
-                                        <rect key="frame" x="143" y="581" width="60" height="33"/>
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="k2v-G7-wXl" customClass="BEMCheckBox">
+                                        <rect key="frame" x="143" y="547" width="60" height="33"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="Gsb-e1-kod">
@@ -352,13 +352,13 @@
                                             </textField>
                                         </subviews>
                                     </stackView>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 6" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="udc-ol-Yxd">
-                                        <rect key="frame" x="222" y="582" width="113" height="31"/>
+                                    <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 6" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="udc-ol-Yxd">
+                                        <rect key="frame" x="222" y="548" width="113" height="31"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name=".SFNSDisplay" family=".SF NS Display" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-pq-PDI" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qg3-pq-PDI" customClass="BEMCheckBox">
                                         <rect key="frame" x="341" y="582" width="47" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -369,13 +369,13 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 2" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="bNU-jN-LzM">
-                                        <rect key="frame" x="26" y="465" width="111" height="66"/>
+                                        <rect key="frame" x="26" y="465" width="111" height="32"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pyt-vt-doZ">
-                                        <rect key="frame" x="149" y="703" width="116" height="48"/>
+                                        <rect key="frame" x="149" y="669" width="116" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="116" id="66d-dC-DtG"/>
                                             <constraint firstAttribute="height" constant="48" id="Nub-mo-XLc"/>
@@ -400,7 +400,7 @@
                                             <segue destination="fI8-Bw-ZTd" kind="show" identifier="goHomeFromNewTrip" id="4DS-VN-RM6"/>
                                         </connections>
                                     </button>
-                                    <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 4" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-n5-gPr">
+                                    <textField opaque="NO" contentMode="scaleAspectFit" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 4" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Gk1-n5-gPr">
                                         <rect key="frame" x="222" y="386" width="113" height="32"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="113" id="1fC-Ay-mci"/>
@@ -409,15 +409,15 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="23"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0BU-Rj-b2b" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0BU-Rj-b2b" customClass="BEMCheckBox">
                                         <rect key="frame" x="143" y="479" width="60" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CvO-ZZ-1yF" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CvO-ZZ-1yF" customClass="BEMCheckBox">
                                         <rect key="frame" x="143" y="383" width="60" height="35"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="INg-OW-h08" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="INg-OW-h08" customClass="BEMCheckBox">
                                         <rect key="frame" x="341" y="383" width="47" height="52"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -567,12 +567,11 @@
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xFV-Hu-tiV">
-                                <rect key="frame" x="0.0" y="163" width="414" height="650"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xFV-Hu-tiV">
+                                <rect key="frame" x="0.0" y="175" width="414" height="638"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Ka9-Qs-XXu">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="userCell" id="Ka9-Qs-XXu">
                                         <rect key="frame" x="0.0" y="28" width="414" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Ka9-Qs-XXu" id="fo4-os-MGZ">
@@ -586,9 +585,8 @@
                                     <outlet property="delegate" destination="cQG-vy-1Jm" id="5IX-pL-a4w"/>
                                 </connections>
                             </tableView>
-                            <searchBar contentMode="redraw" fixedFrame="YES" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-z7-TeI">
-                                <rect key="frame" x="0.0" y="119" width="414" height="44"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            <searchBar contentMode="redraw" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aI9-z7-TeI">
+                                <rect key="frame" x="0.0" y="119" width="414" height="56"/>
                                 <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -599,9 +597,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="xFV-Hu-tiV" firstAttribute="top" secondItem="aI9-z7-TeI" secondAttribute="bottom" id="4wK-f5-rVY"/>
+                            <constraint firstItem="xFV-Hu-tiV" firstAttribute="trailing" secondItem="CP2-96-ppy" secondAttribute="trailing" id="7pv-k6-5cr"/>
+                            <constraint firstItem="aI9-z7-TeI" firstAttribute="leading" secondItem="CP2-96-ppy" secondAttribute="leading" id="BiP-Dj-meK"/>
+                            <constraint firstItem="aI9-z7-TeI" firstAttribute="trailing" secondItem="CP2-96-ppy" secondAttribute="trailing" id="JJh-zp-NP9"/>
                             <constraint firstItem="CP2-96-ppy" firstAttribute="bottom" secondItem="T1W-T8-SCn" secondAttribute="bottom" constant="694" id="ZmI-mq-agY"/>
                             <constraint firstItem="T1W-T8-SCn" firstAttribute="top" secondItem="CP2-96-ppy" secondAttribute="top" id="bxO-PF-2Sy"/>
+                            <constraint firstItem="aI9-z7-TeI" firstAttribute="top" secondItem="T1W-T8-SCn" secondAttribute="bottom" id="cxB-qx-Wok"/>
+                            <constraint firstItem="xFV-Hu-tiV" firstAttribute="leading" secondItem="CP2-96-ppy" secondAttribute="leading" id="dCF-rH-zyq"/>
                             <constraint firstItem="CP2-96-ppy" firstAttribute="trailing" secondItem="T1W-T8-SCn" secondAttribute="trailing" id="der-Ri-6Gc"/>
+                            <constraint firstItem="xFV-Hu-tiV" firstAttribute="bottom" secondItem="CP2-96-ppy" secondAttribute="bottom" id="urR-3f-sfF"/>
                             <constraint firstItem="T1W-T8-SCn" firstAttribute="leading" secondItem="CP2-96-ppy" secondAttribute="leading" id="z3P-C6-FXR"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="CP2-96-ppy"/>
@@ -778,11 +783,11 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-kz-RET">
                                 <rect key="frame" x="-20" y="24" width="454" height="794"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-XJ-geG" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-XJ-geG" customClass="BEMCheckBox">
                                         <rect key="frame" x="139" y="338" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-dg-bgz" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2vJ-dg-bgz" customClass="BEMCheckBox">
                                         <rect key="frame" x="139" y="449" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -824,7 +829,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-Vd-XUv" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-Vd-XUv" customClass="BEMCheckBox">
                                         <rect key="frame" x="354" y="449" width="40" height="143"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -952,7 +957,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7t-7k-jLK" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="K7t-7k-jLK" customClass="BEMCheckBox">
                                         <rect key="frame" x="139" y="551" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -977,7 +982,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-gA-V9K" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-gA-V9K" customClass="BEMCheckBox">
                                         <rect key="frame" x="354" y="338" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -1002,7 +1007,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="veL-0g-El2" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="veL-0g-El2" customClass="BEMCheckBox">
                                         <rect key="frame" x="139" y="393" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -1015,7 +1020,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-Pa-HMz" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-Pa-HMz" customClass="BEMCheckBox">
                                         <rect key="frame" x="354" y="502" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -1040,15 +1045,15 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </textField>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJB-Vf-J3t" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xJB-Vf-J3t" customClass="BEMCheckBox">
                                         <rect key="frame" x="139" y="502" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-Rr-Wut" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-Rr-Wut" customClass="BEMCheckBox">
                                         <rect key="frame" x="354" y="393" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-AB-wQY" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zrK-AB-wQY" customClass="BEMCheckBox">
                                         <rect key="frame" x="354" y="551" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
