@@ -30,16 +30,21 @@ class UsersVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         db = Firestore.firestore()
+        tableView.tableFooterView = UIView()
 
         // Do any additional setup after loading the view.
         
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        emailArray = [String]()
+        searchEmailArray = [String]()
         
             self.loadData()
         
     }
+    
+    
     func loadData() {
         
             db.collection("users").whereField("privacy", isEqualTo: "public").getDocuments { (snapshot, error) in
