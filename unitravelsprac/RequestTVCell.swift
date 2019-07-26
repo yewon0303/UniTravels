@@ -8,8 +8,30 @@
 
 import UIKit
 
-class RequestTVCell: UITableViewCell {
+protocol RequestTableView {
+    func onClickCell(index: Int)
+}
 
+class RequestTVCell: UITableViewCell {
+    
+    //MARK: Properties
+    var cellDelegate: RequestTableView?
+    var index: IndexPath?
+    
+    
+    @IBOutlet weak var labelName: UILabel!
+    
+    //MARK: Actions
+    
+    @IBAction func addTapped(_ sender: Any) {
+        cellDelegate?.onClickCell(index: (index?.row)!)
+    }
+    
+    
+    @IBAction func deleteTapped(_ sender: Any) {
+        //cellDelegate?.onClickCell(index: (index?.row)!, add: false)
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

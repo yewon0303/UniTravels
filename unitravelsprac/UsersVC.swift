@@ -75,6 +75,7 @@ class UsersVC: UIViewController {
         alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)
             //carry out sending request action
+            let uid = Auth.auth().currentUser?.uid
             self.db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
                 if error != nil {
                     print(error!)
@@ -86,7 +87,7 @@ class UsersVC: UIViewController {
                         //add button - send request
                         
                         self.db.collection("users").document(userId).updateData([
-                            "requests": FieldValue.arrayUnion(["\(userId)"])
+                            "requests": FieldValue.arrayUnion(["\(uid!)"])
                             ])
                         print("request sent to \(userId)")
                         

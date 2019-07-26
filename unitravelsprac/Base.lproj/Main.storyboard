@@ -569,16 +569,29 @@
                                                     <rect key="frame" x="276" y="12" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="tick"/>
+                                                    <connections>
+                                                        <action selector="addTapped:" destination="DYQ-7N-Vn3" eventType="touchUpInside" id="lux-2R-n9h"/>
+                                                    </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VL4-mJ-j0V">
                                                     <rect key="frame" x="330" y="12" width="50" height="50"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" image="cross"/>
+                                                    <connections>
+                                                        <action selector="deleteTapped:" destination="DYQ-7N-Vn3" eventType="touchUpInside" id="95h-al-Rx3"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelName" destination="PTO-Bc-1ft" id="Fhs-mA-alG"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="tWl-Ls-42t" id="84r-CA-Y7A"/>
+                                    <outlet property="delegate" destination="tWl-Ls-42t" id="8d1-3T-vXJ"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
