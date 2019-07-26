@@ -70,7 +70,7 @@ class UsersVC: UIViewController {
     }
     
     func createAlert(title: String, message: String, email: String) {
-        let alert = UIAlertController(title: "CONFIRMATION", message: "send request to \(email)?", preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         //create yes button
         alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (action) in
             alert.dismiss(animated: true, completion: nil)

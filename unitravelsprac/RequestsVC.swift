@@ -74,6 +74,50 @@ class RequestsVC: UIViewController {
            
         }
     }
+    
+    func createAlert(title: String, message: String, email: String) {
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        //create yes button
+        alert.addAction(UIAlertAction(title: "YES", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            
+            //carry out sending request action
+            let uid = Auth.auth().currentUser?.uid
+            self.db.collection("users").whereField("email", isEqualTo: email).getDocuments { (snapshot, error) in
+                if error != nil {
+                    print(error!)
+                }else{
+                    for document in (snapshot?.documents)! {
+                        let data = document.data()
+                        let otherId = data["uid"] as? String ?? ""
+                        
+                        //add button - add your uid to friends of others and remove from requests and vice versa
+                        
+                        self.db.collection("users").document(otherId).updateData([
+                            "friends": FieldValue.arrayUnion(["\(uid!)"]),
+                            "requests": FieldValue.arrayRemove(["\(uid!)"])
+                            ])
+                        
+                        self.db.collection("users").document(uid!).updateData([
+                            "friends": FieldValue.arrayUnion(["\(otherId)"]),
+                            "requests": FieldValue.arrayRemove(["\(otherId)"])
+                            ])
+                        print("friends with \(otherId)")
+                        
+                    }
+                }
+            }
+            
+            
+        }))
+        
+        //create no button
+        alert.addAction(UIAlertAction(title: "NO", style: UIAlertAction.Style.default, handler: { (action) in
+            alert.dismiss(animated: true, completion: nil)
+            print("not accepted")
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
 
 }
 
@@ -103,6 +147,7 @@ extension RequestsVC: UITableViewDataSource, UITableViewDelegate {
 
 extension RequestsVC: RequestTableView {
     func onClickCell(index: Int) {
-        print(index)
+        let email = requestsArray[index]
+        self.createAlert(title: "CONFIRMATION", message: "Accept request from \(email)?", email: email)
     }
 }
