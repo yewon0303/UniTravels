@@ -36,6 +36,8 @@
 		EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */; };
 		EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
+		EE4D4FAC22EAC7B3004FA016 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */; };
+		EE4D4FAD22EAC7B3004FA016 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */; };
 		EE71980D22E8AF0800AE39ED /* CurrencyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */; };
 		EE71980E22E8AF0800AE39ED /* CurrencyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */; };
 		EE71981022E8AF4100AE39ED /* CurrencyDetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71980F22E8AF4100AE39ED /* CurrencyDetailsVC.swift */; };
@@ -101,6 +103,7 @@
 		EE18E90022C8BAFB0010ED3F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableVC.swift; sourceTree = "<group>"; };
 		EE2144E122C38C2900402B53 /* NewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
+		EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeVC.swift; sourceTree = "<group>"; };
 		EE71980F22E8AF4100AE39ED /* CurrencyDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsVC.swift; sourceTree = "<group>"; };
 		EE71981222E8B25100AE39ED /* Networking.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Networking.swift; sourceTree = "<group>"; };
@@ -209,6 +212,7 @@
 				179B64D622C4863F006E1748 /* AddItemVC.swift */,
 				EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */,
 				EE71980F22E8AF4100AE39ED /* CurrencyDetailsVC.swift */,
+				EE71981222E8B25100AE39ED /* Networking.swift */,
 				EE18E8FD22C8ABC80010ED3F /* ItemListTableVC.swift */,
 				EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */,
 				EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */,
@@ -220,7 +224,7 @@
 				EE18E8CB22C5DA0A0010ED3F /* ItemModal.swift */,
 				EEA9031A22E6AC37006875EA /* PastTripModal.swift */,
 				EE18E90022C8BAFB0010ED3F /* Item.swift */,
-				EE71981222E8B25100AE39ED /* Networking.swift */,
+				EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
 			);
@@ -425,6 +429,7 @@
 				EEA9031E22E6C097006875EA /* PastTripTableVC.swift in Sources */,
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
+				EE4D4FAC22EAC7B3004FA016 /* UsersVC.swift in Sources */,
 				EE18E8CC22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
 				EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */,
 				179B64D722C4863F006E1748 /* AddItemVC.swift in Sources */,
@@ -466,6 +471,7 @@
 				EEA9031F22E6C097006875EA /* PastTripTableVC.swift in Sources */,
 				EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */,
 				179B64D822C4863F006E1748 /* AddItemVC.swift in Sources */,
+				EE4D4FAD22EAC7B3004FA016 /* UsersVC.swift in Sources */,
 				EE9681DC22C39A9E00BEE281 /* TripModal.swift in Sources */,
 				179B64DB22C524AF006E1748 /* CurrentTripVC.swift in Sources */,
 			);
