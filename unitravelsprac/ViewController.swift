@@ -20,6 +20,11 @@ class ViewController: UIViewController, SplitflapDataSource, SplitflapDelegate {
 
     let splitflapView = Splitflap(frame: CGRect(x: 35, y: 120, width: 350, height: 50))
     
+    func textFieldShouldReturn(textField: TweeAttributedTextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         splitflapView.datasource = self

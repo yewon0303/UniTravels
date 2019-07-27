@@ -57,6 +57,13 @@ class AddItemVC: UIViewController {
     @IBOutlet weak var tripper6Switch: BEMCheckBox!
     
     //MARK: Actions
+    
+    func textFieldShouldReturn(textField: TweeAttributedTextField) -> Bool {
+        
+        textField.resignFirstResponder()
+        return true
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         payer1.setOn(false, animated: true)
