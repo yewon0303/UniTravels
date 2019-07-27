@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double AZExpandableIconListViewVersionNumber;
-FOUNDATION_EXPORT const unsigned char AZExpandableIconListViewVersionString[];
+FOUNDATION_EXPORT double hkGraddiantVersionNumber;
+FOUNDATION_EXPORT const unsigned char hkGraddiantVersionString[];
 

@@ -1,5 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-unitravelsprac/Pods-unitravelsprac-frameworks.sh
-${BUILT_PRODUCTS_DIR}/AZExpandableIconListView/AZExpandableIconListView.framework
 ${BUILT_PRODUCTS_DIR}/BEMCheckBox/BEMCheckBox.framework
 ${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework
 ${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework
@@ -10,5 +9,6 @@ ${BUILT_PRODUCTS_DIR}/Splitflap/Splitflap.framework
 ${BUILT_PRODUCTS_DIR}/TweeTextField/TweeTextField.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework
 ${BUILT_PRODUCTS_DIR}/gRPC-Core/grpc.framework
+${BUILT_PRODUCTS_DIR}/hkGraddiant/hkGraddiant.framework
 ${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework
 ${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework

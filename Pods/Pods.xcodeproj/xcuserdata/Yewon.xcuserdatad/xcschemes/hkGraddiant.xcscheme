@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "F840B03F5391527D0984ABF908470F70"
-               BuildableName = "AZExpandableIconListView.framework"
-               BlueprintName = "AZExpandableIconListView"
+               BlueprintIdentifier = "DE980574246434E0D7F95C8CBA3BC76F"
+               BuildableName = "hkGraddiant.framework"
+               BlueprintName = "hkGraddiant"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

@@ -11,11 +11,11 @@ target 'unitravelsprac' do
   pod 'Firebase/Firestore'
   pod 'Firebase/Analytics'
   pod 'Firebase/Storage'
-  pod 'AZExpandableIconListView'
   pod 'Splitflap', '~> 4.1.0'
   pod 'BEMCheckBox'
   pod 'PasswordTextField'
   pod 'TweeTextField'
+  pod 'hkGraddiant'
 
   target 'unitravelspracTests' do
     inherit! :search_paths

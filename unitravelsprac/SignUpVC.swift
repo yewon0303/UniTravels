@@ -13,7 +13,9 @@ import FirebaseFirestore
 import FirebaseAuth
 import Firebase
 
+@IBDesignable
 class SignUpVC: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
+
     
     //MARK: ~Properties
     var db:Firestore!
