@@ -15,6 +15,7 @@ import FirebaseAuth
 class NewTripVC: UIViewController {
     
     //MARK: ~Properties
+    @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var titleTextField: TweeAttributedTextField!
     @IBOutlet weak var DestinationTextField: TweeAttributedTextField!
     @IBOutlet weak var startDateTextField: UITextField!
@@ -50,6 +51,8 @@ class NewTripVC: UIViewController {
         tripper4Switch.setOn(false, animated: true)
         tripper5Switch.setOn(false, animated: true)
         tripper6Switch.setOn(false, animated: true)
+        
+        self.scrollView.contentSize = CGSize(width: 400, height: 600)
         
         //code for date picker
         datePicker = UIDatePicker()
