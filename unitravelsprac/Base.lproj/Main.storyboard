@@ -313,8 +313,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S6N-Cv-nEu" customClass="GradientView" customModule="hkGraddiant">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S6N-Cv-nEu" customClass="GradientView" customModule="hkGraddiant">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="999"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -340,7 +340,7 @@
                                 <rect key="frame" x="0.0" y="149" width="414" height="678"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 3" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="j3i-kt-QXV">
-                                        <rect key="frame" x="26" y="597" width="111" height="49"/>
+                                        <rect key="frame" x="26" y="551" width="111" height="49"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="49" id="hv0-E3-jQI"/>
                                         </constraints>
@@ -349,7 +349,7 @@
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 1" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="H6h-hD-aqF">
-                                        <rect key="frame" x="26" y="417" width="111" height="43"/>
+                                        <rect key="frame" x="26" y="371" width="111" height="43"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="111" id="5Qn-Ne-mCn"/>
                                         </constraints>
@@ -358,21 +358,21 @@
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9jM-HQ-0N3" customClass="BEMCheckBox">
-                                        <rect key="frame" x="331" y="505" width="50" height="42"/>
+                                        <rect key="frame" x="331" y="459" width="50" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 5" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Ya8-j0-Wst">
-                                        <rect key="frame" x="212" y="507" width="113" height="40"/>
+                                        <rect key="frame" x="212" y="461" width="113" height="40"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jg0-Qu-Man" customClass="BEMCheckBox">
-                                        <rect key="frame" x="143" y="597" width="50" height="42"/>
+                                        <rect key="frame" x="143" y="551" width="50" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="f0z-Va-4Or">
-                                        <rect key="frame" x="123.5" y="86" width="173.5" height="212"/>
+                                        <rect key="frame" x="123.5" y="40" width="173.5" height="212"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trip title" clearsOnBeginEditing="YES" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Gjq-OL-AT5" customClass="TweeAttributedTextField" customModule="TweeTextField">
                                                 <rect key="frame" x="0.0" y="0.0" width="173.5" height="44"/>
@@ -425,50 +425,50 @@
                                         </subviews>
                                     </stackView>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 6" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="ZKm-Kt-XUb">
-                                        <rect key="frame" x="212" y="598" width="113" height="40"/>
+                                        <rect key="frame" x="212" y="552" width="113" height="40"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFi-QX-1UL" customClass="BEMCheckBox">
-                                        <rect key="frame" x="331" y="598" width="50" height="42"/>
+                                        <rect key="frame" x="331" y="552" width="50" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trippers" textAlignment="center" lineBreakMode="wordWrap" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8ON-Ie-jOD">
-                                        <rect key="frame" x="156" y="369" width="95" height="40"/>
+                                        <rect key="frame" x="156" y="323" width="95" height="40"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="30"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 2" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="5lH-Nr-4Bx">
-                                        <rect key="frame" x="26" y="507" width="111" height="40"/>
+                                        <rect key="frame" x="26" y="461" width="111" height="40"/>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <textField opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="tripper 4" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="8il-Gy-g70">
-                                        <rect key="frame" x="212" y="420" width="113" height="40"/>
+                                        <rect key="frame" x="212" y="374" width="113" height="40"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113" id="lha-JU-3qC"/>
+                                            <constraint firstAttribute="width" constant="113" id="i3N-Zg-C5P"/>
                                         </constraints>
                                         <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="27"/>
                                         <textInputTraits key="textInputTraits" textContentType="name"/>
                                     </textField>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bqz-yI-79b" customClass="BEMCheckBox">
-                                        <rect key="frame" x="143" y="505" width="50" height="42"/>
+                                        <rect key="frame" x="143" y="459" width="50" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ts5-pu-O35" customClass="BEMCheckBox">
-                                        <rect key="frame" x="143" y="417" width="50" height="43"/>
+                                        <rect key="frame" x="143" y="371" width="50" height="43"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aXl-Va-r0l" customClass="BEMCheckBox">
-                                        <rect key="frame" x="331" y="417" width="50" height="44"/>
+                                        <rect key="frame" x="331" y="371" width="50" height="44"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KfK-6h-iA7">
-                                        <rect key="frame" x="152" y="728" width="116" height="48"/>
+                                        <rect key="frame" x="152" y="601" width="116" height="48"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="48" id="8MA-Xo-WGY"/>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="116" id="KcV-Ms-7zk"/>
@@ -490,7 +490,7 @@
                                     <constraint firstItem="8ON-Ie-jOD" firstAttribute="top" secondItem="f0z-Va-4Or" secondAttribute="bottom" constant="71" id="345-Ql-wh3"/>
                                     <constraint firstItem="f0z-Va-4Or" firstAttribute="centerX" secondItem="8da-2M-qhS" secondAttribute="centerX" constant="3" id="3Z5-r6-a9T"/>
                                     <constraint firstItem="5lH-Nr-4Bx" firstAttribute="baseline" secondItem="Ya8-j0-Wst" secondAttribute="baseline" id="4PE-U7-gRL"/>
-                                    <constraint firstItem="KfK-6h-iA7" firstAttribute="top" secondItem="jg0-Qu-Man" secondAttribute="bottom" constant="89" id="4aj-xY-KIj"/>
+                                    <constraint firstItem="KfK-6h-iA7" firstAttribute="top" secondItem="jg0-Qu-Man" secondAttribute="bottom" constant="8" id="8OV-JB-h5Q"/>
                                     <constraint firstItem="Ya8-j0-Wst" firstAttribute="bottom" secondItem="9jM-HQ-0N3" secondAttribute="bottom" id="9aI-Kv-o2u"/>
                                     <constraint firstItem="ZKm-Kt-XUb" firstAttribute="top" secondItem="SFi-QX-1UL" secondAttribute="top" id="D6W-Qz-1bn"/>
                                     <constraint firstItem="5lH-Nr-4Bx" firstAttribute="top" secondItem="H6h-hD-aqF" secondAttribute="bottom" constant="47" id="G52-Gr-rGm"/>
@@ -513,6 +513,7 @@
                                     <constraint firstItem="aXl-Va-r0l" firstAttribute="leading" secondItem="9jM-HQ-0N3" secondAttribute="leading" id="Y5f-QS-ogL"/>
                                     <constraint firstAttribute="trailing" secondItem="aXl-Va-r0l" secondAttribute="trailing" constant="33" id="YVu-lf-IaB"/>
                                     <constraint firstItem="8il-Gy-g70" firstAttribute="leading" secondItem="Ts5-pu-O35" secondAttribute="trailing" constant="19" id="eNQ-k9-BjI"/>
+                                    <constraint firstItem="f0z-Va-4Or" firstAttribute="top" secondItem="8da-2M-qhS" secondAttribute="top" constant="40" id="hTx-0I-bfS"/>
                                     <constraint firstItem="Ts5-pu-O35" firstAttribute="top" secondItem="8ON-Ie-jOD" secondAttribute="bottom" constant="8" symbolic="YES" id="jMV-nR-X75"/>
                                     <constraint firstItem="8il-Gy-g70" firstAttribute="trailing" secondItem="Ya8-j0-Wst" secondAttribute="trailing" id="jZw-8U-JcP"/>
                                     <constraint firstItem="8il-Gy-g70" firstAttribute="leading" secondItem="Ya8-j0-Wst" secondAttribute="leading" id="l8K-zs-xEj"/>
@@ -521,7 +522,6 @@
                                     <constraint firstAttribute="bottom" secondItem="KfK-6h-iA7" secondAttribute="bottom" constant="-98" id="nkF-s0-2HB"/>
                                     <constraint firstItem="5lH-Nr-4Bx" firstAttribute="leading" secondItem="j3i-kt-QXV" secondAttribute="leading" id="o8b-kh-t8v"/>
                                     <constraint firstItem="8ON-Ie-jOD" firstAttribute="leading" secondItem="8da-2M-qhS" secondAttribute="leading" constant="156" id="qPG-99-sds"/>
-                                    <constraint firstItem="f0z-Va-4Or" firstAttribute="top" secondItem="8da-2M-qhS" secondAttribute="top" constant="86" id="tPj-zn-W5W"/>
                                     <constraint firstItem="5lH-Nr-4Bx" firstAttribute="trailing" secondItem="j3i-kt-QXV" secondAttribute="trailing" id="tdz-RV-na1"/>
                                     <constraint firstItem="bqz-yI-79b" firstAttribute="bottom" secondItem="Ya8-j0-Wst" secondAttribute="bottom" id="wBD-Dc-xXk"/>
                                     <constraint firstItem="H6h-hD-aqF" firstAttribute="bottom" secondItem="Ts5-pu-O35" secondAttribute="bottom" id="wCm-ku-9QT"/>
@@ -1119,7 +1119,7 @@
                                             </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
-                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-XJ-geG" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bTK-XJ-geG" customClass="BEMCheckBox">
                                         <rect key="frame" x="155" y="298" width="40" height="42.5"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1130,7 +1130,7 @@
                                         <rect key="frame" x="155" y="406" width="39.5" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bal-fT-YXz" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="bal-fT-YXz" customClass="BEMCheckBox">
                                         <rect key="frame" x="358" y="238" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1144,7 +1144,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="Hll-CX-KbE" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" horizontalCompressionResistancePriority="250" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hll-CX-KbE" customClass="BEMCheckBox">
                                         <rect key="frame" x="155" y="247" width="40" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1161,7 +1161,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" ambiguous="YES" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAh-Iy-aPG">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fAh-Iy-aPG">
                                         <rect key="frame" x="25" y="414" width="121" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="121" id="8Oe-JO-9Rr"/>
@@ -1171,7 +1171,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-Vd-XUv" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rZy-Vd-XUv" customClass="BEMCheckBox">
                                         <rect key="frame" x="358" y="405" width="40" height="42"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -1281,7 +1281,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" ambiguous="YES" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4w-CI-0rl">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Tripper 4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4w-CI-0rl">
                                         <rect key="frame" x="236.5" y="412" width="113.5" height="28"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="113.66666666666663" id="KHe-R9-PhK"/>
@@ -1334,13 +1334,13 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Trippers sharing this item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-yF-fP0">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trippers sharing this item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AWQ-yF-fP0">
                                         <rect key="frame" x="166.5" y="206" width="209" height="30"/>
                                         <fontDescription key="fontDescription" name="PlayfairDisplay-Regular" family="Playfair Display" pointSize="22"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-gA-V9K" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Roy-gA-V9K" customClass="BEMCheckBox">
                                         <rect key="frame" x="358" y="294" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1353,7 +1353,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Tripper 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMC-x1-J8r">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="249" verticalHuggingPriority="251" ambiguous="YES" text="Tripper 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cMC-x1-J8r">
                                         <rect key="frame" x="192" y="247" width="158" height="26"/>
                                         <constraints>
                                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="114" id="BiZ-uo-6Hb"/>
@@ -1389,7 +1389,7 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-Pa-HMz" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YrA-Pa-HMz" customClass="BEMCheckBox">
                                         <rect key="frame" x="358" y="455" width="40" height="40"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
@@ -1418,7 +1418,7 @@
                                         <rect key="frame" x="155" y="455" width="39.5" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-Rr-Wut" customClass="BEMCheckBox">
+                                    <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qEt-Rr-Wut" customClass="BEMCheckBox">
                                         <rect key="frame" x="358" y="349" width="40" height="41"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -1610,9 +1610,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-SE-cTF" customClass="GradientView" customModule="hkGraddiant">
-                                <rect key="frame" x="-7" y="0.0" width="421" height="736"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OjS-SE-cTF" customClass="GradientView" customModule="hkGraddiant">
+                                <rect key="frame" x="-7" y="0.0" width="421" height="862"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="color" keyPath="startColor">
@@ -1725,6 +1724,7 @@
                             <constraint firstItem="YdL-2I-KdQ" firstAttribute="leading" secondItem="5Fb-sZ-E5L" secondAttribute="leading" constant="20" id="Mge-95-Orq"/>
                             <constraint firstItem="DXy-RF-Iji" firstAttribute="leading" secondItem="5Fb-sZ-E5L" secondAttribute="leading" constant="48" id="PWd-ey-nVu"/>
                             <constraint firstItem="n40-7t-ZqQ" firstAttribute="leading" secondItem="JNO-kV-KsF" secondAttribute="trailing" constant="18" id="RiZ-sb-7RL"/>
+                            <constraint firstItem="OjS-SE-cTF" firstAttribute="bottom" secondItem="5Fb-sZ-E5L" secondAttribute="bottom" id="T3B-Gg-DpP"/>
                             <constraint firstItem="5Fb-sZ-E5L" firstAttribute="trailing" secondItem="D6t-mO-WDn" secondAttribute="trailing" constant="132" id="TJQ-yw-JMq"/>
                             <constraint firstItem="wcl-nZ-fPh" firstAttribute="top" secondItem="D6t-mO-WDn" secondAttribute="bottom" constant="278" id="aYa-du-tl1"/>
                             <constraint firstItem="5Fb-sZ-E5L" firstAttribute="trailing" secondItem="uqF-jS-wyI" secondAttribute="trailing" constant="52.333333333333314" id="bvH-Ye-zoz"/>
@@ -1750,7 +1750,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KZc-gv-Sxd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2098.5507246376815" y="2804.347826086957"/>
+            <point key="canvasLocation" x="2098.5507246376815" y="2803.7946428571427"/>
         </scene>
         <!--Currency DetailsVC-->
         <scene sceneID="YIY-qn-gGh">
@@ -2504,6 +2504,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="bo7-Ty-ElF"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7sT-hm-cF3" userLabel="First Responder" sceneMemberID="firstResponder"/>
