@@ -7,19 +7,24 @@
 //
 
 import UIKit
+import JSQMessagesViewController
+import FirebaseAuth
 
-class ChatVC: UIViewController {
+class ChatVC: JSQMessagesViewController {
     
     //MARK: ~Properties
     
-    @IBOutlet weak var navigationBar: UINavigationBar!
+
     
     var chattingWith: String = ""
 
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
-        navigationBar.topItem?.title = chattingWith
+        
+        
+        senderId = Auth.auth().currentUser?.uid
+        senderDisplayName = "user"
         
 
         // Do any additional setup after loading the view.
@@ -30,14 +35,6 @@ class ChatVC: UIViewController {
         dismiss(animated: true, completion: nil)
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
+    
 
 }

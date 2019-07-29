@@ -1,5 +1,5 @@
 //  Created by Oleg Hnidets on 12/20/17.
-//  Copyright © 2017-2018 Oleg Hnidets. All rights reserved.
+//  Copyright © 2017-2019 Oleg Hnidets. All rights reserved.
 //
 
 import UIKit
@@ -10,8 +10,15 @@ internal class Line {
 	var layer = CAShapeLayer()
 }
 
+public struct BorderOffset {
+	let x: CGFloat // swiftlint:disable:this identifier_name
+	let y: CGFloat // swiftlint:disable:this identifier_name
+}
+
 /// An object of the class can show bottom line permanently.
 open class TweeBorderedTextField: TweePlaceholderTextField {
+
+	public var borderOffset = BorderOffset(x: 0, y: 0)
 
 	/// Color of bottom line.
 	@IBInspectable public var lineColor: UIColor {
@@ -70,12 +77,12 @@ open class TweeBorderedTextField: TweePlaceholderTextField {
 		// Path
 		line.path = UIBezierPath()
 
-		let yOffset = frame.height - line.layer.lineWidth / 2
+		let yOffset = frame.height - (line.layer.lineWidth * 0.5) + borderOffset.y
 
 		let startPoint = CGPoint(x: 0, y: yOffset)
 		line.path.move(to: startPoint)
 
-		let endPoint = CGPoint(x: frame.width, y: yOffset)
+		let endPoint = CGPoint(x: frame.width + borderOffset.x, y: yOffset)
 		line.path.addLine(to: endPoint)
 
 		// Layer

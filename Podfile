@@ -16,6 +16,7 @@ target 'unitravelsprac' do
   pod 'PasswordTextField'
   pod 'TweeTextField'
   pod 'hkGraddiant'
+  pod 'JSQMessagesViewController'
 
   target 'unitravelspracTests' do
     inherit! :search_paths
