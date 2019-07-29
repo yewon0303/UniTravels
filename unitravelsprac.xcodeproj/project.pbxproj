@@ -80,6 +80,8 @@
 		EEEE89C922D9DF030080FD37 /* UploadMemoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */; };
 		EEEE89CB22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
 		EEEE89CC22D9F0250080FD37 /* ImageTVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */; };
+		EEFD10BE22EF014700439220 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFD10BD22EF014700439220 /* ChatVC.swift */; };
+		EEFD10BF22EF014700439220 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEFD10BD22EF014700439220 /* ChatVC.swift */; };
 		FBFAA3C5CFF67AACFA6F04B2 /* Pods_unitravelspracTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2195BD06B098B3F7AEE332F5 /* Pods_unitravelspracTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,6 +144,7 @@
 		EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendTVCell.swift; sourceTree = "<group>"; };
 		EEEE89C722D9DF030080FD37 /* UploadMemoryVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UploadMemoryVC.swift; sourceTree = "<group>"; };
 		EEEE89CA22D9F0250080FD37 /* ImageTVCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageTVCell.swift; sourceTree = "<group>"; };
+		EEFD10BD22EF014700439220 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F2F4F70A3C0EFCA2D7343F75 /* Pods-unitravelspracTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-unitravelspracTests.release.xcconfig"; path = "Target Support Files/Pods-unitravelspracTests/Pods-unitravelspracTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -244,6 +247,7 @@
 				EEC29E2522EB548C00CDD5CD /* RequestsVC.swift */,
 				EEC29E2222EB545700CDD5CD /* RequestTVCell.swift */,
 				EEC29E2822EB6B0E00CDD5CD /* FriendsVC.swift */,
+				EEFD10BD22EF014700439220 /* ChatVC.swift */,
 				EEC29E2B22EB6B4700CDD5CD /* FriendTVCell.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
@@ -453,6 +457,7 @@
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
 				EE4D4FAC22EAC7B3004FA016 /* UsersVC.swift in Sources */,
+				EEFD10BE22EF014700439220 /* ChatVC.swift in Sources */,
 				EE18E8CC22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
 				EEC29E2622EB548C00CDD5CD /* RequestsVC.swift in Sources */,
 				EEEE89C822D9DF030080FD37 /* UploadMemoryVC.swift in Sources */,
@@ -485,6 +490,7 @@
 				EE18E8CD22C5DA0A0010ED3F /* ItemModal.swift in Sources */,
 				EEBF5C0C22B8CEFD00A4F317 /* SignUpVC.swift in Sources */,
 				EE71981422E8B25100AE39ED /* Networking.swift in Sources */,
+				EEFD10BF22EF014700439220 /* ChatVC.swift in Sources */,
 				EE18E90222C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
 				EEC29E2422EB545700CDD5CD /* RequestTVCell.swift in Sources */,

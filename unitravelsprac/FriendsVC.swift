@@ -15,6 +15,7 @@ class FriendsVC: UIViewController {
     //MARK: Properties
     var db: Firestore!
     var friendsArray = [String]()
+    var selectedEmail = ""
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -138,6 +139,23 @@ extension FriendsVC: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 75
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        NSLog("You selected cell number: \(indexPath.row)!");
+            
+            selectedEmail = friendsArray[indexPath.row]
+            //THE SEGUE
+            self.performSegue(withIdentifier: "goToChat", sender: self)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if segue.destination is ChatVC
+        {
+            let vc = segue.destination as? ChatVC
+            vc?.chattingWith = selectedEmail
+        }
     }
 }
 
