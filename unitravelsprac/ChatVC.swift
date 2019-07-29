@@ -14,6 +14,8 @@ class ChatVC: JSQMessagesViewController {
     
     //MARK: ~Properties
     
+
+    
     var messages = [JSQMessage]()
     var timestamp: String {
         return "\(NSDate().timeIntervalSince1970)"
@@ -33,6 +35,10 @@ class ChatVC: JSQMessagesViewController {
     //MARK: ~Actions
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
+        
+        
         
         let uid = Auth.auth().currentUser!.uid
         senderId = uid

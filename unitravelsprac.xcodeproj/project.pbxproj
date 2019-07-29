@@ -36,6 +36,8 @@
 		EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */; };
 		EE2144E222C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
 		EE2144E322C38C2900402B53 /* NewTripVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE2144E122C38C2900402B53 /* NewTripVC.swift */; };
+		EE340C2F22EF1D55006A5A0D /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE340C2E22EF1D55006A5A0D /* DummyViewController.swift */; };
+		EE340C3022EF1D55006A5A0D /* DummyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE340C2E22EF1D55006A5A0D /* DummyViewController.swift */; };
 		EE4D4FAC22EAC7B3004FA016 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */; };
 		EE4D4FAD22EAC7B3004FA016 /* UsersVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */; };
 		EE71980D22E8AF0800AE39ED /* CurrencyExchangeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */; };
@@ -117,6 +119,7 @@
 		EE18E90022C8BAFB0010ED3F /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		EE18E90322C9EF660010ED3F /* MemoriesTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoriesTableVC.swift; sourceTree = "<group>"; };
 		EE2144E122C38C2900402B53 /* NewTripVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripVC.swift; sourceTree = "<group>"; };
+		EE340C2E22EF1D55006A5A0D /* DummyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DummyViewController.swift; sourceTree = "<group>"; };
 		EE4D4FAA22EAC7B3004FA016 /* UsersVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersVC.swift; sourceTree = "<group>"; };
 		EE71980C22E8AF0800AE39ED /* CurrencyExchangeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyExchangeVC.swift; sourceTree = "<group>"; };
 		EE71980F22E8AF4100AE39ED /* CurrencyDetailsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyDetailsVC.swift; sourceTree = "<group>"; };
@@ -257,6 +260,7 @@
 				EEFD10C122EF0AFE00439220 /* Constants.swift */,
 				EEBF5BF322B8C92300A4F317 /* Info.plist */,
 				175FDFBF22E382A3001B9C66 /* GoogleService-Info.plist */,
+				EE340C2E22EF1D55006A5A0D /* DummyViewController.swift */,
 			);
 			path = unitravelsprac;
 			sourceTree = "<group>";
@@ -460,6 +464,7 @@
 				EEFD10C222EF0AFE00439220 /* Constants.swift in Sources */,
 				EE86AE5C22BF969000CAB5E8 /* UserModal.swift in Sources */,
 				EEC29E2922EB6B0E00CDD5CD /* FriendsVC.swift in Sources */,
+				EE340C2F22EF1D55006A5A0D /* DummyViewController.swift in Sources */,
 				EEA9031E22E6C097006875EA /* PastTripTableVC.swift in Sources */,
 				EEBF5BEA22B8C91F00A4F317 /* ViewController.swift in Sources */,
 				EE7BF7CA22B902C800EF3DC9 /* HomeVC.swift in Sources */,
@@ -502,6 +507,7 @@
 				EE18E90222C8BAFB0010ED3F /* Item.swift in Sources */,
 				EE18E8FF22C8ABC80010ED3F /* ItemListTableVC.swift in Sources */,
 				EEC29E2422EB545700CDD5CD /* RequestTVCell.swift in Sources */,
+				EE340C3022EF1D55006A5A0D /* DummyViewController.swift in Sources */,
 				EEA9031C22E6AC37006875EA /* PastTripModal.swift in Sources */,
 				EE18E90522C9EF660010ED3F /* MemoriesTableVC.swift in Sources */,
 				EE7BF7D122B91C6100EF3DC9 /* FirebaseAuthManager.swift in Sources */,
