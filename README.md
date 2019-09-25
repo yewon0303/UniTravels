@@ -75,18 +75,20 @@ The trip can now be viewed under Current Trip.
 ### View Current Trip
 The trip of the title can be seen at the top of the screen. The summary page displays the current overview of balance of each tripper and the total expense of the trip thus far.
 <br />
+
 ![summary](/images/7.png)
 <br />
 
 1. On the tab bar, the next function, Add new item, allows the user to enter the details of their expenses to keep track of their expenditure.  
 <br />
+
 ![additem](/images/8.png)
 <br />
       
 2. The name of the item and the price of the item have to be entered. Then, the name of the person who paid for the item has to be ticked, as well as the trippers who will be sharing the particular item.
 	* This function is necessary as this is an aspect of trip budgeting which poses as a problem for many users who experience confusion when having to deal with splitting budgets in a group when not everyone in the group has to pay for a particular item.
 	* By having checkboxes to tick off who should be paying for the item added, the financial tracking can be done more efficiently and accurately.  
-  <br />
+<br />
 
 ![added item](/images/9.png)
 <br />
@@ -135,5 +137,6 @@ friend list | friend confirmation | friend deletion
 
 3. Extension: Chat between friends
 <br />
+
 ![chat](/images/16.png)
 <br />
