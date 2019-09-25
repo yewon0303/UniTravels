@@ -1,5 +1,6 @@
 # UniTravels
 ![UniTravels](/images/poster.png)
+<br />
 An iPhone application to view itineraries before the trip, manage and analyse budgets during the trip, and save the itinerary as a memory collector after the trip.
 
 ## Motivation: 
